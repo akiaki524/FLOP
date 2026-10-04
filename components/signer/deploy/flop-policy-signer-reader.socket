@@ -1,0 +1,13 @@
+[Unit]
+Description=FLOP Policy Signer Trusted Reader Socket
+
+[Socket]
+ListenStream=/run/flop-policy-signer-reader.sock
+SocketMode=0660
+SocketUser=flop-signer-reader
+FileDescriptorName=reader
+SocketGroup=flop-signer
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

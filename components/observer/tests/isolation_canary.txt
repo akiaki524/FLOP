@@ -1,0 +1,2 @@
+PUBLIC OBSERVER ISOLATION CANARY
+This file contains no credentials. It must not appear at its host absolute path inside the container.

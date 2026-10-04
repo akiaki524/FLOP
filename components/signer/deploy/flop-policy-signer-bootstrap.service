@@ -1,0 +1,23 @@
+[Unit]
+Description=Initialize FLOP Policy Signer State
+ConditionPathExists=!/var/lib/flop-policy-signer/state.json
+
+[Service]
+LimitCORE=0
+Type=oneshot
+User=flop-signer
+Group=flop-signer
+ExecStart=/usr/local/lib/flop-policy-signer/node --jitless --disable-sigusr1 --disallow-code-generation-from-strings /usr/local/lib/flop-policy-signer/src/bootstrap_state.mjs
+LoadCredentialEncrypted=project-seed:/var/lib/flop-policy-signer-secret/project-seed.cred
+StateDirectory=flop-policy-signer
+StateDirectoryMode=0700
+PrivateNetwork=yes
+RestrictAddressFamilies=AF_UNIX
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectHome=yes
+ProtectSystem=strict
+InaccessiblePaths=/var/lib/flop-policy-signer-secret
+MemoryDenyWriteExecute=yes
+UMask=0077

@@ -1,0 +1,80 @@
+{
+  "verification_date": "2026-09-09",
+  "purpose": "Pre-GitHub-public sanitization: remove machine-specific host paths and usernames from tracked files; make the host-HOME isolation probes machine-independent without weakening the isolation boundary.",
+  "baseline": {
+    "commit": "d86b679",
+    "tag": "pre-vps-v0.3",
+    "offline_regression": "165 PASS / skip 0",
+    "pre_vps_independent_audit": "complete",
+    "new_p0": 0,
+    "new_p1": 0
+  },
+  "scope": "path/username sanitization and probe portability only",
+  "out_of_scope_unchanged": [
+    "Technocore protocol behavior, request semantics, cursor/poll_seq/resolved_seq/gap-detection logic",
+    "generation/observer_epoch/resync/maintenance/retention/evidence-budget/storage-budget/DB-limit/HTTP-body-cap/retry-backoff behavior",
+    "URL allowlist and read-only network boundary",
+    "Signer separation, private key / DID handling",
+    "Docker isolation policy, production supervisor design, VPS settings"
+  ],
+  "security_property_preserved": "The actual host HOME must not be visible inside the Observer container.",
+  "probe_mechanism": {
+    "before": "In-container isolation probes hard-coded the literal host HOME path (a personal '/home/<user>' string) and, in tests/live_smoke.py, a personal absolute path to the public repository canary file.",
+    "after": "The host resolves its own real HOME path (pathlib.Path.home()) and the public repository canary path, and passes them to the container as the OBSERVER_HOST_HOME / OBSERVER_HOST_CANARY environment variables. The probes assert that the supplied absolute path is NOT visible inside the container. A missing, empty, relative, or root ('/') value makes the check evaluate False (fail closed / ISOLATION_FAILED), never an unconditional pass. No fixed username is substituted.",
+    "constraints_respected": [
+      "host HOME contents are never read; no secret / seed / key / API-key access",
+      "host HOME is not mounted into the container",
+      "no Docker socket, key storage, or Windows filesystem mount added",
+      "OBSERVER_HOST_HOME / OBSERVER_HOST_CANARY are added to the container env allowlist (ALLOWED_ENV); the 'no unexpected env name' configuration check is unchanged in strength",
+      "no security assertion removed, skipped, downgraded to a warning, or made conditionally-passing"
+    ]
+  },
+  "changed_files": {
+    "tests/container_isolation.py": "OBSERVER_HOST_HOME/OBSERVER_HOST_CANARY added to ALLOWED_ENV and to create_command (resolved on the host); embedded PROBE reads OBSERVER_HOST_HOME and asserts the absolute path is not visible, fail-closed. Canary check still uses the already machine-independent injected CANARY_PATH.",
+    "tests/live_smoke.py": "module-level CANARY now comes from OBSERVER_HOST_CANARY (empty when unset); process_checks() reads OBSERVER_HOST_HOME for host_home_absent and gates public_canary_unreadable on a valid absolute canary path, both fail-closed.",
+    "tests/durability_payload.py": "container_probe() no_host_home reads OBSERVER_HOST_HOME and asserts the absolute path is not visible, fail-closed. CORE_CHECKS key names unchanged.",
+    "tests/run_durability.py": "container_args() passes --env=OBSERVER_HOST_HOME resolved on the host.",
+    "docs/container-isolation.md": "historical command working directory '/home/<user>/technocore-observer' -> '~/technocore-observer'.",
+    "docs/durability-verification.md": "four historical one-command examples changed from '/home/<user>/technocore-observer/tests/...' to '~/technocore-observer/tests/...'.",
+    "docs/pre-vps-opus-audit.md": "P3-2 finding and checklist item 10: personal path token neutralized to 'hard-coded host HOME path'. Finding, severity (P3 / NICE TO HAVE), file references, and historical judgement unchanged."
+  },
+  "runners_inheriting_env_without_edit": [
+    "tests/run_container_smoke.py (container_command builds on container_isolation.create_command)",
+    "tests/run_container_soak.py (reuses run_container_smoke.container_command)"
+  ],
+  "post_sanitization_source_sha256": {
+    "tests/container_isolation.py": "1f779dfe570d2e513764315219dba6e4192fe51e9a6e029b9a226740c6a9838b",
+    "tests/live_smoke.py": "42f169343f507b072b89b8b1690b02481861059bcd3f1a7ebbfffaed84869f49",
+    "tests/durability_payload.py": "d592d4878655baece6315a5e00dcdb226803bed026e5923cecc0e2d58e1021ba",
+    "tests/run_durability.py": "c11ec8ea52157607ef46ca6ce56978c7269f284014158ad41633c187f42e75c5"
+  },
+  "historical_artifacts": {
+    "policy": "Not modified. Per the repository convention (historical evidence is preserved; new state is recorded in a new artifact), the dated audit/regression artifacts intentionally retain the pre-sanitization source hashes of the tree they were run against.",
+    "now_stale_by_design": [
+      "docs/final-regression-20260907.json (current_source_hashes / artifact_source_hash_matches: tests/container_isolation.py, tests/durability_payload.py, tests/live_smoke.py)",
+      "docs/durability-local-mount-policy-regression.json (source_hashes: tests/durability_payload.py, tests/container_isolation.py)",
+      "docs/pre-vps-p1-final.json / docs/pre-vps-p1-verification.json / docs/pre-vps-final-remediation.json (source_sha256 sections, where present)"
+    ],
+    "note": "These records describe historical executions on the pre-sanitization source. This sanitization is NOT presented as a re-run of those historical results."
+  },
+  "post_sanitization_offline_regression": {
+    "command": "python3 -B -m unittest discover -s tests",
+    "tests": 165,
+    "pass": 165,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "relation_to_history": "This is a NEW post-sanitization verification run. It is distinct from the historical '165 PASS' fact recorded for the pre-VPS v0.3 baseline (commit d86b679)."
+  },
+  "external_actions": {
+    "live_technocore_requests": 0,
+    "technocore_writes": 0,
+    "docker_operations": 0,
+    "external_network_access": false,
+    "package_installation": false,
+    "git_commit": false,
+    "git_push": false,
+    "tag_modification": false
+  },
+  "independent_audit": "The sanitization diff described here is NOT independently audited. It is subject to the post-production Fable Final Audit."
+}

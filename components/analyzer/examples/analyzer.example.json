@@ -1,0 +1,50 @@
+{
+  "state_db": "state/analyzer.sqlite",
+  "output_dir": "out",
+  "observer_configs": [
+    {
+      "path": "<PATH-TO>/observer-multi-room.json",
+      "kind": "multi-room",
+      "source_prefix": "observer",
+      "read_manifest": false,
+      "path_map": {"<OBSERVER-ROOT-ON-VPS>": "<TRANSFERRED-COPY-MOUNT>"},
+      "provenance": "captured"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lobby-snapshot",
+      "kind": "observer-state-sqlite",
+      "room": "lobby",
+      "snapshot": true,
+      "path": "<PATH-TO>/lobby-state-backup.sqlite",
+      "provenance": "captured"
+    }
+  ],
+  "window_hours": 24,
+  "interests": {"keywords": ["review", "agent", "tclk"], "exclude": []},
+  "rules": {
+    "rate": {"min_count": 20, "ratio": 5.0, "baseline_windows": 7},
+    "duplicate": {"min_repeats": 5, "min_chars": 16},
+    "cross_room": {"min_rooms": 3}
+  },
+  "event_profiles": [],
+  "llm": {
+    "runtime": "none",
+    "allowed_rooms": [],
+    "max_invocations_per_day": 0,
+    "max_invocations_per_run": 0,
+    "max_attempts_per_task": 2,
+    "sample_size": 20,
+    "bundle_limits": {"max_items": 20, "max_item_chars": 600, "max_input_chars": 12000},
+    "claude_code": {
+      "executable": "claude",
+      "timeout_seconds": 120,
+      "max_output_chars": 20000,
+      "max_turns": null,
+      "human_billing_confirmation": null,
+      "auth_status_expectation": null
+    }
+  },
+  "limits": {"max_new_records_per_run": 500000, "nice": 10}
+}

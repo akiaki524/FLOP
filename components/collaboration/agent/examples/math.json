@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "task_id": "example-math",
+  "family": "math.gcd_lcm",
+  "params": {
+    "source": "s1"
+  },
+  "evidence": [
+    {
+      "id": "s1",
+      "locator": "fixture:human-selected-board-ask",
+      "text": "Compute gcd(12, 18) and lcm(12, 18).",
+      "sha256": "7e6fd38512f60463264a44db2bbc73c3bb20ed3b97be55eaeeeadff98bc7be73"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+**
+!Containerfile
+!src/
+!src/technocore_observer/
+!src/technocore_observer/*.py
+!tests/
+!tests/durability_payload.py
+!tests/Containerfile.durability

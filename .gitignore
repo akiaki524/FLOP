@@ -1,0 +1,3 @@
+
+# Owner-only publication denylist; never include in snapshots.
+/.local/public-check-identifiers.json

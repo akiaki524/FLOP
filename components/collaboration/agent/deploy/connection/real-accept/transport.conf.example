@@ -1,0 +1,9 @@
+# Gate A consumes this template temporarily; Real Secret activation remains separate.
+# Future location: collab-transport.service.d/real-accept.conf
+[Service]
+StateDirectory=collab-transport
+StateDirectoryMode=0700
+ExecStart=
+ExecStart=/usr/local/lib/collab-connection/node --permission --disable-sigusr1 --disallow-code-generation-from-strings --allow-fs-read=/usr/local/lib/collab-connection --allow-fs-read=/etc/collab-connection --allow-fs-read=/var/lib/collab-transport --allow-fs-write=/var/lib/collab-transport /usr/local/lib/collab-connection/src/collaboration_agent/connection_services.mjs transport
+Restart=no
+# Keep the existing transport UID, socket DAC, null stdout/stderr and other controls.

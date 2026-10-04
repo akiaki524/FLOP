@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "task_id": "example-lines",
+  "family": "text.lines",
+  "params": {
+    "source": "s1",
+    "first": 2,
+    "last": 2
+  },
+  "evidence": [
+    {
+      "id": "s1",
+      "locator": "fixture:capability-note",
+      "text": "Synthetic capability note\nThis fixture supports offline review only.\nNo signature or official-source claim.",
+      "sha256": "140f01be72d56ee5d13a5bc3f7309747ae6abf3dbb6fed87ec72030092c60d40"
+    }
+  ]
+}

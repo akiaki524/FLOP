@@ -1,0 +1,41 @@
+[Unit]
+Description=FLOP Project DID Policy Signer
+Requires=flop-policy-signer.socket flop-policy-signer-reader.socket
+After=flop-policy-signer.socket flop-policy-signer-reader.socket
+
+[Service]
+LimitCORE=0
+Type=simple
+User=flop-signer
+Group=flop-signer
+SupplementaryGroups=flop-signer-acquisition
+ExecStart=/usr/local/lib/flop-policy-signer/node --jitless --disable-sigusr1 --disallow-code-generation-from-strings /usr/local/lib/flop-policy-signer/src/runtime_service.mjs
+LoadCredentialEncrypted=project-seed:/var/lib/flop-policy-signer-secret/project-seed.cred
+StateDirectory=flop-policy-signer
+StateDirectoryMode=0700
+PrivateNetwork=yes
+RestrictAddressFamilies=AF_UNIX
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectHome=yes
+ProtectSystem=strict
+InaccessiblePaths=/var/lib/flop-policy-signer-secret
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+RestrictSUIDSGID=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+UMask=0077
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,181 @@
+{
+  "date": "2026-09-09",
+  "purpose": "Limited test-harness P2 closure after public sanitization; no production changes.",
+  "baseline_commit": "d86b679",
+  "baseline_tag": "pre-vps-v0.3",
+  "changed_files": [
+    "tests/container_isolation.py",
+    "tests/run_durability.py",
+    "tests/test_durability.py",
+    "docs/vps-migration-checklist.md",
+    "docs/public-sanitization-p2-closure-20260909.json"
+  ],
+  "p2_a": {
+    "status": "CLOSED",
+    "implementation": "Shared container_isolation.host_home uses pwd.getpwuid(os.getuid()).pw_dir; rejects invalid, relative, root, missing, non-directory and inaccessible paths with HOST_HOME_UNSAFE before command construction completes. Only directory metadata is inspected; only the path string is passed to containers.",
+    "producers": [
+      "container_isolation.create_command",
+      "run_durability.container_args"
+    ],
+    "inherited_consumers": [
+      "run_container_smoke",
+      "run_container_soak"
+    ],
+    "adversarial_tests": [
+      "normal account HOME",
+      "HOME=/nonexistent",
+      "HOME=/var/empty",
+      "HOME=/",
+      "HOME=relative/path",
+      "HOME unset",
+      "invalid account HOME: empty, relative, root, None, NUL",
+      "missing account / OS lookup failure",
+      "nonexistent directory / regular file / PermissionError"
+    ],
+    "test": "test_durability.BoundaryTests.test_container_create_has_no_pull_or_host_mount",
+    "test_count_note": "Extended existing test with subtests; no test removed or assertion weakened."
+  },
+  "p2_b": {
+    "status": "CLOSED",
+    "document": "docs/vps-migration-checklist.md",
+    "local_evidence_committed": false,
+    "compatibility_test_changed": false
+  },
+  "regression": {
+    "command": "python3 -B -m unittest discover -s tests",
+    "tests": 165,
+    "pass": 165,
+    "fail": 0,
+    "error": 0,
+    "skip": 0
+  },
+  "fresh_clone_equivalent": {
+    "method": "During unittest discovery only, unittest.mock.patch replaces Path.is_dir for exactly the SavedResponseTests EVIDENCE path with False; assert exactly one intercepted call. Restore before running suite. No real evidence moved, deleted, modified or printed.",
+    "tests": 165,
+    "pass": 163,
+    "fail": 0,
+    "error": 0,
+    "skip": 2,
+    "exact_skipped_tests": [
+      "test_live_compatibility.SavedResponseTests.test_saved_200_records_round_trip_through_actual_observer",
+      "test_live_compatibility.SavedResponseTests.test_saved_config_values"
+    ]
+  },
+  "execution_limitations": [
+    "Initial sandbox runs of both suites each ran 160 tests with one setUpClass error: existing loopback HTTP server socket was denied. Both rerun once outside sandbox after approval; successful results above. No code changes made to bypass HTTP assertions.",
+    "No Docker isolation execution; closure verifies host path selection and command construction offline."
+  ],
+  "source_test_sha256": {
+    "docs/vps-migration-checklist.md": "9bbc98c3af4b8388e161e1046b65277391cbfaf698976e18ea275d804a67b471",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/observer.py": "09ed46d2a423486913d6044f8a475e30087362c452d6e5629f22feb4b47712b7",
+    "src/technocore_observer/cli.py": "7c93a1490dbd4ff43527993995660de92f6cfa18ef6e336dc08021b562c2772e",
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/storage.py": "5160191b69449cbe89e37312a92a0f9fe33f965f32f0665e30a7820e43fb4e45",
+    "src/technocore_observer/protocol.py": "7cd70c57c5be65dc5ee9d47ebf19515b5694ff49b196a5e4485b13ae9b88a72f",
+    "src/technocore_observer/maintenance.py": "4b7d595b39eae7d2d291e812d9655f52828768555ec0c2649b12fac0ccb3d510",
+    "src/technocore_observer/http.py": "1b5f65c342256e560630831b3e5fd1ba65c3777295d190db8c2881799ae602ae",
+    "tests/p1_memory_probe.py": "fd8d02166c33e8c4212f505a50d48ebe5e74e7794f2026071e78f45275ced44f",
+    "tests/live_smoke.py": "42f169343f507b072b89b8b1690b02481861059bcd3f1a7ebbfffaed84869f49",
+    "tests/test_durability.py": "3327721f0a46fccf1faed43f47147901452cde8f3e9cfc011419fd952d716ad3",
+    "tests/test_live_smoke.py": "148c8be91c883e87f6d61516899c9631ef043d234a01af17e084dfd063048b2b",
+    "tests/test_live_compatibility.py": "9f33a0b91587a7783279066086c9fb581e6b59925b28dec95b9ccba25539813b",
+    "tests/run_container_recreation.py": "922cabafdaefe0edf2eda41d1f2a8da6dfdb43c435443d7ea65e830ea814f0a7",
+    "tests/run_durability.py": "c67ef891993dda53616a7afe7e182d008a1a52d8f4c2ba279e18b9ad8b006bd6",
+    "tests/soak_payload.py": "1dfb16c9e9e35e0175e5c4c97b1d67fafa979ddf3547861d0ff614e3ed62bfc8",
+    "tests/test_http.py": "018bb2bbb90efe20a41c98c9d9737bea6e55c746b9437f8a51aa472d5761a74c",
+    "tests/test_container_recreation.py": "d0b112fc745c194e472318716bc643a3c34dc3931e6423a31a48e8dd40cf179c",
+    "tests/durability_diagnostics.py": "fe53de1a4dd0ddd86c114b439e52e92ff3fc801371423177a3aba903d5db4976",
+    "tests/run_container_soak.py": "0cc46ab87a0412e937d528ace0a577474a93889d2c1266203e23cb44f4573759",
+    "tests/test_durability_diagnostics.py": "25ead30e81628d25321d757ed25044fac77c5efe2626eea132f0f7f122ad5145",
+    "tests/pre_vps_audit_probe.py": "fe0a861f9dc4d6540d56c52037136a2aee46128281462997f7a46850f57554b4",
+    "tests/container_isolation.py": "aa3a5b556b04aa04a7063dc230d0b0980e29c11a5ff2f612bb5e501e7ce32490",
+    "tests/run_container_smoke.py": "e8d23f25b79a2678b44664ea1d24d259157a3e735e76624230cfe6b0319e0e88",
+    "tests/test_crash.py": "5f70d6239970afc105651df71e44c7476f0b57ef9950a4aedd55817efe9ba801",
+    "tests/durability_payload.py": "d592d4878655baece6315a5e00dcdb226803bed026e5923cecc0e2d58e1021ba",
+    "tests/test_p1_remediation.py": "13ca6fc5623c40901ed986619a40b5d0ea5f62292f91f152bc658f64dda80e05",
+    "tests/test_final_remediation.py": "7dd3aed38b779af318d61b90a524ce1d279676314000565254c17ff8ec37e325",
+    "tests/test_soak.py": "4ca0a31088eb8ccd59f796410e93fa34ba6766ca2f185280a72b7eca6d53bda5",
+    "tests/test_observer.py": "4fce3b51bfc9b9bb0ff627dcb20452cfec48882ec6401cb6ac2dd48af213056a"
+  },
+  "historical_integrity": {
+    "historical_artifacts_rewritten_by_this_closure": false,
+    "initial_document_hashes_unchanged_except": "docs/vps-migration-checklist.md",
+    "prior_sanitization_retained": true,
+    "note": "Existing Sonnet sanitization edits to historical prose were already present and retained. Original historical execution hashes and Opus verdict were not rewritten.",
+    "initial_document_sha256": {
+      "docs/pre-vps-p1-final.json": "8a6e79e0db6cacfa871a4f74bf668698b3af85db69fe9ff0b9bc6266fc2e7ec0",
+      "docs/public-sanitization-verification-20260909.json": "8884b5d85f0ce937eb0fecf716c8d4e3690c5cf1d4c55ee7c2249b7a37b505e2",
+      "docs/pre-vps-final-remediation.json": "cb8de8d53237f12172f586ef27b9d69c2bc3eea6dc5d96293d28c4b58161b3fc",
+      "docs/final-regression-20260907.json": "cab171b15cf5121ae2420b8bf7aaff74a06430ab7cd150192deb1ba7b7fa911e",
+      "docs/pre-vps-p1-verification.json": "252c6d7c4c898a89affdd8505e1deae0fcb8f8984f9faf0448ab8ebd62b12b7c",
+      "docs/durability-local-mount-policy-regression.json": "5e3bbad0590149ebb0a134cee2e24677cf9dc77a2ff6da65ea33fff0cb864c1e",
+      "docs/smoke-review-20260906.md": "3e008148dedfe0a60d6a186a8350e4c8927305aaf282011493cc844222f0e103",
+      "docs/live-smoke-plan.md": "1d1b3dd20bc09b340b924c9530ed313795b301d4616e96ee5efb1632b6a0fe7c",
+      "docs/pre-vps-p1-remediation.md": "ab3c623f509777d28e0d0c6464ab1e7792d038db225e270e9b77a14c6070bae2",
+      "docs/operations.md": "340b90436f9aa8dc8ad676eccfc781cf6bddb84b0caf9ce5c07df5e9ed36c83e",
+      "docs/pre-vps-opus-audit.md": "fd52338c143742148d031bd5161f379c3cc1e49492d8281939d7b4737eb9a80c",
+      "docs/persistent-storage-durability-plan.md": "92724f2b2387ae3c4d14be724e1f58e7be43b2a2512eea2334c932d5a59df0a1",
+      "docs/durability-verification.md": "98630964e77e91df040bc125acacd61c936c42d1bedc6e5b56b99f14c05abd36",
+      "docs/technocore-v0121-read-contract.md": "71216c6c85080c88414bd4d960fbae1e86f7731326a0fe2a35598aaeceb6f31a",
+      "docs/container-isolation.md": "f1e52b79b376bdb1c17215ecd6c4cb427dc181338f855e68109c484ea6c937fd",
+      "docs/soak-verification.md": "dc44cbbe82f055ec5128fa6913719947f4925c1dd679daa8cfdc9dbe973010f8",
+      "docs/verification.md": "5ca58b67772651296b20a734312692ca47812b6970c5bec57ed315d0116f62d4",
+      "docs/soak-plan.md": "04f593fbdedfae2a55bbda9e2be3319fbfa93353dd11b826274d6aca401274d2"
+    }
+  },
+  "independent_audit": {
+    "closure_audited": false,
+    "prior_delta_review": "User reports Opus GO WITH CONDITIONS, P0=0, P1=0. That review predates this Codex closure."
+  },
+  "post_review": {
+    "source": "User-provided subsequent Opus independent P2 closure review; recorded by this documentation-only update, not a new audit execution.",
+    "historical_state_note": "independent_audit.closure_audited=false records the historical pre-review state. Existing execution results, artifact hashes and historical verdicts are retained.",
+    "closure_audited": true,
+    "verdict": "GO WITH CONDITIONS",
+    "p0": 0,
+    "p1": 0,
+    "p2_a": "CLOSED",
+    "p2_b": "CLOSED",
+    "baseline_finalization": "GO",
+    "root_commit_amend": "GO",
+    "pre_vps_v0_3_retag": "GO",
+    "private_github_push": "GO",
+    "additional_opus_review_before_those_steps": "NOT REQUIRED",
+    "vps_gate": "PENDING",
+    "vps_gate_pending_items": {
+      "P2-N1": "Before adopting host_home_not_visible as production isolation evidence on VPS, check for false FAIL when the host account HOME path also exists inside the container image, especially /root.",
+      "P2-N2": "run_container_smoke / durability plan artifacts may contain actual absolute paths in OBSERVER_HOST_HOME / OBSERVER_HOST_CANARY. Redact these values before committing plan output as tracked docs artifacts."
+    },
+    "execution_note": "GO records review disposition only. This documentation update performs no commit, amend, tag operation, push, GitHub, VPS, network, Docker or secret access."
+  },
+  "tag_semantics": "After a future Human root amend and tag move, pre-vps-v0.3 represents original Pre-VPS audited baseline + Sonnet public-sanitization implementation + Opus independent sanitization delta review + this Codex P2 closure + Opus independent P2 closure review. Original Opus audit does not cover later code. No tag changed here.",
+  "security": {
+    "read_only_boundary_changed": false,
+    "production_behavior_changed": false,
+    "docker_isolation_weakened": false,
+    "secret_access": false,
+    "home_contents_read_or_enumerated": false,
+    "home_mounted": false,
+    "assertions_weakened": false
+  },
+  "sanitization": {
+    "tracked_identity_hits": 0,
+    "specific_machine_path_candidates": 0,
+    "suspicious_tracked_secret_files": 0,
+    "tracked_runtime_artifacts": 0,
+    "diff_check": "PASS"
+  },
+  "external_actions": {
+    "external_network": 0,
+    "technocore": 0,
+    "docker": 0,
+    "github": 0,
+    "vps": 0,
+    "commit": 0,
+    "amend": 0,
+    "tag_change": 0,
+    "push": 0,
+    "note": "Existing HTTP tests use loopback only."
+  }
+}

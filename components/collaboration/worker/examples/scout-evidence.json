@@ -1,0 +1,6 @@
+{
+  "generation": "synthetic-offline-example",
+  "messages": [
+    {"from": "unverified-demo-author", "seq": 1, "ts": "2026-09-17T00:00:00Z", "text": "TODO: document unknown-send recovery. This is synthetic Scout evidence."}
+  ]
+}

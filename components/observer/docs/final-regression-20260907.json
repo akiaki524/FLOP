@@ -1,0 +1,163 @@
+{
+  "review_date": "2026-09-07",
+  "observer_spec": "0.3",
+  "technocore_baseline": "0.12.1",
+  "local_persistent_storage_durability_gate": "COMPLETE",
+  "local_result": "LOCAL_DURABILITY_PASS_WITH_HARDENING_WARNINGS",
+  "isolation_boundary": "PASS",
+  "persistent_storage_durability": "PASS",
+  "production_hardening_gate": "PENDING",
+  "vps_migration_gate": "PENDING",
+  "scope": "host process crash/restart matrix plus real local Docker named-volume A/B recreation; not power-loss or production qualification",
+  "recreation_artifact": "docs/durability-results-recreation-20260907-192144-4562d78c",
+  "recreation_report_sha256": "f96f16b98249f0476a9c0b382aff80f77a1b00369d33f73a7a4ac36431a67ca3",
+  "historical_full_durability_gate": "PENDING",
+  "host_process_artifact": "docs/durability-results-local-20260906-175824-5d4b3f34/report.json",
+  "host_process_cases": 31,
+  "recreation_elapsed_seconds": 12.294,
+  "external_requests": 0,
+  "configuration_observations": 5,
+  "checks_per_configuration": 21,
+  "container_probes": 2,
+  "hard_process_checks_per_probe": 11,
+  "hardening_warnings": [
+    "state_mount_nodev",
+    "state_mount_noexec",
+    "state_mount_nosuid"
+  ],
+  "before_recreation": {
+    "room": "durability-fixture",
+    "observer_epoch": 1,
+    "server_generation": 2,
+    "init_anchor_seq": 100,
+    "poll_seq": 201,
+    "resolved_seq": 103,
+    "status": "DEGRADED"
+  },
+  "after_recreation": {
+    "room": "durability-fixture",
+    "observer_epoch": 1,
+    "server_generation": 2,
+    "init_anchor_seq": 100,
+    "poll_seq": 201,
+    "resolved_seq": 103,
+    "status": "DEGRADED"
+  },
+  "resumed": {
+    "room": "durability-fixture",
+    "observer_epoch": 1,
+    "server_generation": 2,
+    "init_anchor_seq": 100,
+    "poll_seq": 203,
+    "resolved_seq": 103,
+    "status": "DEGRADED"
+  },
+  "resume_first_since": 201,
+  "preserved_messages": 5,
+  "final_messages": 7,
+  "open_gap": {
+    "start_seq": 104,
+    "end_seq": 199,
+    "status": "OPEN"
+  },
+  "state_and_message_and_gap_hashes_preserved": true,
+  "backup": {
+    "method": "sqlite3.Connection.backup",
+    "sha256": "92527ebf64ecd0e77dc791f13d8cea7b2565d4f6ab641cc8578160d02e53276a",
+    "bytes": 32768,
+    "read_only_review_integrity": "ok",
+    "quick_check": "ok",
+    "application_id": 1413697346,
+    "user_version": 1,
+    "state_messages_gaps_match": true,
+    "pending_wal_bytes": 0
+  },
+  "artifact_source_hash_matches": {
+    "src/technocore_observer/__init__.py": true,
+    "src/technocore_observer/__main__.py": true,
+    "src/technocore_observer/cli.py": true,
+    "src/technocore_observer/http.py": true,
+    "src/technocore_observer/observer.py": true,
+    "src/technocore_observer/protocol.py": true,
+    "src/technocore_observer/storage.py": true,
+    "tests/durability_payload.py": true,
+    "tests/run_durability.py": true,
+    "tests/test_durability.py": true,
+    "tests/Containerfile.durability": true,
+    "tests/container_isolation.py": true,
+    "tests/durability_diagnostics.py": true,
+    "tests/run_container_recreation.py": true,
+    "tests/test_container_recreation.py": true
+  },
+  "observer_source_hashes": {
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/cli.py": "188b2f4d1a23c549aa2684238c7254056f8f9011efe226bfa4316f4e5e4f3f1b",
+    "src/technocore_observer/http.py": "d9ce4feb1ca1391d955352bf5c4350efc66db8ff030b758efb739bd56521fff8",
+    "src/technocore_observer/observer.py": "1cc0398e7438e85018bca6d26eb7f26e884596479f1a5cf2f9b89bbe9676d377",
+    "src/technocore_observer/protocol.py": "1c6c16fcc7ba6e9b47be16ecc144a534192f217360fdc0a2b9ef412d63f578bf",
+    "src/technocore_observer/storage.py": "d2447c479e74d28bf0025629bc3f86b794a1d1c07252c3c667179e3a84c2d45e"
+  },
+  "remaining_container_names": [
+    "observer-durability-20260907-192144-4562d78c-2",
+    "observer-durability-base-20260907-192144-4562d78c"
+  ],
+  "volume_name": "observer-durability-20260907-192144-4562d78c",
+  "image_id": "sha256:fed4ddbbf66813778ef4625aa72a65329cca48fad0456ef65a648598e4275b8b",
+  "image_tag": "observer-durability-local:20260907-192144-4562d78c",
+  "regression": {
+    "status": "PASS",
+    "tests": 123,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "runs": [
+      {
+        "command": "env PYTHONPATH=src:tests python3 -B -m unittest test_observer test_crash test_live_compatibility test_live_smoke test_soak test_durability test_container_recreation test_durability_diagnostics",
+        "tests": 118,
+        "seconds": 18.92,
+        "result": "OK"
+      },
+      {
+        "command": "env PYTHONPATH=src:tests python3 -B -m unittest test_http",
+        "tests": 5,
+        "seconds": 0.833,
+        "result": "OK",
+        "network": "127.0.0.1 only",
+        "sandbox": "approved outside sandbox after socket PermissionError"
+      }
+    ],
+    "initial_http_attempt": {
+      "tests": 0,
+      "error": "sandbox denied socket creation",
+      "resolved_by": "same unchanged test command outside sandbox"
+    }
+  },
+  "current_source_hashes": {
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/cli.py": "188b2f4d1a23c549aa2684238c7254056f8f9011efe226bfa4316f4e5e4f3f1b",
+    "src/technocore_observer/http.py": "d9ce4feb1ca1391d955352bf5c4350efc66db8ff030b758efb739bd56521fff8",
+    "src/technocore_observer/observer.py": "1cc0398e7438e85018bca6d26eb7f26e884596479f1a5cf2f9b89bbe9676d377",
+    "src/technocore_observer/protocol.py": "1c6c16fcc7ba6e9b47be16ecc144a534192f217360fdc0a2b9ef412d63f578bf",
+    "src/technocore_observer/storage.py": "d2447c479e74d28bf0025629bc3f86b794a1d1c07252c3c667179e3a84c2d45e",
+    "tests/container_isolation.py": "3e7b60ab128e2f2eb1b008655b247cb335c6495f23d63b92d46e34f2f9a9b04d",
+    "tests/durability_diagnostics.py": "fe53de1a4dd0ddd86c114b439e52e92ff3fc801371423177a3aba903d5db4976",
+    "tests/durability_payload.py": "f39f2cbf91ff5b5ee03164cda95f8f7e10b0ef3dd1f414b9f43512257563cad2",
+    "tests/live_smoke.py": "2e1312c6742b23e77d66eda9db187aeea144129300292e7918c01a0959444aaa",
+    "tests/run_container_recreation.py": "922cabafdaefe0edf2eda41d1f2a8da6dfdb43c435443d7ea65e830ea814f0a7",
+    "tests/run_container_smoke.py": "e8d23f25b79a2678b44664ea1d24d259157a3e735e76624230cfe6b0319e0e88",
+    "tests/run_container_soak.py": "0cc46ab87a0412e937d528ace0a577474a93889d2c1266203e23cb44f4573759",
+    "tests/run_durability.py": "6dd1dfed5d3ca54204e8cfd1845100b1f4a8fda13f80598b20a573512338c973",
+    "tests/soak_payload.py": "1dfb16c9e9e35e0175e5c4c97b1d67fafa979ddf3547861d0ff614e3ed62bfc8",
+    "tests/test_container_recreation.py": "d0b112fc745c194e472318716bc643a3c34dc3931e6423a31a48e8dd40cf179c",
+    "tests/test_crash.py": "5f70d6239970afc105651df71e44c7476f0b57ef9950a4aedd55817efe9ba801",
+    "tests/test_durability.py": "88169279be22f7ea1cd78e340c38a496ed5bcf79dd370a120cf9ccc627f1abcf",
+    "tests/test_durability_diagnostics.py": "25ead30e81628d25321d757ed25044fac77c5efe2626eea132f0f7f122ad5145",
+    "tests/test_http.py": "018bb2bbb90efe20a41c98c9d9737bea6e55c746b9437f8a51aa472d5761a74c",
+    "tests/test_live_compatibility.py": "9f33a0b91587a7783279066086c9fb581e6b59925b28dec95b9ccba25539813b",
+    "tests/test_live_smoke.py": "148c8be91c883e87f6d61516899c9631ef043d234a01af17e084dfd063048b2b",
+    "tests/test_observer.py": "a5caf0b0edc49f45f01b485461ff5137224981a4b17fdbc034a8fc6e10275b39",
+    "tests/test_soak.py": "4ca0a31088eb8ccd59f796410e93fa34ba6766ca2f185280a72b7eca6d53bda5"
+  }
+}

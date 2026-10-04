@@ -1,0 +1,399 @@
+{
+  "base_head": "027c3d80ff611a12d62a89b4077fe8e5b5644341",
+  "reviewed_core_head": "c7a82acbcd3c4df74daf0310239559efb41388b7",
+  "rehearsal": {
+    "real_secret_access": 0,
+    "external_writes": 0,
+    "steps": [
+      "fresh_setup",
+      "partial_install_before_reload",
+      "partial_install_recovered_and_update",
+      "real_failed_and_start_limit_reset",
+      "stopped_socket_gc_unloaded_reset_and_reload",
+      "smoke_crash_restart_recovery",
+      "second_run_recovery"
+    ],
+    "kernel": "6.6.87.2-microsoft-standard-WSL2",
+    "systemd": "systemd 255 (255.4-1ubuntu8.17)",
+    "source": {
+      "head": "04862d169a4d6a979cbc567178c5290d9e1356a6",
+      "node_sha256": "1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31"
+    },
+    "passed": true,
+    "clean_retry": "RECREATE_DISTRO_AND_REPEAT; NEVER_RESET_SAME_IDENTITY"
+  },
+  "checkpoints": [
+    {
+      "mode": "DUMMY_OFFLINE",
+      "real_secret_access": false,
+      "external_writes": 0,
+      "evidence_file": ".local/connection/host-checkpoint-941f53becb4f439483201d4c9ec975bb.json",
+      "setup": {
+        "recovered": true,
+        "mode": "DUMMY_OFFLINE",
+        "external_writes": 0,
+        "updated_sources": [],
+        "evidence_preserved": false,
+        "boundary_remeasured": true,
+        "state_mode": "pristine",
+        "quota_consumed": null,
+        "recovery_evidence": "state-recovery-206runad"
+      },
+      "smoke": {
+        "passed": 13,
+        "failed": 0,
+        "externalWrites": 0,
+        "realSecrets": false
+      },
+      "permissions": {
+        "cross_uid_read_denied": {
+          "worker": true,
+          "approval": true,
+          "transport": true
+        },
+        "ipc_denied": {
+          "worker:human": true,
+          "worker:gate": true,
+          "worker:transport": true,
+          "transport:gate": true
+        },
+        "services": {
+          "worker": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          },
+          "approval": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          },
+          "signer": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          },
+          "transport": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          }
+        },
+        "sockets_active": true,
+        "external_writes": 0,
+        "all_passed": true
+      },
+      "crash": {
+        "dummy_crash_restarted": true,
+        "pointer_unchanged": true,
+        "custody_nonce_unchanged": true,
+        "socket_reactivated": true,
+        "quota_reset": false,
+        "state_rollback": false
+      },
+      "recovery": {
+        "passed": 3,
+        "failed": 0,
+        "externalWrites": 0,
+        "realSecrets": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "DUMMY_OFFLINE",
+      "real_secret_access": false,
+      "external_writes": 0,
+      "evidence_file": ".local/connection/host-checkpoint-991fdfb0bfc8422abfd71fc91f193e80.json",
+      "setup": {
+        "recovered": true,
+        "mode": "DUMMY_OFFLINE",
+        "external_writes": 0,
+        "updated_sources": [],
+        "evidence_preserved": false,
+        "boundary_remeasured": true,
+        "state_mode": "reconciliation",
+        "quota_consumed": true,
+        "recovery_evidence": "state-recovery-tzm4fo8x"
+      },
+      "recovery": {
+        "passed": 3,
+        "failed": 0,
+        "externalWrites": 0,
+        "realSecrets": false
+      },
+      "permissions": {
+        "cross_uid_read_denied": {
+          "worker": true,
+          "approval": true,
+          "transport": true
+        },
+        "ipc_denied": {
+          "worker:human": true,
+          "worker:gate": true,
+          "worker:transport": true,
+          "transport:gate": true
+        },
+        "services": {
+          "worker": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          },
+          "approval": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          },
+          "signer": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          },
+          "transport": {
+            "uid_matches": true,
+            "no_new_privileges": true,
+            "secret_absent_env_argv": true,
+            "secret_absent_journal": true
+          }
+        },
+        "sockets_active": true,
+        "external_writes": 0,
+        "all_passed": true
+      },
+      "crash": {
+        "dummy_crash_restarted": true,
+        "pointer_unchanged": true,
+        "custody_nonce_unchanged": true,
+        "socket_reactivated": true,
+        "quota_reset": false,
+        "state_rollback": false
+      },
+      "passed": true
+    }
+  ],
+  "recovery_records": {
+    "/var/lib/collab-connection-setup/state-recovery-p2j_se6a/before.json": {
+      "mode": "DUMMY_OFFLINE",
+      "state_mode": "reconciliation",
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "be1171b12b9ba9ba4023142a017f0d31a1894e67ea2ab4682fc16c65689e7275",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "e2b9174cb2877ddf68679a05e025794dc22693fc17501fa965aa834f4b374269",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "fa76a8b72aad59b03650314895d238fce8a2299756001cd36263129c1d9762a4"
+      }
+    },
+    "/var/lib/collab-connection-setup/state-recovery-p2j_se6a/stopped.json": {
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "be1171b12b9ba9ba4023142a017f0d31a1894e67ea2ab4682fc16c65689e7275",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "e2b9174cb2877ddf68679a05e025794dc22693fc17501fa965aa834f4b374269",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "fa76a8b72aad59b03650314895d238fce8a2299756001cd36263129c1d9762a4"
+      }
+    },
+    "/var/lib/collab-connection-setup/state-recovery-p2j_se6a/dead-lock-1.json": {
+      "version": 1,
+      "pid": 1007
+    },
+    "/var/lib/collab-connection-setup/state-recovery-p2j_se6a/after.json": {
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "f4b6aa6995e52ef85d86e6f321a5d0d67b5c7099660224d11c0e957ca9682165",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "1e34afff7e1dfe197d9fc2fef2a2fb64a38c51ee38946630f7c7ddbabdc7ce74",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "38fc379f7189135ff18dad5d848df39751c39655ff6b2a4b68fb1cd25afe4972"
+      },
+      "quota_consumed": true,
+      "state_mode": "reconciliation",
+      "external_writes": 0
+    },
+    "/var/lib/collab-connection-setup/state-recovery-p2j_se6a/dead-lock-0.json": {
+      "pid": 1007,
+      "did": "did:key:z6MkwUpBcqyq9cS2CDnUkCfucGngc3JsocoDqvB6LiULyP5d"
+    },
+    "/var/lib/collab-connection-setup/state-recovery-tzm4fo8x/before.json": {
+      "mode": "DUMMY_OFFLINE",
+      "state_mode": "reconciliation",
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "f4b6aa6995e52ef85d86e6f321a5d0d67b5c7099660224d11c0e957ca9682165",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "1e34afff7e1dfe197d9fc2fef2a2fb64a38c51ee38946630f7c7ddbabdc7ce74",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "38fc379f7189135ff18dad5d848df39751c39655ff6b2a4b68fb1cd25afe4972"
+      }
+    },
+    "/var/lib/collab-connection-setup/state-recovery-tzm4fo8x/stopped.json": {
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "f4b6aa6995e52ef85d86e6f321a5d0d67b5c7099660224d11c0e957ca9682165",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4"
+      }
+    },
+    "/var/lib/collab-connection-setup/state-recovery-tzm4fo8x/after.json": {
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "4368204524182de76c14edc9f37823b3d79bf84ab8e5a700440824895cb45bc9",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "2ca49f2d0de3b68c663e1af39ce1bb46c0e460239aa14f7c5f67766af6466e25",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "9a656dd53543b221f371729dbef2b5e4183128d079f489ca74105b68b15fc151"
+      },
+      "quota_consumed": true,
+      "state_mode": "reconciliation",
+      "external_writes": 0
+    },
+    "/var/lib/collab-connection-setup/state-recovery-206runad/before.json": {
+      "mode": "DUMMY_OFFLINE",
+      "state_mode": "pristine",
+      "files": {}
+    },
+    "/var/lib/collab-connection-setup/state-recovery-206runad/stopped.json": {
+      "files": {}
+    },
+    "/var/lib/collab-connection-setup/state-recovery-206runad/after.json": {
+      "files": {},
+      "quota_consumed": null,
+      "state_mode": "pristine",
+      "external_writes": 0
+    },
+    "/var/lib/collab-connection-setup/state-recovery-r3qi9lfl/before.json": {
+      "mode": "DUMMY_OFFLINE",
+      "state_mode": "reconciliation",
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "4368204524182de76c14edc9f37823b3d79bf84ab8e5a700440824895cb45bc9",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "2ca49f2d0de3b68c663e1af39ce1bb46c0e460239aa14f7c5f67766af6466e25",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "9a656dd53543b221f371729dbef2b5e4183128d079f489ca74105b68b15fc151"
+      }
+    },
+    "/var/lib/collab-connection-setup/state-recovery-r3qi9lfl/stopped.json": {
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "4368204524182de76c14edc9f37823b3d79bf84ab8e5a700440824895cb45bc9",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "2ca49f2d0de3b68c663e1af39ce1bb46c0e460239aa14f7c5f67766af6466e25",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "9a656dd53543b221f371729dbef2b5e4183128d079f489ca74105b68b15fc151"
+      }
+    },
+    "/var/lib/collab-connection-setup/state-recovery-r3qi9lfl/dead-lock-1.json": {
+      "version": 1,
+      "pid": 1377
+    },
+    "/var/lib/collab-connection-setup/state-recovery-r3qi9lfl/after.json": {
+      "files": {
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json": "ba4a35cb966695207afc5f0bc4698c31bc1aa6d0ec0da31076244accd7976990",
+        "ledger/identity-0a965826a973ed9ed8d54b8b7f6161d98a542dda3768370aa1ab60ff3048483c.json.lock": "d9a8ed06f0d26721fce955172b84ce2c7565facd9f5f71df4586ab455a2dfdee",
+        "custody/connection-pointer.json": "e6ed8e3e4b1b2dddb66e48c634e1200ce1d418592e20460ff66e09a0d54486f3",
+        "custody/connection-highwater.json": "cf4d2b456678b3bb2d4b69ae41bb3acb8c68b34fcb05eff2a96bdee4706c0705",
+        "custody/connection-state.enc": "ccef1b64f8693440e838e12dbefd1d587b0843b131ab9ba9766c761103dcd2c4",
+        "custody/connection-store.lock": "b3fa13a75b0557cbd6313973379556a80e1f4848ac4cd30ae2752bb0a668fbdd"
+      },
+      "quota_consumed": true,
+      "state_mode": "reconciliation",
+      "external_writes": 0
+    },
+    "/var/lib/collab-connection-setup/state-recovery-r3qi9lfl/dead-lock-0.json": {
+      "pid": 1377,
+      "did": "did:key:z6MkwUpBcqyq9cS2CDnUkCfucGngc3JsocoDqvB6LiULyP5d"
+    },
+    "/var/lib/collab-connection-setup/state-recovery-0o9o18ig/before.json": {
+      "mode": "DUMMY_OFFLINE",
+      "state_mode": "pristine",
+      "files": {}
+    },
+    "/var/lib/collab-connection-setup/state-recovery-0o9o18ig/stopped.json": {
+      "files": {}
+    },
+    "/var/lib/collab-connection-setup/state-recovery-0o9o18ig/after.json": {
+      "files": {},
+      "quota_consumed": null,
+      "state_mode": "pristine",
+      "external_writes": 0
+    },
+    "/var/lib/collab-connection-setup/result.json": {
+      "uid": 995,
+      "credential_read": true,
+      "invocation_id": "9a4073a6de89431bbe8706d40cbc63f8",
+      "schema": 2,
+      "dummy_credential_sha256": "c3f114bc4ccff3931f55dbc6764a35f7752188c1cc752eda12250392fe96fb02",
+      "secret_absent_env": true,
+      "secret_absent_argv": true,
+      "inet_errno": 97,
+      "inet_denied": true,
+      "fork_errno": 1,
+      "fork_denied": true,
+      "no_new_privileges": true,
+      "credential_path": "/run/credentials/collab-boundary-probe.service",
+      "cross_uid": {
+        "collab-worker": true,
+        "collab-approval": true,
+        "collab-transport": true
+      },
+      "roles": {
+        "collab-worker": 999,
+        "collab-approval": 997,
+        "collab-signer": 995,
+        "collab-transport": 994
+      },
+      "external_writes": 0
+    }
+  },
+  "tests": {
+    "signer": 91,
+    "approval": 19,
+    "custody_restart": 12,
+    "ipc": 4,
+    "regression": 108,
+    "boundary": 19,
+    "host": 7,
+    "recovery": 16,
+    "systemd_model": 5,
+    "rootless_four_role": 1,
+    "startup": 2,
+    "ledger": 4
+  },
+  "test_note": "All passed. Signer91 is included in regression108.",
+  "negative_reproduction": {
+    "baseline_smoke_recovery_tests": 10,
+    "errors_after_GC_model_before_fix": 3
+  },
+  "historical": {
+    "checked": 11946,
+    "changed": 0
+  },
+  "real_secret_access": 0,
+  "external_writes": 0,
+  "push": false,
+  "claude_review": {
+    "provider": "Claude Code",
+    "model": "claude-sonnet-5",
+    "initial_blocking_findings": 0,
+    "final_verdict": "GO_DUMMY_OFFLINE_HUMAN_CHECKPOINT_ONLY",
+    "fresh_clean_retry_condition": "MET",
+    "real_secret": "NO_GO",
+    "external_write": "NO_GO",
+    "report": "host-recovery-claude-review-20260922.md"
+  },
+  "disposable_distro_removed": true,
+  "wsl_interop": {
+    "temporarily_lost_after_disposable_boot": true,
+    "restored_with_explicit_additional_root_approval": true,
+    "persistent_configuration_changed": false
+  }
+}

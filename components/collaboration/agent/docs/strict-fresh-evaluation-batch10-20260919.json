@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "batch": 10,
+  "evaluation": "strict fresh generalization",
+  "starting_commit": "8e6f7369b8dbb28e0c1bc9f832e047b434f6a44f",
+  "code_changes": 0,
+  "sampling_rule": {
+    "fixed_at": "2026-09-19T08:13:42.278898Z",
+    "url": "https://technocore.chat/r/tclk-offers?format=json&limit=200",
+    "planned_gets": 3,
+    "minimum_start_interval_seconds": 60,
+    "selection": "all offer jobs in chronological sample and record order; no content or result filtering",
+    "failure_policy": "failed planned sample consumes its slot; no addition or replacement",
+    "adaptation": "none"
+  },
+  "samples": [
+    {
+      "sample": "01",
+      "collection_started_at": "2026-09-19T08:14:41.470205+00:00",
+      "collection_finished_at": "2026-09-19T08:14:45.422907+00:00",
+      "seq_first": 6852245,
+      "seq_last": 6852444,
+      "records": 200,
+      "offers": 24,
+      "fresh_tasks": 22,
+      "missing_or_malformed_jobs": 2,
+      "snapshot_sha256": "b6d0a5a75a9aeff43d17b910369a113cb1912b3cffe64a31a56f55426f5ac988",
+      "network": {"fetches": 15, "bytes": 33518, "cache_hits": 0},
+      "metrics": {"tasks": 22, "material_complete": 7, "classifier_reached": 7, "solver_reached": 1, "COMPLETED": 0, "HUMAN_REVIEW": 1, "UNKNOWN": 21, "false_complete": 0}
+    },
+    {
+      "sample": "02",
+      "collection_started_at": "2026-09-19T08:15:49.958516+00:00",
+      "collection_finished_at": "2026-09-19T08:15:50.400245+00:00",
+      "seq_first": 6852700,
+      "seq_last": 6852899,
+      "records": 200,
+      "offers": 36,
+      "fresh_tasks": 36,
+      "missing_or_malformed_jobs": 0,
+      "snapshot_sha256": "9940ab1b4d0026c2c8916dcdec02cbb0aa85361c1c2cce6edf44c9b6c6b84663",
+      "network": {"fetches": 22, "bytes": 0, "cache_hits": 0},
+      "metrics": {"tasks": 36, "material_complete": 0, "classifier_reached": 0, "solver_reached": 0, "COMPLETED": 0, "HUMAN_REVIEW": 0, "UNKNOWN": 36, "false_complete": 0}
+    },
+    {
+      "sample": "03",
+      "collection_started_at": "2026-09-19T08:16:53.102453+00:00",
+      "collection_finished_at": "2026-09-19T08:16:54.094037+00:00",
+      "seq_first": 6853191,
+      "seq_last": 6853390,
+      "records": 200,
+      "offers": 22,
+      "fresh_tasks": 22,
+      "missing_or_malformed_jobs": 0,
+      "snapshot_sha256": "37c7a45cbc7ba7b5481ea4ef2572ca85a2ac16a161ba005423fb7ac3ab61b93b",
+      "network": {"fetches": 14, "bytes": 0, "cache_hits": 0},
+      "metrics": {"tasks": 22, "material_complete": 0, "classifier_reached": 0, "solver_reached": 0, "COMPLETED": 0, "HUMAN_REVIEW": 0, "UNKNOWN": 22, "false_complete": 0}
+    }
+  ],
+  "metrics": {
+    "fresh_tasks": 80,
+    "material_complete": 7,
+    "classifier_reached": 7,
+    "existing_exact_template_matches": 0,
+    "solver_reached": 1,
+    "COMPLETED": 0,
+    "HUMAN_REVIEW": 1,
+    "UNKNOWN": 79,
+    "false_complete": 0
+  },
+  "freshness": {
+    "prior_snapshot_offer_count": 118,
+    "fresh_job_offer_count": 80,
+    "job_id_overlap": 0,
+    "canonical_job_overlap": 0,
+    "offer_text_overlap": 0,
+    "record_overlap": 0,
+    "complete_specs": 7,
+    "complete_spec_rows_matching_prior_content": 5,
+    "unseen_complete_specs": 2,
+    "note": "fresh offer identity does not imply semantically unseen task content"
+  },
+  "confirmed_occurrence_frequency": {
+    "denominator_material_complete": 7,
+    "target_exact_templates": 0,
+    "rate_among_material_complete": "0/7",
+    "confirmed_rate_among_all_fresh_tasks": "0/80",
+    "unknown_due_to_incomplete_material": 73
+  },
+  "capabilities": {
+    "validation.ordered_seq_pair@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "assessment": "not_observed_unconfirmed"},
+    "math.normal_nim@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "assessment": "not_observed_unconfirmed"},
+    "docs.quoted_limit@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "assessment": "not_observed_unconfirmed"},
+    "docs.agent_fields@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "assessment": "not_observed_unconfirmed"},
+    "validation.integer_reference@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "runtime_validations": 0, "independent_oracle_validations": 0, "assessment": "not_observed_unconfirmed"},
+    "tables.inline@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "assessment": "not_observed_unconfirmed"},
+    "math.shortest_path@1": {"confirmed_tasks": 0, "solver_reached": 0, "completed": 0, "assessment": "not_observed_unconfirmed"}
+  },
+  "inline_table_length_evidence": [],
+  "integer_reference_verification_scope": {
+    "runtime": "exact envelope, canonical integer/range/operand consistency, and worker-to-supplied-reference comparison",
+    "independent_oracle": "separate parser and output decision/value/citation comparison",
+    "excluded_from_both": "mathematical proof that the author-supplied reference is the true modular inverse",
+    "batch10_observations": 0
+  },
+  "errors": {
+    "FETCH_FAILURE": 36,
+    "MISSING_TASK_REFERENCE": 27,
+    "UNRESOLVED_REFERENCE": 4,
+    "MALFORMED_REFERENCE": 3,
+    "SOURCE_NOT_ALLOWED": 1,
+    "TRUNCATION_SUSPECTED": 1,
+    "INCOMPLETE_SPEC": 1
+  },
+  "verification": {
+    "double_state_replay_identical": true,
+    "audits_valid": true,
+    "implementation_lock_files": 15,
+    "implementation_lock_unchanged": true,
+    "tests_passed": 86,
+    "tests_skipped": 0,
+    "replay_network_requests": 0,
+    "external_writes": 0,
+    "source_status": "SOURCE_UNVERIFIED"
+  },
+  "evidence": {
+    "preregistration_sha256": "8d112f6960f5a8a707b64a77393a19649cf7009276d5693e6eb0ffb296b55dfd",
+    "implementation_lock_sha256": "f5f0cbb5a2d56e3fab88ef7e57424ed76dd1b1c5733cda1b1a1e4ac4f1a2d770",
+    "analysis_sha256": "17485c3098147d22e0db200c46c299197c86c67cdcd666b136ee0b8a95e2fdf1",
+    "evidence_manifest_files": 380,
+    "evidence_manifest_sha256": "fc4ad470fd0e208b22231716f46b1b3cc49c99ccca10c8723281c7064c113382",
+    "replay_summary_sha256": {
+      "01": "dea6f27245f24c42fa413914163eaaace40e59fcfb9c19b78ae8223b86b8aab8",
+      "02": "8b340a328874a152c46d21d0cf22656910e8a9514300735558ed77111f5dada0",
+      "03": "bb4496248dd0c16c104bdb4fa133e7e8a5f4b244af2e1229b50dfd457b822d43"
+    }
+  },
+  "decision": {
+    "unseen_reproduced_capabilities": [],
+    "failed_matching_capabilities": [],
+    "unconfirmed_capabilities": [
+      "validation.ordered_seq_pair@1",
+      "math.normal_nim@1",
+      "docs.quoted_limit@1",
+      "docs.agent_fields@1",
+      "validation.integer_reference@1",
+      "tables.inline@1",
+      "math.shortest_path@1"
+    ],
+    "next": "read_only_operation",
+    "basis": "No false complete, no matching target task, and no repeated complete new template supporting capability development. Preserve fail-closed behavior and label Batch 9 families as strict-fresh unconfirmed."
+  }
+}

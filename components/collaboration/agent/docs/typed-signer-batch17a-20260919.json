@@ -1,0 +1,437 @@
+{
+  "batch": "17A",
+  "status": "OFFLINE_COMPLETE_REAL_PILOT_NOT_AUTHORIZED",
+  "verified_at": "2026-09-19T14:57:51.034789+00:00",
+  "start": {
+    "head": "e26f040980ae5bab94dea722e27ca5596ee13e9f",
+    "worktree": "clean",
+    "at": "2026-09-19T14:15:58.644130+00:00",
+    "handoff_difference": null
+  },
+  "end": {
+    "head": "commit containing this report; exact SHA in .local/batch17a/final-state.json",
+    "precommit_head": "e26f040980ae5bab94dea722e27ca5596ee13e9f",
+    "push": false
+  },
+  "official": {
+    "repository": "https://github.com/flop-labs/tclk",
+    "commit": "5cc4ab93efbc8999a3a7e1471b639deca25998ea",
+    "version": "0.1.0",
+    "runtime_files_verified": 63,
+    "source_files_verified": 16,
+    "original_acquisition": "2026-09-19 13:24 UTC (Batch16 ledger)",
+    "checkout_clean": true,
+    "production_deployment_confirmed": false,
+    "dependencies": [
+      {
+        "package": "@noble/curves",
+        "version": "2.4.0",
+        "integrity": "sha512-P4/62zrgfH33CneE3Dn4WhJVA22YUU0eR51wKIan4NVRvwsA0YnPTwWGpNbpuacSujmSFLvyzpyuR30+fbq2Ew=="
+      },
+      {
+        "package": "@noble/hashes",
+        "version": "2.4.0",
+        "integrity": "sha512-X5XaVWZIBCT7HHZGm5I7ZQXDwLG+bGXuSrMQAW+7Zvl87h1kmc1ZB1VSRJcpUfoUrGQp4Fkoxm5kZ+Ms+aW+eA=="
+      },
+      {
+        "package": "@scure/base",
+        "version": "2.4.0",
+        "integrity": "sha512-thZ1TuJwFwBblOhgsjDKvvGirBxNp+wSvY/DR6tJBJOTDhdAAcHJ8Vbr2eFnqaxeca4+t0i9KBf+uHYGWwZORg=="
+      }
+    ],
+    "new_dependencies": 0,
+    "node": "v22.22.0"
+  },
+  "authorization": {
+    "actions": [
+      "ACCEPT",
+      "INITIAL_HEARTBEAT",
+      "DELIVERY_GCD",
+      "REVEAL"
+    ],
+    "max_candidates_per_session": 1,
+    "max_contracts_per_session": 1,
+    "max_attempts_per_action": 1,
+    "gate": "separate trusted supervisor pipe; mock approval, not authenticated Human UI",
+    "key_mode": "TEST_EPHEMERAL only",
+    "real_key_access": false,
+    "real_credentials": false,
+    "technocore_reads_this_batch": 0,
+    "technocore_writes": 0,
+    "public_transport_implemented": false,
+    "automatic_accept": false,
+    "automatic_resend": false,
+    "automatic_fallback": false,
+    "cross_session_real_quota": "not implemented; must be resolved before Real connection"
+  },
+  "regression": {
+    "baseline_tests": 107,
+    "final_python_tests": 108,
+    "passed": 108,
+    "failed": 0,
+    "skip": 0,
+    "elapsed_seconds": 21.62,
+    "exit_code": 0,
+    "nested_node_tests": 63,
+    "nested_not_added_to_python_count": true,
+    "command": "python3 -B -m unittest discover -s tests -v",
+    "log": ".local/batch17a/regression-resumed.log",
+    "log_sha256": "f0c9a5b3bb481740c78eb853b7e1f20fc888402fee8383d63bbd3750259040c9"
+  },
+  "integration": {
+    "mode": "TEST_EPHEMERAL_MOCK_ONLY",
+    "results": [
+      {
+        "name": "happy path: approved four typed actions, mock claim, redacted journal",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action LOCK",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action REFUND",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action CANCEL",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action RECEIPT",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action SIGN_TEXT",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action OFFER",
+        "passed": true
+      },
+      {
+        "name": "unsupported signer action heartbeat",
+        "passed": true
+      },
+      {
+        "name": "ACCEPT binding: did",
+        "passed": true
+      },
+      {
+        "name": "ACCEPT binding: room",
+        "passed": true
+      },
+      {
+        "name": "ACCEPT binding: offer",
+        "passed": true
+      },
+      {
+        "name": "ACCEPT binding: contract",
+        "passed": true
+      },
+      {
+        "name": "ACCEPT binding: ref",
+        "passed": true
+      },
+      {
+        "name": "ACCEPT binding: sourceDigest",
+        "passed": true
+      },
+      {
+        "name": "arbitrary frame / command / secret fields cannot expand permission",
+        "passed": true
+      },
+      {
+        "name": "Worker cannot invoke approval channel",
+        "passed": true
+      },
+      {
+        "name": "approval digest mismatch rejected",
+        "passed": true
+      },
+      {
+        "name": "signed request differs from approved payload",
+        "passed": true
+      },
+      {
+        "name": "duplicate approval and duplicate signature rejected",
+        "passed": true
+      },
+      {
+        "name": "expired approval cannot sign",
+        "passed": true
+      },
+      {
+        "name": "expired approval cannot attempt a previously signed payload",
+        "passed": true
+      },
+      {
+        "name": "stale observation blocks signing",
+        "passed": true
+      },
+      {
+        "name": "stale / expired OFFER rejected on admission",
+        "passed": true
+      },
+      {
+        "name": "invalid signature rejected on admission",
+        "passed": true
+      },
+      {
+        "name": "malformed tclk frame fails without reflecting bytes",
+        "passed": true
+      },
+      {
+        "name": "unsafe numeric nonce rejected instead of rounded",
+        "passed": true
+      },
+      {
+        "name": "19-digit decimal nonce remains exact",
+        "passed": true
+      },
+      {
+        "name": "payee-role offer rejected",
+        "passed": true
+      },
+      {
+        "name": "Real key configuration and Real mode not accepted",
+        "passed": true
+      },
+      {
+        "name": "non-paper rail rejected",
+        "passed": true
+      },
+      {
+        "name": "no-value attestation required from trusted Gate",
+        "passed": true
+      },
+      {
+        "name": "unbound task digest rejected",
+        "passed": true
+      },
+      {
+        "name": "generic delivery text rejected",
+        "passed": true
+      },
+      {
+        "name": "second candidate blocked even before ACCEPT",
+        "passed": true
+      },
+      {
+        "name": "duplicate ACCEPT cannot allocate new nonce or contract",
+        "passed": true
+      },
+      {
+        "name": "REVEAL without LOCK rejected",
+        "passed": true
+      },
+      {
+        "name": "Delivery without LOCK rejected",
+        "passed": true
+      },
+      {
+        "name": "Task-required heartbeat gates Delivery",
+        "passed": true
+      },
+      {
+        "name": "heartbeat refused when trusted Task admission does not require it",
+        "passed": true
+      },
+      {
+        "name": "wrong LOCK contract rejected by official fold",
+        "passed": true
+      },
+      {
+        "name": "wrong LOCK sender / party rejected",
+        "passed": true
+      },
+      {
+        "name": "signature / frame.from mismatch rejected",
+        "passed": true
+      },
+      {
+        "name": "wrong room binding rejects signed LOCK",
+        "passed": true
+      },
+      {
+        "name": "wrong lock.ref cannot authorize Delivery or REVEAL",
+        "passed": true
+      },
+      {
+        "name": "official PaperRail verification is separate from signed LOCK",
+        "passed": true
+      },
+      {
+        "name": "legacy JSON Paper note unsupported without repair",
+        "passed": true
+      },
+      {
+        "name": "record gap / epoch change rejected",
+        "passed": true
+      },
+      {
+        "name": "Delivery must exactly match admitted verified answer",
+        "passed": true
+      },
+      {
+        "name": "REVEAL waits for observed Delivery",
+        "passed": true
+      },
+      {
+        "name": "duplicate / conflicting REVEAL and preimage injection blocked",
+        "passed": true
+      },
+      {
+        "name": "default network path disabled, including GET write URLs",
+        "passed": true
+      },
+      {
+        "name": "response lost after append: exact signed envelope reconciles, no retry",
+        "passed": true
+      },
+      {
+        "name": "response lost before append: absence is ambiguous, no fresh nonce retry",
+        "passed": true
+      },
+      {
+        "name": "retention loss never proves unsent",
+        "passed": true
+      },
+      {
+        "name": "REVEAL response lost reconciles without echoing secret",
+        "passed": true
+      },
+      {
+        "name": "STOP blocks signing and send after prior approval",
+        "passed": true
+      },
+      {
+        "name": "restart with existing journal refuses new key/session and second ACCEPT",
+        "passed": true
+      },
+      {
+        "name": "concurrent duplicate requests serialize to exactly one PREPARED",
+        "passed": true
+      },
+      {
+        "name": "record metadata does not accept coerced string timestamps or seq",
+        "passed": true
+      },
+      {
+        "name": "claim margin rechecked even after fresh observations",
+        "passed": true
+      },
+      {
+        "name": "unsafe refund gap rejected at admission",
+        "passed": true
+      },
+      {
+        "name": "STOP blocks already signed and prepared effect",
+        "passed": true
+      },
+      {
+        "name": "repeated identical observation is idempotent; conflicting seq fails",
+        "passed": true
+      }
+    ],
+    "passed": 63,
+    "failed": 0,
+    "planned": 63,
+    "real_credentials": false,
+    "public_writes": 0,
+    "isolation": "separate signer process, separate gate pipe, Node fs permissions, mock-only effect"
+  },
+  "integration_evidence": {
+    "path": ".local/batch17a/verification-i5qexvdb/summary.json",
+    "sha256": "35a992c252ab0e176b0560ec44bb49eadc406b5d6b5381f4d0e2d5d66f3fd4c9"
+  },
+  "candidate": {
+    "source_digest": "7b9f40436cab2d4034119ebc4f125feb2b4e08800a2051a82662bce7ba7bc649",
+    "answer": "gcd=1 lcm=30662344343776909681828104055662",
+    "independent_verification": {
+      "kind": "gcd_lcm",
+      "operands": [
+        72955676151262,
+        420287302665846201
+      ],
+      "gcd": 1,
+      "lcm": 30662344343776909681828104055662,
+      "bezout_coefficients": [
+        196707049564492510,
+        -34145442209819
+      ],
+      "certificate_valid": true,
+      "method": "extended Euclidean Bezout certificate and product identity; independent source/output parsing",
+      "expected_answer": "gcd=1 lcm=30662344343776909681828104055662",
+      "valid": true
+    },
+    "family": "math.gcd_lcm",
+    "heartbeat_required": true,
+    "task_format_evidence": "Batch16 GCD contract 00d2d493c303559c and frozen full spec",
+    "source": ".local/batch15/session-01/frozen/native-6948666"
+  },
+  "preservation": {
+    "files_checked": 11495,
+    "changed": [],
+    "baseline_sha256": "cb1bfe543fbddc6eed3a2c0e4c004568d903ac1d0625b894a0b89d60ca0a4e39"
+  },
+  "secret_log_check": {
+    "journals": 247,
+    "events": 1811,
+    "forbidden_payload_keys": 0,
+    "raw_ipc_saved": false,
+    "test_key_saved": false,
+    "preimage_saved": false,
+    "scope": "new Batch17A case journals, signer output guards, in-memory assertions; historical files preserved"
+  },
+  "development_issues": [
+    {
+      "issue": "Node Permission Model fsync denied",
+      "resolution": "supervisor durable writer ACK; child has no fs write permission"
+    },
+    {
+      "issue": "extra fd fs stream blocked shutdown",
+      "resolution": "Socket fd classifier returned UNKNOWN; fd read plus durable CLOSED ACK then parent endpoint close/EOF; all final fixtures close without forced kill"
+    },
+    {
+      "issue": "diagnostic import path",
+      "resolution": "one correction; no signing effect"
+    },
+    {
+      "issue": "new deadline test retained old offer ref",
+      "resolution": "fixture ref corrected; claim deadline and remaining tests pass in final 63-case run"
+    }
+  ],
+  "limitations": [
+    "TEST context and PAPER asset only",
+    "No hostile same-UID OS isolation guarantee",
+    "No Human authentication UI",
+    "No durable secret recovery or Real nonce continuity",
+    "No live board adapter or public transport",
+    "No real counterparty acceptance",
+    "Batch16 incompatible real Paper Note and claim owner unresolved",
+    "Independent review pending"
+  ],
+  "stop": "Gate stop blocks signing/effects; supervisor close or kill; read-only reconcile permitted before process exit",
+  "next_phase_started": false,
+  "resume": {
+    "authorized": "Human explicitly authorized routine Offline debugging through tests, diff review and local commit",
+    "head_measured": "e26f040980ae5bab94dea722e27ca5596ee13e9f",
+    "worktree": "same eight new Batch17A files; no other changes",
+    "stopped_report": ".local/batch17a/stopped-report.json",
+    "stopped_report_sha256": "28ae18d96c6a80e35bccb681c959aea205ed780d13649fa5448d3b121e0c1901",
+    "fd_diagnosis": ".local/batch17a/fd-diagnosis.json",
+    "fd_diagnosis_sha256": "39730b00c266f3699280a70899477bf915f6ca1d563d5ea423bbab06f22373ee",
+    "permissions_expanded": false,
+    "new_dependencies": 0,
+    "signer_actions_expanded": false
+  },
+  "implementation_sha256": {
+    "src/collaboration_agent/pilot_protocol.mjs": "3f3469f512bb9c628a4a3128974d9a947346a58350798d0f33a3fe57a8f2fd14",
+    "src/collaboration_agent/pilot_client.mjs": "0e7f2cc5f3b6f6ba0660ff16272ff422f06fe1c885a400e59f042d806415344a",
+    "src/collaboration_agent/pilot_signer.mjs": "be33ad67fbbde553882947100e1cccc8a2c69f5724aaa3c73ef53aa3eec19ec3",
+    "src/collaboration_agent/tclk_pin.json": "66f653878691106650ae5e98638b3ed9fa1546c2fd7efc0665b3a3050c49e6f8",
+    "tests/pilot_signer.mjs": "62121d58726b29eeea6b68f742e59c1b01cf68b776ae3383dba29d9bf5c5446d",
+    "tests/test_pilot_signer.py": "8458aa00cb5e398c10b25588551e4e465cfef9b04a70fdfc9fe4b712c5f2d5c6"
+  }
+}

@@ -1,0 +1,1703 @@
+{
+  "kind": "quote_omitted_public_summary",
+  "limitations": [
+    "Derived selection with original quotations and response bodies omitted.",
+    "Not a valid outcome, complete proof, or reproducible replay fixture.",
+    "Digests identify original evidence or materials, not this summary JSON.",
+    "COMPLETED means local processing only; it does not establish approval or external acceptance.",
+    "Historical metrics describe the recorded inputs and revision, not current production readiness."
+  ],
+  "observations": [
+    {
+      "metric": 5,
+      "source_pointer": "/batch"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/batch3/COMPLETED"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/batch3/HUMAN_REVIEW"
+    },
+    {
+      "metric": 24,
+      "source_pointer": "/batch3/UNKNOWN"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/batch3/classifier_reached"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/batch3/false_complete"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/batch3/material_complete"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/batch3/solver_reached"
+    },
+    {
+      "metric": 25,
+      "source_pointer": "/batch3/tasks"
+    },
+    {
+      "metric": 2,
+      "source_pointer": "/batch4/COMPLETED"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/batch4/HUMAN_REVIEW"
+    },
+    {
+      "metric": 22,
+      "source_pointer": "/batch4/UNKNOWN"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/batch4/classifier_reached"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/batch4/false_complete"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/batch4/material_complete"
+    },
+    {
+      "metric": 5,
+      "source_pointer": "/batch4/solver_reached"
+    },
+    {
+      "metric": 25,
+      "source_pointer": "/batch4/tasks"
+    },
+    {
+      "metric": 3,
+      "source_pointer": "/batch5/COMPLETED"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/batch5/HUMAN_REVIEW"
+    },
+    {
+      "metric": 21,
+      "source_pointer": "/batch5/UNKNOWN"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/batch5/classifier_reached"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/batch5/false_complete"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/batch5/material_complete"
+    },
+    {
+      "metric": 5,
+      "source_pointer": "/batch5/solver_reached"
+    },
+    {
+      "metric": 25,
+      "source_pointer": "/batch5/tasks"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/external_writes"
+    },
+    {
+      "digest": "22ae000cb0dbe30fed1bcdf2be54d82b84c75e1db38771388abdef24bda86da8",
+      "source_pointer": "/frozen_bundle_digests/native-6343689"
+    },
+    {
+      "digest": "b2b3288553c3bcde2d328682cc3c704216989f76312f2cc59abd38c7b2ddeb72",
+      "source_pointer": "/frozen_bundle_digests/native-6343690"
+    },
+    {
+      "digest": "bff7c7f7cb4e735d18467bcd2df3a0539164d27bc9bb3b62ce1218c4fd705020",
+      "source_pointer": "/frozen_bundle_digests/native-6343695"
+    },
+    {
+      "digest": "ce9ce0cba35039a7b6b13854d1f347ec79abfcba4a445c05855a8373f99a981b",
+      "source_pointer": "/frozen_bundle_digests/native-6343699"
+    },
+    {
+      "digest": "3303275dc176493be1f235a7c9a613ab96c57459ffd884b4a29a4b374069054f",
+      "source_pointer": "/frozen_bundle_digests/native-6343703"
+    },
+    {
+      "digest": "4ec77ee9968afccf00ab4977579a5d3e424891aead30d8bdc67c58ca0091991c",
+      "source_pointer": "/frozen_bundle_digests/native-6343712"
+    },
+    {
+      "digest": "38f24e0d8cfde07ecc1caabbdb62c45ba166e76791cd1bf8f67b1d3bf06d5820",
+      "source_pointer": "/frozen_bundle_digests/native-6343713"
+    },
+    {
+      "digest": "ea7df58215a88f349e887f9c2b696301b2e8dc2cb7aaa86156def1a6df9934d5",
+      "source_pointer": "/frozen_bundle_digests/native-6343716"
+    },
+    {
+      "digest": "d890efd2fba68aa599b4e6e684fcdf520589bec3bd1e30e11aca2591901a3920",
+      "source_pointer": "/frozen_bundle_digests/native-6343727"
+    },
+    {
+      "digest": "7aa0d2b34e9b975860e53a50aa27b1b3d06083099b7853f0e73e5e7931d3d505",
+      "source_pointer": "/frozen_bundle_digests/native-6343730"
+    },
+    {
+      "digest": "58ca49607cd04ef40379162b9f20a4fdb95293df64b99d4fcc7af3eb11324eeb",
+      "source_pointer": "/frozen_bundle_digests/native-6343741"
+    },
+    {
+      "digest": "4735649077ce6f6a4c7ef31e49eb193807028986dc01e598bfdb49b3eb4a7a78",
+      "source_pointer": "/frozen_bundle_digests/native-6343746"
+    },
+    {
+      "digest": "7538cec4e35fc98401dd570a534e8ac920b0fd1910f67187ea04c9b48ae4e046",
+      "source_pointer": "/frozen_bundle_digests/native-6343749"
+    },
+    {
+      "digest": "8c5b38a230822e5b76ce83f0217b125e9c5c16554feedf864c793da538cdc3cb",
+      "source_pointer": "/frozen_bundle_digests/native-6343753"
+    },
+    {
+      "digest": "ec1d123c2d1299c1cd9fcce7e8f4c4df43dd4167d514e3946dc11f3d1daa9118",
+      "source_pointer": "/frozen_bundle_digests/native-6343759"
+    },
+    {
+      "digest": "048a1365a70a08977e9438b3d55b0e150a3aa37acbba46349bbdc11d35e8e3c9",
+      "source_pointer": "/frozen_bundle_digests/native-6343763"
+    },
+    {
+      "digest": "55dcef85aa34dbf72f3461154bf6f83a6514e1a40bc94a85ed5a84cfaf7b27c0",
+      "source_pointer": "/frozen_bundle_digests/native-6343775"
+    },
+    {
+      "digest": "8e5e7e3a0f9ebab718513cdeee942a845145c2b39a404b2d0b0b54a80e4c4de8",
+      "source_pointer": "/frozen_bundle_digests/native-6343779"
+    },
+    {
+      "digest": "40e1fcaac733562591172264fcd5bbf7d832ff390454a479113caf86dccecc28",
+      "source_pointer": "/frozen_bundle_digests/native-6343793"
+    },
+    {
+      "digest": "0b7a62bcf3974de67fa69905695aac49bd1a3d7ae9f4855f5d84eb6b7aa25527",
+      "source_pointer": "/frozen_bundle_digests/native-6343801"
+    },
+    {
+      "digest": "0999763ceee7aeb41bfa306992a117ae7f2b2a9c83912edb3eca76a77f1a2833",
+      "source_pointer": "/frozen_bundle_digests/native-6343811"
+    },
+    {
+      "digest": "59c031b0990852b38d803fedf633ffd9c3c7a3215089e774069c9aef69fa340c",
+      "source_pointer": "/frozen_bundle_digests/native-6343814"
+    },
+    {
+      "digest": "a242bceba26204f7d49a33ee24ca84919bad330b1f826bb3480e5ca2e6970587",
+      "source_pointer": "/frozen_bundle_digests/native-6343825"
+    },
+    {
+      "digest": "34fe5b4ec6234c2e0c286f39d4a9f6b3ab3c08bcc0f3b6956d32fecab5154d47",
+      "source_pointer": "/frozen_bundle_digests/native-6343881"
+    },
+    {
+      "digest": "e04b08dd03fa7da2231b30cab1a335f25847c8b63e72deabbaed312e2ba1e7ea",
+      "source_pointer": "/frozen_bundle_digests/native-6343883"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/network_requests"
+    },
+    {
+      "digest": "12e3699562df1c5c3969c09e9690bae5e31ce09927a64db737bb3dc8401b7f8f",
+      "source_pointer": "/results_sha256"
+    },
+    {
+      "digest": "22ae000cb0dbe30fed1bcdf2be54d82b84c75e1db38771388abdef24bda86da8",
+      "source_pointer": "/rows/0/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343689",
+      "source_pointer": "/rows/0/id"
+    },
+    {
+      "source_id": "task-a8dd5881-open",
+      "source_pointer": "/rows/0/job_id"
+    },
+    {
+      "source_pointer": "/rows/0/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/0/materials/0/id"
+    },
+    {
+      "digest": "76aa06ecfecab7a1b49fb13bee731ca93fb6b41cac29451f18c176ce6211dc13",
+      "source_pointer": "/rows/0/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "230e86099b0fb795ad3a8f71c9fb96bede8c7828dd66b6a9b41a311b58bcc254",
+      "source_pointer": "/rows/0/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/task-a8dd5881-",
+      "source_pointer": "/rows/0/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/0/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "source_id": "s2",
+      "source_pointer": "/rows/0/materials/1/id"
+    },
+    {
+      "digest": "4fd57fb18f5f9a4c16771238f5e3d2c77b10c3592c8315da23101f30719e02b3",
+      "source_pointer": "/rows/0/materials/1/normalized_sha256"
+    },
+    {
+      "digest": "4fd57fb18f5f9a4c16771238f5e3d2c77b10c3592c8315da23101f30719e02b3",
+      "source_pointer": "/rows/0/materials/1/raw_sha256"
+    },
+    {
+      "locator": "https://raw.githubusercontent.com/flop-labs/technocore-chat/main/README.md",
+      "source_pointer": "/rows/0/materials/1/reference"
+    },
+    {
+      "source_pointer": "/rows/0/materials/1/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "77b939973ff67523325ab05b0aeed401428a389d9cfbac9578046ef1025dc2f4",
+      "source_pointer": "/rows/0/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/0/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "22ae000cb0dbe30fed1bcdf2be54d82b84c75e1db38771388abdef24bda86da8",
+      "source_pointer": "/rows/0/result/bundle_sha256"
+    },
+    {
+      "digest": "2a77263ceb6401955bb3e96894bb6c0422ec93068cb9ed2b4e45cfd769cfc9ee",
+      "source_pointer": "/rows/0/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/0/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/0/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/0/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/0/verified",
+      "verdict": false
+    },
+    {
+      "digest": "ce9ce0cba35039a7b6b13854d1f347ec79abfcba4a445c05855a8373f99a981b",
+      "source_pointer": "/rows/1/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343699",
+      "source_pointer": "/rows/1/id"
+    },
+    {
+      "source_id": "VISION-TOKENIZE-3232CA",
+      "source_pointer": "/rows/1/job_id"
+    },
+    {
+      "source_pointer": "/rows/1/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "4dbfe265fb6e834c0ccbb21cdc7392e9888677ba9624917e346c7517e476b2a3",
+      "source_pointer": "/rows/1/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/1/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "ce9ce0cba35039a7b6b13854d1f347ec79abfcba4a445c05855a8373f99a981b",
+      "source_pointer": "/rows/1/result/bundle_sha256"
+    },
+    {
+      "digest": "719331d6343a43b4922482581394171dc1be20b11cc534dac2a2eb95ef7c6ae1",
+      "source_pointer": "/rows/1/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/1/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/1/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/1/verified",
+      "verdict": false
+    },
+    {
+      "digest": "8c5b38a230822e5b76ce83f0217b125e9c5c16554feedf864c793da538cdc3cb",
+      "source_pointer": "/rows/10/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343753",
+      "source_pointer": "/rows/10/id"
+    },
+    {
+      "source_id": "task-8088dfab",
+      "source_pointer": "/rows/10/job_id"
+    },
+    {
+      "source_pointer": "/rows/10/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/10/materials/0/id"
+    },
+    {
+      "digest": "d11aa23d14f8b837db2c1179c486becea30f249383e0387446f6837c2ae00a01",
+      "source_pointer": "/rows/10/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "ec54d29f3884b3895dd1e95e764cc2ecaef5fc24de45a64712c2afff026220f8",
+      "source_pointer": "/rows/10/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-ab/task-8088dfab",
+      "source_pointer": "/rows/10/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/10/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "a51c837635feef86602511858b1c3b8b9b5fd595310fbbfdd8c362e319c86f44",
+      "source_pointer": "/rows/10/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/10/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "8c5b38a230822e5b76ce83f0217b125e9c5c16554feedf864c793da538cdc3cb",
+      "source_pointer": "/rows/10/result/bundle_sha256"
+    },
+    {
+      "digest": "6621923ed69ede138109ebdcfde0019d83b75338187d76c4e0515caa94ca7553",
+      "source_pointer": "/rows/10/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/10/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/10/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/10/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/10/verified",
+      "verdict": false
+    },
+    {
+      "digest": "ec1d123c2d1299c1cd9fcce7e8f4c4df43dd4167d514e3946dc11f3d1daa9118",
+      "source_pointer": "/rows/11/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343759",
+      "source_pointer": "/rows/11/id"
+    },
+    {
+      "source_id": "task-2fcdab74-open",
+      "source_pointer": "/rows/11/job_id"
+    },
+    {
+      "source_pointer": "/rows/11/material_complete",
+      "verdict": false
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/11/materials/0/id"
+    },
+    {
+      "digest": "cddb2eb23441ca44d98ff09e2709ccdf92f534f41ee7d510c21d978ee6edae1c",
+      "source_pointer": "/rows/11/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "df4bb5d8b409c94f1736d96705eda6d9e23bb6cd0060abc34c69318ec80e13b5",
+      "source_pointer": "/rows/11/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/task-2fcdab74-",
+      "source_pointer": "/rows/11/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/11/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "69028065e31c668f2b8b22481b7beeba6897c591d2f3cc7b90adb7dd5c8976c5",
+      "source_pointer": "/rows/11/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/11/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "ec1d123c2d1299c1cd9fcce7e8f4c4df43dd4167d514e3946dc11f3d1daa9118",
+      "source_pointer": "/rows/11/result/bundle_sha256"
+    },
+    {
+      "digest": "833fa010f1c2ee06facced280cb56c8f1e941647d6cb5fd1b40b88e7f579ffd4",
+      "source_pointer": "/rows/11/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/11/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/11/result/status",
+      "status": "HUMAN_REVIEW"
+    },
+    {
+      "source_pointer": "/rows/11/verified",
+      "verdict": false
+    },
+    {
+      "digest": "048a1365a70a08977e9438b3d55b0e150a3aa37acbba46349bbdc11d35e8e3c9",
+      "source_pointer": "/rows/12/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343763",
+      "source_pointer": "/rows/12/id"
+    },
+    {
+      "source_id": "VISION-TOKENIZE-5EB5FD",
+      "source_pointer": "/rows/12/job_id"
+    },
+    {
+      "source_pointer": "/rows/12/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "d434b2b551c3885eeb48973d119ed2bfd5dd8c5e2e6d972dccc133b73c174bbc",
+      "source_pointer": "/rows/12/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/12/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "048a1365a70a08977e9438b3d55b0e150a3aa37acbba46349bbdc11d35e8e3c9",
+      "source_pointer": "/rows/12/result/bundle_sha256"
+    },
+    {
+      "digest": "7bba38f28e29756c8c732ac196a06d91521cf95435d41518ef5942a37299c175",
+      "source_pointer": "/rows/12/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/12/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/12/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/12/verified",
+      "verdict": false
+    },
+    {
+      "digest": "8e5e7e3a0f9ebab718513cdeee942a845145c2b39a404b2d0b0b54a80e4c4de8",
+      "source_pointer": "/rows/13/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343779",
+      "source_pointer": "/rows/13/id"
+    },
+    {
+      "source_id": "194061be6f88631740322665aadaabea",
+      "source_pointer": "/rows/13/job_id"
+    },
+    {
+      "source_pointer": "/rows/13/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "bbfa16b26f0f3664e18e17707b99c77a82f19963ca92558d72ee8f9313ecec41",
+      "source_pointer": "/rows/13/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/13/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "8e5e7e3a0f9ebab718513cdeee942a845145c2b39a404b2d0b0b54a80e4c4de8",
+      "source_pointer": "/rows/13/result/bundle_sha256"
+    },
+    {
+      "digest": "ae1a4b99d5eba1b6d54ab45c58cca7982156a5c0910b168d5dbc9cee307de649",
+      "source_pointer": "/rows/13/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/13/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/13/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/13/verified",
+      "verdict": false
+    },
+    {
+      "digest": "40e1fcaac733562591172264fcd5bbf7d832ff390454a479113caf86dccecc28",
+      "source_pointer": "/rows/14/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343793",
+      "source_pointer": "/rows/14/id"
+    },
+    {
+      "source_id": "val-92891bd7",
+      "source_pointer": "/rows/14/job_id"
+    },
+    {
+      "source_pointer": "/rows/14/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/14/materials/0/id"
+    },
+    {
+      "digest": "cace52d34bd95eb39e0d9fabe97a93526330e54ff48d2ad8e016c62925802986",
+      "source_pointer": "/rows/14/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "70dcc97f8f7a94c7600a818072a60ace040c2fbcf973419628bc78b861b4f96a",
+      "source_pointer": "/rows/14/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-d7/val-92891bd7",
+      "source_pointer": "/rows/14/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/14/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "27ab68ada180ff002553a8eb6948ef572f866b202c7d957e674e218147169c0e",
+      "source_pointer": "/rows/14/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/14/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "40e1fcaac733562591172264fcd5bbf7d832ff390454a479113caf86dccecc28",
+      "source_pointer": "/rows/14/result/bundle_sha256"
+    },
+    {
+      "digest": "2529a3b426d2ffb9649a84fc8ea6e796d3738caffa6765fb47405bc5b412067e",
+      "source_pointer": "/rows/14/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/14/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/14/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/14/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/14/verified",
+      "verdict": false
+    },
+    {
+      "digest": "0b7a62bcf3974de67fa69905695aac49bd1a3d7ae9f4855f5d84eb6b7aa25527",
+      "source_pointer": "/rows/15/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343801",
+      "source_pointer": "/rows/15/id"
+    },
+    {
+      "source_id": "POUI-VERIFY-ZERO-8C455C",
+      "source_pointer": "/rows/15/job_id"
+    },
+    {
+      "source_pointer": "/rows/15/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "02a3e0c68ef62bd2bc05e8c5fbbf4c05fd60778cedb2a3b5345c90fe6cf38598",
+      "source_pointer": "/rows/15/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/15/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "0b7a62bcf3974de67fa69905695aac49bd1a3d7ae9f4855f5d84eb6b7aa25527",
+      "source_pointer": "/rows/15/result/bundle_sha256"
+    },
+    {
+      "digest": "4ea34259b79b6ccd64d402fa7a8feb5aa441c6ba4ef479e628b84f52d5ce2c7f",
+      "source_pointer": "/rows/15/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/15/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/15/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/15/verified",
+      "verdict": false
+    },
+    {
+      "digest": "0999763ceee7aeb41bfa306992a117ae7f2b2a9c83912edb3eca76a77f1a2833",
+      "source_pointer": "/rows/16/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343811",
+      "source_pointer": "/rows/16/id"
+    },
+    {
+      "source_id": "VEC-EMBED-V4-B654AA",
+      "source_pointer": "/rows/16/job_id"
+    },
+    {
+      "source_pointer": "/rows/16/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "de98d5283fa8f3041383444d69b002d62dfd27301949503520d80440569556fc",
+      "source_pointer": "/rows/16/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/16/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "0999763ceee7aeb41bfa306992a117ae7f2b2a9c83912edb3eca76a77f1a2833",
+      "source_pointer": "/rows/16/result/bundle_sha256"
+    },
+    {
+      "digest": "34f94afab789e062e24d88066daa9ab17730ab83cef57f257025f68e41d1cb0c",
+      "source_pointer": "/rows/16/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/16/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/16/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/16/verified",
+      "verdict": false
+    },
+    {
+      "digest": "59c031b0990852b38d803fedf633ffd9c3c7a3215089e774069c9aef69fa340c",
+      "source_pointer": "/rows/17/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343814",
+      "source_pointer": "/rows/17/id"
+    },
+    {
+      "source_id": "VISION-TOKENIZE-D15C4F",
+      "source_pointer": "/rows/17/job_id"
+    },
+    {
+      "source_pointer": "/rows/17/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "f0f735706751b8c1ce0945d2a9787c50aadfc083ce84a29281640b57baceb5d9",
+      "source_pointer": "/rows/17/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/17/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "59c031b0990852b38d803fedf633ffd9c3c7a3215089e774069c9aef69fa340c",
+      "source_pointer": "/rows/17/result/bundle_sha256"
+    },
+    {
+      "digest": "876bbba6143570ba13dd33fd5600b3c25009bbda996c9f54c52caff8b8d5d1be",
+      "source_pointer": "/rows/17/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/17/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/17/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/17/verified",
+      "verdict": false
+    },
+    {
+      "digest": "34fe5b4ec6234c2e0c286f39d4a9f6b3ab3c08bcc0f3b6956d32fecab5154d47",
+      "source_pointer": "/rows/18/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343881",
+      "source_pointer": "/rows/18/id"
+    },
+    {
+      "source_id": "CODE-SYNTH-AI-D132F9",
+      "source_pointer": "/rows/18/job_id"
+    },
+    {
+      "source_pointer": "/rows/18/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "7bd136cc3b862fd03e6fe515f1e9f71229760e03930daee2dd00358d06727149",
+      "source_pointer": "/rows/18/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/18/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "34fe5b4ec6234c2e0c286f39d4a9f6b3ab3c08bcc0f3b6956d32fecab5154d47",
+      "source_pointer": "/rows/18/result/bundle_sha256"
+    },
+    {
+      "digest": "35c99f995388618850ba80fd4185edb717aaf57baaefec94c0276d5af4d180e8",
+      "source_pointer": "/rows/18/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/18/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/18/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/18/verified",
+      "verdict": false
+    },
+    {
+      "digest": "e04b08dd03fa7da2231b30cab1a335f25847c8b63e72deabbaed312e2ba1e7ea",
+      "source_pointer": "/rows/19/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343883",
+      "source_pointer": "/rows/19/id"
+    },
+    {
+      "source_id": "task-302ef8d8-open",
+      "source_pointer": "/rows/19/job_id"
+    },
+    {
+      "source_pointer": "/rows/19/material_complete",
+      "verdict": false
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/19/materials/0/id"
+    },
+    {
+      "digest": "8ee4536c6ba4dd496a3ac138ce4a38c39f98e2662852573981f085b85725b209",
+      "source_pointer": "/rows/19/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "439642732f5e18e3246e4610baa8a82c5d51c13ac20fb20e7ec032959294045d",
+      "source_pointer": "/rows/19/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/task-302ef8d8-",
+      "source_pointer": "/rows/19/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/19/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "source_id": "s2",
+      "source_pointer": "/rows/19/materials/1/id"
+    },
+    {
+      "digest": "7500ced25eb0e997b3086d8c486a5a2d18bf5f59741f22fd9310c82fca74eccd",
+      "source_pointer": "/rows/19/materials/1/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-mat-en/mtask-302ef8d8",
+      "source_pointer": "/rows/19/materials/1/reference"
+    },
+    {
+      "digest": "2b1c234c5eff2201bd3ac4651c4655c44e675c7be93196057527e94adfc98973",
+      "source_pointer": "/rows/19/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/19/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "e04b08dd03fa7da2231b30cab1a335f25847c8b63e72deabbaed312e2ba1e7ea",
+      "source_pointer": "/rows/19/result/bundle_sha256"
+    },
+    {
+      "digest": "4ee3d22d403c2afd7cf7b750ad000da1d3716711a3227fe509255262b6d25830",
+      "source_pointer": "/rows/19/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/19/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/19/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/19/verified",
+      "verdict": false
+    },
+    {
+      "digest": "3303275dc176493be1f235a7c9a613ab96c57459ffd884b4a29a4b374069054f",
+      "source_pointer": "/rows/2/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343703",
+      "source_pointer": "/rows/2/id"
+    },
+    {
+      "source_id": "attest-b5d16020-open",
+      "source_pointer": "/rows/2/job_id"
+    },
+    {
+      "source_pointer": "/rows/2/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/2/materials/0/id"
+    },
+    {
+      "digest": "b12095ce3950bde3521388717fb2f7359e45a1f3c2c5df845d34b8cf2986daab",
+      "source_pointer": "/rows/2/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "aedc7d47b01ae0118282daccc5fc4e7c49d2fa6a3707a67de1baa8ca5233f8e7",
+      "source_pointer": "/rows/2/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/attest-b5d1602",
+      "source_pointer": "/rows/2/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/2/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "7ec57f1ce2bf467b54dbbe136789635b391f2a4de672193b5e75e81a2c7cbb33",
+      "source_pointer": "/rows/2/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/2/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "3303275dc176493be1f235a7c9a613ab96c57459ffd884b4a29a4b374069054f",
+      "source_pointer": "/rows/2/result/bundle_sha256"
+    },
+    {
+      "digest": "8175b133505179c21a89dd289ca733e360c4325d29512a9fb035a0641458d1fb",
+      "source_pointer": "/rows/2/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/2/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/2/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/2/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/2/verified",
+      "verdict": false
+    },
+    {
+      "digest": "b2b3288553c3bcde2d328682cc3c704216989f76312f2cc59abd38c7b2ddeb72",
+      "source_pointer": "/rows/20/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343690",
+      "source_pointer": "/rows/20/id"
+    },
+    {
+      "source_id": "VEC-EMBED-V4-EB0F42",
+      "source_pointer": "/rows/20/job_id"
+    },
+    {
+      "source_pointer": "/rows/20/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "b39924c139151db0273c3925a4c457eaf60ad0d464e16e22f800c31f36943429",
+      "source_pointer": "/rows/20/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/20/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "b2b3288553c3bcde2d328682cc3c704216989f76312f2cc59abd38c7b2ddeb72",
+      "source_pointer": "/rows/20/result/bundle_sha256"
+    },
+    {
+      "digest": "74cfbf8c8026cf653744d179ade8eee1315a089633159499938dc9e4150b1730",
+      "source_pointer": "/rows/20/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/20/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/20/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/20/verified",
+      "verdict": false
+    },
+    {
+      "digest": "bff7c7f7cb4e735d18467bcd2df3a0539164d27bc9bb3b62ce1218c4fd705020",
+      "source_pointer": "/rows/21/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343695",
+      "source_pointer": "/rows/21/id"
+    },
+    {
+      "source_id": "VISION-TOKENIZE-0CD4E3",
+      "source_pointer": "/rows/21/job_id"
+    },
+    {
+      "source_pointer": "/rows/21/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "d23f913456c418210bbdb26168c54f8e51ba172962120263b9ca58f11f472507",
+      "source_pointer": "/rows/21/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/21/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "bff7c7f7cb4e735d18467bcd2df3a0539164d27bc9bb3b62ce1218c4fd705020",
+      "source_pointer": "/rows/21/result/bundle_sha256"
+    },
+    {
+      "digest": "7997195ff054c882a43ee2b1752bd09bc5fa8ab3a64ce17d80a100d19cbb49eb",
+      "source_pointer": "/rows/21/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/21/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/21/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/21/verified",
+      "verdict": false
+    },
+    {
+      "digest": "7aa0d2b34e9b975860e53a50aa27b1b3d06083099b7853f0e73e5e7931d3d505",
+      "source_pointer": "/rows/22/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343730",
+      "source_pointer": "/rows/22/id"
+    },
+    {
+      "source_id": "val-568dd136",
+      "source_pointer": "/rows/22/job_id"
+    },
+    {
+      "source_pointer": "/rows/22/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/22/materials/0/id"
+    },
+    {
+      "digest": "200ebd0479c8f228fa95b51cc7016c7d4280c0d79673fb5ac1e46197d0e631bc",
+      "source_pointer": "/rows/22/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "d8a94412292dec5f26e55bb8e92c388ed949ec89ffdef86845e3d0f03d73c3c1",
+      "source_pointer": "/rows/22/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-36/val-568dd136",
+      "source_pointer": "/rows/22/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/22/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "809a24bbace5fde6cbe73480ec60aaf2dbdbfea1d937d958262824a3290dee01",
+      "source_pointer": "/rows/22/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/22/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "7aa0d2b34e9b975860e53a50aa27b1b3d06083099b7853f0e73e5e7931d3d505",
+      "source_pointer": "/rows/22/result/bundle_sha256"
+    },
+    {
+      "digest": "e02cbf59f169c68304981267380ed81378ccdb6688956c610cdc04374c2c4ac2",
+      "source_pointer": "/rows/22/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/22/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/22/result/status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/rows/22/state/final_status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/rows/22/verified",
+      "verdict": true
+    },
+    {
+      "digest": "55dcef85aa34dbf72f3461154bf6f83a6514e1a40bc94a85ed5a84cfaf7b27c0",
+      "source_pointer": "/rows/23/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343775",
+      "source_pointer": "/rows/23/id"
+    },
+    {
+      "source_id": "k1cc2ca70ea",
+      "source_pointer": "/rows/23/job_id"
+    },
+    {
+      "source_pointer": "/rows/23/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "b5179f3262e3d90ee77f41f683a21ec2749841b7cefa8cbeb74a04ab41d9efe3",
+      "source_pointer": "/rows/23/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/23/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "55dcef85aa34dbf72f3461154bf6f83a6514e1a40bc94a85ed5a84cfaf7b27c0",
+      "source_pointer": "/rows/23/result/bundle_sha256"
+    },
+    {
+      "digest": "3e02517bae2e2c91cc4fab6c2c37d0bb27156bdd0f42aba7db6f717c0d6f2aa3",
+      "source_pointer": "/rows/23/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/23/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/23/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/23/verified",
+      "verdict": false
+    },
+    {
+      "digest": "a242bceba26204f7d49a33ee24ca84919bad330b1f826bb3480e5ca2e6970587",
+      "source_pointer": "/rows/24/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343825",
+      "source_pointer": "/rows/24/id"
+    },
+    {
+      "source_id": "VEC-EMBED-V4-8EDB74",
+      "source_pointer": "/rows/24/job_id"
+    },
+    {
+      "source_pointer": "/rows/24/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "7140f9383e8a66aa9ad93e788fdbe9c9a87a108890faf76b8862b8362ea4a846",
+      "source_pointer": "/rows/24/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/24/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "a242bceba26204f7d49a33ee24ca84919bad330b1f826bb3480e5ca2e6970587",
+      "source_pointer": "/rows/24/result/bundle_sha256"
+    },
+    {
+      "digest": "5405263a29835d88b98bd2645bf66a2743e8b57b68cdbfa610dc9f181ec3a52e",
+      "source_pointer": "/rows/24/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/24/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/24/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/24/verified",
+      "verdict": false
+    },
+    {
+      "digest": "4ec77ee9968afccf00ab4977579a5d3e424891aead30d8bdc67c58ca0091991c",
+      "source_pointer": "/rows/3/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343712",
+      "source_pointer": "/rows/3/id"
+    },
+    {
+      "source_id": "k00dcafd3f5",
+      "source_pointer": "/rows/3/job_id"
+    },
+    {
+      "source_pointer": "/rows/3/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "c1003852d3fb8b924e59c75a18771244a1c46d57ba8c1c26acf2b9005aa84489",
+      "source_pointer": "/rows/3/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/3/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "4ec77ee9968afccf00ab4977579a5d3e424891aead30d8bdc67c58ca0091991c",
+      "source_pointer": "/rows/3/result/bundle_sha256"
+    },
+    {
+      "digest": "3d3a4c9fccbde09dcb764fcdc52357eafd63264cb7ebb1a60bd0fa706b484097",
+      "source_pointer": "/rows/3/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/3/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/3/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/3/verified",
+      "verdict": false
+    },
+    {
+      "digest": "38f24e0d8cfde07ecc1caabbdb62c45ba166e76791cd1bf8f67b1d3bf06d5820",
+      "source_pointer": "/rows/4/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343713",
+      "source_pointer": "/rows/4/id"
+    },
+    {
+      "source_id": "val-9ed61760",
+      "source_pointer": "/rows/4/job_id"
+    },
+    {
+      "source_pointer": "/rows/4/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/4/materials/0/id"
+    },
+    {
+      "digest": "542a83b1e0d50b12a4bb004a712da995df230edc0371e9bea7f45c54ea57a0cf",
+      "source_pointer": "/rows/4/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "a304d59127394331384856a1fdfa6ec9c0e2740316ce0b3f4c698dc1535852c6",
+      "source_pointer": "/rows/4/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-60/val-9ed61760",
+      "source_pointer": "/rows/4/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/4/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "d6891094a6e378195137fdcf65f5d5a8ecce39b8a0843f977b6a0fb44bbe9fe9",
+      "source_pointer": "/rows/4/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/4/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "38f24e0d8cfde07ecc1caabbdb62c45ba166e76791cd1bf8f67b1d3bf06d5820",
+      "source_pointer": "/rows/4/result/bundle_sha256"
+    },
+    {
+      "digest": "e0b9852c6596ed983b1d43ff3747416147169acc600e9ed9331c279dd77a7a04",
+      "source_pointer": "/rows/4/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/4/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/4/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/4/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/4/verified",
+      "verdict": false
+    },
+    {
+      "digest": "ea7df58215a88f349e887f9c2b696301b2e8dc2cb7aaa86156def1a6df9934d5",
+      "source_pointer": "/rows/5/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343716",
+      "source_pointer": "/rows/5/id"
+    },
+    {
+      "source_id": "88c1ca051c907e39ed2da1508d826d58",
+      "source_pointer": "/rows/5/job_id"
+    },
+    {
+      "source_pointer": "/rows/5/material_complete",
+      "verdict": false
+    },
+    {
+      "digest": "ef14220614e8ba6ccee57e8629207973a683100c3185d6883ba0a705219274b0",
+      "source_pointer": "/rows/5/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/5/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "ea7df58215a88f349e887f9c2b696301b2e8dc2cb7aaa86156def1a6df9934d5",
+      "source_pointer": "/rows/5/result/bundle_sha256"
+    },
+    {
+      "digest": "0ad63728041c52643be4f564d619cf597c9386c075d353636baf28f1a223a5e5",
+      "source_pointer": "/rows/5/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/5/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/5/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/5/verified",
+      "verdict": false
+    },
+    {
+      "digest": "d890efd2fba68aa599b4e6e684fcdf520589bec3bd1e30e11aca2591901a3920",
+      "source_pointer": "/rows/6/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343727",
+      "source_pointer": "/rows/6/id"
+    },
+    {
+      "source_id": "val-178f6335",
+      "source_pointer": "/rows/6/job_id"
+    },
+    {
+      "source_pointer": "/rows/6/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/6/materials/0/id"
+    },
+    {
+      "digest": "9df2129203fb5ad3a5b6ccc866eba4d28be1c0395c718a39cbaebc3195b072df",
+      "source_pointer": "/rows/6/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "0ef61dffb222abe41d67f066d21649267793c6679e3e9f78a872e099186d8bf6",
+      "source_pointer": "/rows/6/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-35/val-178f6335",
+      "source_pointer": "/rows/6/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/6/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "111ce54e7b1d5e28313c55826550b302e19a3817e80c007494f419044f3b1587",
+      "source_pointer": "/rows/6/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/6/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "d890efd2fba68aa599b4e6e684fcdf520589bec3bd1e30e11aca2591901a3920",
+      "source_pointer": "/rows/6/result/bundle_sha256"
+    },
+    {
+      "digest": "c7a2cb0963a8923dcb38cfaae9128053b751242932df3cc5ae548459e01debe8",
+      "source_pointer": "/rows/6/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/6/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/6/result/status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/rows/6/state/final_status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/rows/6/verified",
+      "verdict": true
+    },
+    {
+      "digest": "58ca49607cd04ef40379162b9f20a4fdb95293df64b99d4fcc7af3eb11324eeb",
+      "source_pointer": "/rows/7/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343741",
+      "source_pointer": "/rows/7/id"
+    },
+    {
+      "source_id": "task-7bc57fc2-open",
+      "source_pointer": "/rows/7/job_id"
+    },
+    {
+      "source_pointer": "/rows/7/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/7/materials/0/id"
+    },
+    {
+      "digest": "b2239f8574aac2f84d4c7dfc1657447321f7d6db0e14b9b43df79ee2470a394b",
+      "source_pointer": "/rows/7/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "5c9850d5386b49e98a329a5f762cabce61e608c5d845c5e6bbfb4398e9959477",
+      "source_pointer": "/rows/7/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/task-7bc57fc2-",
+      "source_pointer": "/rows/7/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/7/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "source_id": "s2",
+      "source_pointer": "/rows/7/materials/1/id"
+    },
+    {
+      "digest": "40e0bebabcc105a2931805b68e200f1d5fc212e32ca14501ac4d85d105a2bb54",
+      "source_pointer": "/rows/7/materials/1/normalized_sha256"
+    },
+    {
+      "digest": "40e0bebabcc105a2931805b68e200f1d5fc212e32ca14501ac4d85d105a2bb54",
+      "source_pointer": "/rows/7/materials/1/raw_sha256"
+    },
+    {
+      "locator": "https://technocore.chat/llms.txt",
+      "source_pointer": "/rows/7/materials/1/reference"
+    },
+    {
+      "source_pointer": "/rows/7/materials/1/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "e689156bda6a2a270820c0fa8adc41a404bb16a640bb0f1097e6b453aa7a69ba",
+      "source_pointer": "/rows/7/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/7/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "58ca49607cd04ef40379162b9f20a4fdb95293df64b99d4fcc7af3eb11324eeb",
+      "source_pointer": "/rows/7/result/bundle_sha256"
+    },
+    {
+      "digest": "3d0ec8b4a1503f4c2f714d68eba818e43ee97a45c15459ec83d50a4e9a9aabfc",
+      "source_pointer": "/rows/7/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/7/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/7/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/7/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/7/verified",
+      "verdict": false
+    },
+    {
+      "digest": "4735649077ce6f6a4c7ef31e49eb193807028986dc01e598bfdb49b3eb4a7a78",
+      "source_pointer": "/rows/8/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343746",
+      "source_pointer": "/rows/8/id"
+    },
+    {
+      "source_id": "task-a8848e47-open",
+      "source_pointer": "/rows/8/job_id"
+    },
+    {
+      "source_pointer": "/rows/8/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/8/materials/0/id"
+    },
+    {
+      "digest": "9dc9cd21cd198114c2bc732f3cc7c28b8609eefde46ad03af8df294b9bb87c21",
+      "source_pointer": "/rows/8/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "4cb81ee00fbea6f3bd6e4249d756de2974f1ec69e846f0a2169c3d4c8238ad07",
+      "source_pointer": "/rows/8/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/task-a8848e47-",
+      "source_pointer": "/rows/8/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/8/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "source_id": "s2",
+      "source_pointer": "/rows/8/materials/1/id"
+    },
+    {
+      "digest": "4fd57fb18f5f9a4c16771238f5e3d2c77b10c3592c8315da23101f30719e02b3",
+      "source_pointer": "/rows/8/materials/1/normalized_sha256"
+    },
+    {
+      "digest": "4fd57fb18f5f9a4c16771238f5e3d2c77b10c3592c8315da23101f30719e02b3",
+      "source_pointer": "/rows/8/materials/1/raw_sha256"
+    },
+    {
+      "locator": "https://raw.githubusercontent.com/flop-labs/technocore-chat/main/README.md",
+      "source_pointer": "/rows/8/materials/1/reference"
+    },
+    {
+      "source_pointer": "/rows/8/materials/1/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "beb8234214532f5198d18230d780a2b53c7662d9083f49f24d4cbe5512cf2abe",
+      "source_pointer": "/rows/8/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/8/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "4735649077ce6f6a4c7ef31e49eb193807028986dc01e598bfdb49b3eb4a7a78",
+      "source_pointer": "/rows/8/result/bundle_sha256"
+    },
+    {
+      "digest": "76943c073351502ddc970f1ac47cc90d7a0162d13917d827f42ca1de6d2c0208",
+      "source_pointer": "/rows/8/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/8/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/8/result/status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/8/state/final_status",
+      "status": "UNKNOWN"
+    },
+    {
+      "source_pointer": "/rows/8/verified",
+      "verdict": false
+    },
+    {
+      "digest": "7538cec4e35fc98401dd570a534e8ac920b0fd1910f67187ea04c9b48ae4e046",
+      "source_pointer": "/rows/9/bundle_sha256"
+    },
+    {
+      "source_id": "native-6343749",
+      "source_pointer": "/rows/9/id"
+    },
+    {
+      "source_id": "math-cf9f2a18-open",
+      "source_pointer": "/rows/9/job_id"
+    },
+    {
+      "source_pointer": "/rows/9/material_complete",
+      "verdict": true
+    },
+    {
+      "source_id": "s1",
+      "source_pointer": "/rows/9/materials/0/id"
+    },
+    {
+      "digest": "c28786b9db28feaa3f84aafaa378e80fcaa92824cc2336ac43483dcfa1648fda",
+      "source_pointer": "/rows/9/materials/0/normalized_sha256"
+    },
+    {
+      "digest": "cfab420b7185f38d07aafd0f40a1d9fbdd64961f86f4e3d3bae0914674d09f64",
+      "source_pointer": "/rows/9/materials/0/raw_sha256"
+    },
+    {
+      "locator": "/kv/tclk-job-en/math-cf9f2a18-",
+      "source_pointer": "/rows/9/materials/0/reference"
+    },
+    {
+      "source_pointer": "/rows/9/materials/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "digest": "33e8aa0f2e4cd3ee9a7ad2801e6d9b49adae44f5cf3a21f6598f0d0b2af2f6a3",
+      "source_pointer": "/rows/9/offer_sha256"
+    },
+    {
+      "source_pointer": "/rows/9/replay_identical",
+      "verdict": true
+    },
+    {
+      "digest": "7538cec4e35fc98401dd570a534e8ac920b0fd1910f67187ea04c9b48ae4e046",
+      "source_pointer": "/rows/9/result/bundle_sha256"
+    },
+    {
+      "digest": "0629a26e2b8b565c74c912c77655f957d8b1c8a17a94f2ec9e5f6e28002c6a97",
+      "source_pointer": "/rows/9/result/request_digest"
+    },
+    {
+      "source_pointer": "/rows/9/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/rows/9/result/status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/rows/9/state/final_status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/rows/9/verified",
+      "verdict": true
+    },
+    {
+      "source_pointer": "/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "metric": 24,
+      "source_pointer": "/verification/batch4_unchanged_results"
+    },
+    {
+      "metric": 780,
+      "source_pointer": "/verification/independent_game_tree_positions"
+    },
+    {
+      "metric": 25,
+      "source_pointer": "/verification/replay_cases"
+    },
+    {
+      "metric": 25,
+      "source_pointer": "/verification/replay_identical"
+    },
+    {
+      "metric": 62,
+      "source_pointer": "/verification/unit_tests"
+    }
+  ],
+  "original_evidence_file": "empirical-evaluation-batch5-20260919.json",
+  "original_evidence_sha256": "a72847024b68199360dff5152b13ecd75ab0bcffb5099b809493c4c0797978e9",
+  "schema_version": 1
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "technocore-analyzer"
+version = "0.1.0"
+description = "Read-only Technocore Evidence analyzer (no external writes, no signing)"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# Ed25519 signature verification and secp256k1 checks. Without it, signatures stay
+# VERIFIER_UNAVAILABLE (never VALID) and tclk state is not advanced.
+crypto = ["cryptography>=41"]
+
+[project.scripts]
+technocore-analyzer = "technocore_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

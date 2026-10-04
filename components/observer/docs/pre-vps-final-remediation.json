@@ -1,0 +1,409 @@
+{
+  "kind": "PRE_VPS_FINAL_REMEDIATION",
+  "created_at_utc": "2026-09-07T14:47:30.108Z",
+  "scope": "NEW-1 / NEW-2 required remediation, NEW-4 / NEW-5 cleanup; no VPS deployment",
+  "baseline": {
+    "artifact": "docs/pre-vps-p1-final.json",
+    "tests_run": 148,
+    "skipped": 0,
+    "previous_P1_findings": "ALL_FIVE_CLOSED_PER_USER_SUPPLIED_OPUS_FOCUSED_RE_REVIEW",
+    "upstream_fetch_performed": false
+  },
+  "findings": {
+    "NEW-1": {
+      "status": "CLOSED",
+      "root_cause": "Global storage guards could stop writes without terminal DB state, budget telemetry or a supported retention recovery path.",
+      "design": {
+        "heartbeat_metrics": [
+          "evidence_rows",
+          "evidence_bytes",
+          "event_rows",
+          "db_bytes",
+          "wal_bytes"
+        ],
+        "metric_fields": [
+          "used",
+          "limit",
+          "remaining",
+          "utilization"
+        ],
+        "additional_metrics": [
+          "db_reusable_bytes",
+          "disk_free_bytes",
+          "min_disk_free_bytes",
+          "disk_headroom_bytes"
+        ],
+        "warning_utilization": 0.8,
+        "warning_writes": false,
+        "capacity_indicator": "PREDICTIVE_UTILIZATION_NOT_ARBITRARY_TRANSACTION_SUCCESS_GUARANTEE",
+        "authoritative_write_failure": "SQLITE_FULL",
+        "failure_exit_code": 1,
+        "sqlite_failure_stderr": {
+          "error": "DATABASE_FAILURE",
+          "sqlite_code": "SQLITE_FULL",
+          "human_review_required": true
+        },
+        "budget_failure_stderr": {
+          "error": "STORAGE_BUDGET_EXHAUSTED",
+          "human_review_required": true
+        },
+        "terminal_db_write_guaranteed": false,
+        "failure_evidence_write_guaranteed": false,
+        "supervisor_contract": "Latch nonzero exit/write failure for Human review even if the preceding or subsequent heartbeat is WARNING/OK; heartbeat command exit 0 only confirms snapshot reading; no automatic restart."
+      },
+      "supported_recovery": {
+        "documentation": "docs/operations.md",
+        "commands": [
+          "retention-backup",
+          "retention-plan",
+          "retention-apply"
+        ],
+        "requirements": [
+          "worker and automatic restart stopped",
+          "existing StateLock",
+          "SQLite backup API into a new private state-directory file",
+          "backup integrity/schema/FK/sequence checks and exact all-table snapshot match",
+          "dry-run plan with deletion counts, ID/time ranges, metadata count and preserved-table counts",
+          "explicit Human approval token bound to unchanged snapshot and cutoff",
+          "strictly older than explicit cutoff; INIT_ANCHOR and evidence referenced by retained events excluded",
+          "transactional events -> evidence_metadata -> evidence deletion",
+          "integrity/schema/FK/sequence validation before commit",
+          "operator budget/status check before restart"
+        ],
+        "protected_tables": [
+          "state",
+          "messages",
+          "gaps",
+          "epoch_history"
+        ],
+        "automatic_deletion": false,
+        "automatic_backup": false,
+        "automatic_resync": false,
+        "raw_sql_required_from_operator": false,
+        "db_budget_increase": false,
+        "backup_deleted": false,
+        "limitations": [
+          "Requires backup disk headroom and write headroom for retention.",
+          "Does not shrink the DB file; freed pages are reused.",
+          "Retained inbox/history may still leave insufficient capacity; stop for separate Human capacity/restore decision.",
+          "Approval tokens bind plans but do not authenticate a human.",
+          "Terminal gap ERROR still needs separately approved manual resync."
+        ]
+      },
+      "tests": [
+        "test_warning_boundary_is_readonly_and_does_not_stop_poll",
+        "test_budget_telemetry_and_persistent_exhaustion",
+        "test_heartbeat_contains_only_budget_counts_not_content",
+        "test_real_sqlite_full_rolls_back_gap_and_cursor",
+        "test_real_full_cli_exits_nonzero_after_warning_without_partial_commit",
+        "test_real_full_recovery_reuses_pages_without_increasing_db_budget",
+        "test_supported_recovery_preserves_protected_tables_and_integrity",
+        "test_retention_dry_run_and_invalid_approval_do_not_write",
+        "test_retention_requires_unchanged_verified_backup",
+        "test_retention_transaction_failure_rolls_back_all_deletions",
+        "test_retention_cutoff_boundary_and_invalid_cutoffs",
+        "test_retention_rejects_missing_unsafe_or_corrupt_backup",
+        "test_retention_keeps_evidence_referenced_by_newer_events",
+        "test_retention_cli_is_offline_and_requires_lock"
+      ]
+    },
+    "NEW-2": {
+      "status": "CLOSED",
+      "root_cause": "MAX_PREFIX_MISSING bounded one response, not accumulated unobserved positions/discontinuities in an epoch.",
+      "pre_fix_reproduction": {
+        "source": "This remediation pass, disposable real SQLite, 2 baseline reproduction tests passed",
+        "missing_per_response": 10000,
+        "responses": 300,
+        "initial_poll_seq": 100,
+        "final_poll_seq": 3000400,
+        "resolved_seq": 100,
+        "open_gaps": 300,
+        "status": "DEGRADED"
+      },
+      "design": {
+        "max_epoch_open_gaps": 16,
+        "max_epoch_unobserved_seq": 50000,
+        "boundary": "INCLUSIVE; first prospective value over either limit is rejected before message/gap/cursor writes",
+        "terminal_reason": "EPOCH_GAP_BUDGET_REQUIRES_REVIEW",
+        "terminal_status": "ERROR",
+        "protocol_anomaly_increment": 0,
+        "manual_resync": "Existing explicit plan/token path; epoch increments, old gaps/evidence/history preserved",
+        "rationale": "16 gaps bound operator review to a short list and at most 3,200 records in gap-bearing limit=200 polls; small fraction of 8,192 events and local 16 MiB DB at expected small-room ~300-byte text workload. 50,000 unobserved seq allows five maximum-size prefixes before more needs review.",
+        "meaning": "Local Human-review safety policy; newest-N can create legitimate gaps; no attack or physical-loss assertion; no automatic recovery/resync.",
+        "capacity_caveat": "Independent prior-epoch/non-gap/large-record storage use still requires global budget monitoring and supported recovery."
+      },
+      "tests": [
+        "test_cumulative_seq_below_equal_and_over",
+        "test_gap_count_below_equal_and_over"
+      ],
+      "verified": [
+        "below/equal/first-over boundaries",
+        "failed poll_seq unchanged",
+        "failed resolved_seq unchanged",
+        "no new gap or message commit",
+        "prior evidence/gaps preserved",
+        "terminal ERROR persists across restart",
+        "restart blocked for Human review",
+        "manual resync succeeds after review error",
+        "approved resync increments epoch",
+        "old gaps/evidence preserved",
+        "contiguous/empty polls at the inclusive gap limit remain valid"
+      ]
+    },
+    "NEW-4": {
+      "status": "CLOSED",
+      "files": [
+        "docs/verification.md",
+        "docs/soak-plan.md"
+      ],
+      "current_max_body_bytes": 4194304,
+      "json_pre_budget": {
+        "depth": 32,
+        "structure": 32768,
+        "before": "json.loads"
+      },
+      "historical_32_mib_artifacts_preserved": true
+    },
+    "NEW-5": {
+      "status": "CLOSED",
+      "change": "Removed the unused Store.save retention_seconds parameter and Observer caller argument.",
+      "call_graph": {
+        "production_callers": [
+          "src/technocore_observer/observer.py:Observer.poll_once"
+        ],
+        "test_call_sites": 2,
+        "test_file": "tests/test_p1_remediation.py"
+      },
+      "diagnostic_retention_seconds_preserved": true,
+      "prefix_gap_contract": "UNOBSERVED_NORMAL_READ; physical loss UNKNOWN; no TTL-derived deadline"
+    },
+    "NEW-3": {
+      "status": "DEFERRED TO VPS CAPACITY PLANNING",
+      "local_db_budget_bytes": 16777216,
+      "permanent_production_sizing": false,
+      "opus_user_supplied_measurement": {
+        "messages_approx": 18800,
+        "text_bytes_approx": 300,
+        "db_mib_approx": 14.4,
+        "remeasured_this_pass": false
+      },
+      "max_page_count_change_requires_schema_migration": false,
+      "vps_reassessment": [
+        "disk",
+        "DB",
+        "WAL",
+        "backup",
+        "evidence reserve",
+        "expected workload and retention duration"
+      ]
+    }
+  },
+  "sqlite_full_verification": {
+    "distinction": "heartbeat is a predictive capacity indicator; real SQLITE_FULL is the authoritative write failure.",
+    "local_allocation_probe": {
+      "sqlite_version": "3.45.1",
+      "page_size": 4096,
+      "max_page_count": 48,
+      "db_budget_bytes": 196608,
+      "db_reusable_bytes_before": 16384,
+      "db_reusable_bytes_after_rollback": 16384,
+      "heartbeat_before": "WARNING",
+      "heartbeat_after": "WARNING",
+      "actual_failure": "SQLITE_FULL",
+      "in_transaction_after": false,
+      "poll_seq_after": 100,
+      "resolved_seq_after": 100
+    },
+    "recovery_test": {
+      "name": "test_real_full_recovery_reuses_pages_without_increasing_db_budget",
+      "status": "PASS",
+      "partial_commit": false,
+      "backup_integrity": "ok",
+      "retention_evidence_deleted": 8,
+      "retention_events_deleted": 8,
+      "init_anchor_preserved": true,
+      "integrity_after": "ok",
+      "foreign_key_check": "ok",
+      "restart_with_same_page_limit": true,
+      "resumed_poll_seq": 101,
+      "resumed_resolved_seq": 101
+    },
+    "real_cli_process_test": {
+      "name": "test_real_full_cli_exits_nonzero_after_warning_without_partial_commit",
+      "status": "PASS",
+      "http_boundary": "FakeClient only; no network",
+      "sqlite_failure": "Real allocation failure; exception handler not mocked",
+      "preceding_heartbeat": "WARNING",
+      "returncode": 1,
+      "stderr": {
+        "error": "DATABASE_FAILURE",
+        "class": "OperationalError",
+        "sqlite_code": "SQLITE_FULL",
+        "human_review_required": true
+      },
+      "poll_seq": 100,
+      "resolved_seq": 100,
+      "partial_commits": false
+    },
+    "superseded_test_expectations": [
+      {
+        "expectation": "One more 16 KiB evidence record must force SQLITE_FULL",
+        "correction": "It can fit existing reusable pages; use a larger real record allocation."
+      },
+      {
+        "expectation": "A real SQLITE_FULL must make heartbeat EXHAUSTED",
+        "correction": "Rollback restores reusable pages and a large transaction can fail while utilization remains WARNING; verify authoritative process failure and data integrity instead.",
+        "continuation": "User explicitly approved rechecking allocation behavior and correcting the test; no capacity calculation change made to force this expectation."
+      }
+    ]
+  },
+  "regression": {
+    "command": "python3 -B -m unittest discover -s tests",
+    "status": "PASS",
+    "tests_run": 165,
+    "existing_baseline_tests": 148,
+    "added_test_methods": 17,
+    "skipped": 0,
+    "errors": 0,
+    "failures": 0,
+    "elapsed_seconds": 22.01,
+    "exit_code": 0,
+    "scope": "Offline fixtures, saved-artifact replay, disposable real SQLite, process tests and loopback HTTP only",
+    "loopback_permission": "Previously denied by sandbox; identical offline unittest command rerun with Human-approved escalation.",
+    "focused_recovery_suite": {
+      "command": "python3 -B -m unittest discover -s tests -p test_final_remediation.py",
+      "tests_run": 17,
+      "skipped": 0,
+      "errors": 0,
+      "failures": 0,
+      "elapsed_seconds": 1.245,
+      "status": "PASS"
+    },
+    "existing_tests_removed": 0
+  },
+  "memory_probe": {
+    "rerun": false,
+    "reason": "HTTP/JSON parsing and memory-budget code unchanged; protocol.py/http.py and p1_memory_probe.py hashes match previous artifact. No new cgroup measurement claimed.",
+    "prior_artifact": "docs/pre-vps-p1-final.json"
+  },
+  "changed_observer_source_files": [
+    "src/technocore_observer/storage.py",
+    "src/technocore_observer/observer.py",
+    "src/technocore_observer/cli.py",
+    "src/technocore_observer/maintenance.py"
+  ],
+  "changed_docs": [
+    "docs/operations.md",
+    "docs/verification.md",
+    "docs/soak-plan.md",
+    "docs/vps-migration-checklist.md",
+    "docs/pre-vps-final-remediation.json"
+  ],
+  "newly_introduced_findings": {
+    "P0": 0,
+    "P1": 0,
+    "assessment": "None identified by local implementation review and offline tests; independent review of this final diff remains pending."
+  },
+  "security_boundary": {
+    "unchanged": true,
+    "observer_read_only_toward_technocore": true,
+    "technocore_write_capability": false,
+    "say_or_say_signed": false,
+    "arbitrary_or_message_derived_url_fetch": false,
+    "private_key_seed_wallet_or_signer_access": false,
+    "docker_socket_access": false,
+    "host_home_access": false,
+    "repository_external_secret_search": false,
+    "strict_local_docker_profile_change": false,
+    "automatic_evidence_deletion": false,
+    "protected_table_deletion": false,
+    "automatic_resync": false,
+    "automatic_export_recovery": false
+  },
+  "operation_counts": {
+    "live_requests": 0,
+    "technocore_writes": 0,
+    "external_network_requests": 0,
+    "docker_operations": 0,
+    "vps_operations": 0,
+    "package_installs": 0,
+    "soak_reruns": 0
+  },
+  "remaining_vps_blockers": [
+    "NEW-3 disk/DB/WAL/backup/evidence-reserve capacity planning; 16 MiB remains local only",
+    "production entrypoint -I and actual deployment image validation",
+    "watchdog/heartbeat UID and SQLite WAL permission model",
+    "actual 256 MiB container cgroup memory measurement",
+    "production state volume sizing and mount hardening",
+    "production backup/restore schedule and real-volume recovery verification",
+    "monitoring destination and supervisor failure-latching/restart policy",
+    "raw_record_json byte-exactness remains deferred",
+    "independent review of final remediation and Human deployment approval"
+  ],
+  "vps_migration_readiness": "NOT_READY; NO_DEPLOYMENT_PERFORMED",
+  "schema_version": 2,
+  "budgets": {
+    "max_body_bytes": 4194304,
+    "max_json_depth": 32,
+    "max_json_structure": 32768,
+    "max_prefix_missing": 10000,
+    "max_epoch_open_gaps": 16,
+    "max_epoch_unobserved_seq": 50000,
+    "evidence_prefix_bytes": 16384,
+    "evidence_total_bytes": 4194304,
+    "evidence_rows": 4096,
+    "event_rows": 8192,
+    "db_bytes": 16777216,
+    "wal_bytes": 8388608,
+    "min_disk_free_bytes": 8388608,
+    "warning_utilization": 0.8
+  },
+  "source_sha256": {
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/cli.py": "7c93a1490dbd4ff43527993995660de92f6cfa18ef6e336dc08021b562c2772e",
+    "src/technocore_observer/http.py": "1b5f65c342256e560630831b3e5fd1ba65c3777295d190db8c2881799ae602ae",
+    "src/technocore_observer/maintenance.py": "4b7d595b39eae7d2d291e812d9655f52828768555ec0c2649b12fac0ccb3d510",
+    "src/technocore_observer/observer.py": "09ed46d2a423486913d6044f8a475e30087362c452d6e5629f22feb4b47712b7",
+    "src/technocore_observer/protocol.py": "7cd70c57c5be65dc5ee9d47ebf19515b5694ff49b196a5e4485b13ae9b88a72f",
+    "src/technocore_observer/storage.py": "5160191b69449cbe89e37312a92a0f9fe33f965f32f0665e30a7820e43fb4e45",
+    "tests/test_final_remediation.py": "7dd3aed38b779af318d61b90a524ce1d279676314000565254c17ff8ec37e325",
+    "docs/operations.md": "340b90436f9aa8dc8ad676eccfc781cf6bddb84b0caf9ce5c07df5e9ed36c83e",
+    "docs/verification.md": "5ca58b67772651296b20a734312692ca47812b6970c5bec57ed315d0116f62d4",
+    "docs/soak-plan.md": "04f593fbdedfae2a55bbda9e2be3319fbfa93353dd11b826274d6aca401274d2",
+    "docs/vps-migration-checklist.md": "1e1f75c1510930a29b6861cf26cd978b8398fc53d160f947fe95f5bf9860ec4e"
+  },
+  "baseline_unchanged": {
+    "src/technocore_observer/__init__.py": true,
+    "src/technocore_observer/__main__.py": true,
+    "src/technocore_observer/http.py": true,
+    "src/technocore_observer/protocol.py": true,
+    "tests/test_observer.py": true,
+    "tests/test_p1_remediation.py": true,
+    "tests/p1_memory_probe.py": true,
+    "docs/technocore-v0121-read-contract.md": true,
+    "Containerfile": true
+  },
+  "test_methods": [
+    "test_cumulative_seq_below_equal_and_over",
+    "test_gap_count_below_equal_and_over",
+    "test_budget_telemetry_and_persistent_exhaustion",
+    "test_warning_boundary_is_readonly_and_does_not_stop_poll",
+    "test_heartbeat_contains_only_budget_counts_not_content",
+    "test_real_sqlite_full_rolls_back_gap_and_cursor",
+    "test_machine_readable_stderr_for_budget_and_full",
+    "test_supported_recovery_preserves_protected_tables_and_integrity",
+    "test_retention_dry_run_and_invalid_approval_do_not_write",
+    "test_retention_requires_unchanged_verified_backup",
+    "test_real_full_recovery_reuses_pages_without_increasing_db_budget",
+    "test_real_full_cli_exits_nonzero_after_warning_without_partial_commit",
+    "test_retention_cutoff_boundary_and_invalid_cutoffs",
+    "test_retention_rejects_missing_unsafe_or_corrupt_backup",
+    "test_retention_transaction_failure_rolls_back_all_deletions",
+    "test_retention_keeps_evidence_referenced_by_newer_events",
+    "test_retention_cli_is_offline_and_requires_lock"
+  ],
+  "python": "3.12.3",
+  "sqlite": "3.45.1",
+  "syntax_and_trailing_whitespace": "PASS"
+}

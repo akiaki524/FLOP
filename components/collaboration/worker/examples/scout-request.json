@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "request": "Humanが選んだ保存済み投稿のTODOを確認してください。",
+  "scope": {"include": ["選択した1件の本文"], "exclude": ["投稿者の本人確認、URL取得、実送信"]},
+  "destination": {"room": "mock/flop_labs", "recipient": "human-selected-demo"},
+  "sources": []
+}

@@ -1,0 +1,1395 @@
+{
+  "kind": "quote_omitted_public_summary",
+  "limitations": [
+    "Derived selection with original quotations and response bodies omitted.",
+    "Not a valid outcome, complete proof, or reproducible replay fixture.",
+    "Digests identify original evidence or materials, not this summary JSON.",
+    "COMPLETED means local processing only; it does not establish approval or external acceptance.",
+    "Historical metrics describe the recorded inputs and revision, not current production readiness."
+  ],
+  "observations": [
+    {
+      "metric": 197,
+      "source_pointer": "/all_original_results_identical"
+    },
+    {
+      "metric": 11,
+      "source_pointer": "/batch"
+    },
+    {
+      "metric": 2,
+      "source_pointer": "/combined_comparison_metrics/COMPLETED"
+    },
+    {
+      "metric": 9,
+      "source_pointer": "/combined_comparison_metrics/HUMAN_REVIEW"
+    },
+    {
+      "metric": 69,
+      "source_pointer": "/combined_comparison_metrics/UNKNOWN"
+    },
+    {
+      "metric": 28,
+      "source_pointer": "/combined_comparison_metrics/classifier_reached"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/combined_comparison_metrics/false_complete"
+    },
+    {
+      "metric": 28,
+      "source_pointer": "/combined_comparison_metrics/material_complete"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/combined_comparison_metrics/solver_reached"
+    },
+    {
+      "metric": 80,
+      "source_pointer": "/combined_comparison_metrics/tasks"
+    },
+    {
+      "source_id": "native-6852823",
+      "source_pointer": "/current_completed/0/id"
+    },
+    {
+      "source_id": "val-db311e3c",
+      "source_pointer": "/current_completed/0/job_id"
+    },
+    {
+      "digest": "14ac5e710c7019437d45ca47fcc268cebd6ffb6a5b304f58601d01c279d56063",
+      "source_pointer": "/current_completed/0/result/bundle_sha256"
+    },
+    {
+      "digest": "3da35eb38de3ccf5567a965fdfebaf280e9f4a7da275d55c406b29bae982f3e7",
+      "source_pointer": "/current_completed/0/result/request_digest"
+    },
+    {
+      "source_pointer": "/current_completed/0/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/current_completed/0/result/status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/current_completed/0/verified",
+      "verdict": true
+    },
+    {
+      "source_id": "native-6852849",
+      "source_pointer": "/current_completed/1/id"
+    },
+    {
+      "source_id": "task-7a8e68b2-open",
+      "source_pointer": "/current_completed/1/job_id"
+    },
+    {
+      "digest": "1744063411f3ea7ad53f490774be4d530c70d6e800147f4d4e8d19b415abb218",
+      "source_pointer": "/current_completed/1/result/bundle_sha256"
+    },
+    {
+      "digest": "14fcb477ff075b95da2cf0324ac7683b8d08f565684b3a177d6f8f6178d65dd9",
+      "source_pointer": "/current_completed/1/result/request_digest"
+    },
+    {
+      "source_pointer": "/current_completed/1/result/source_status",
+      "status": "SOURCE_UNVERIFIED"
+    },
+    {
+      "source_pointer": "/current_completed/1/result/status",
+      "status": "COMPLETED"
+    },
+    {
+      "source_pointer": "/current_completed/1/verified",
+      "verdict": true
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/current_remaining_errors/INCOMPLETE_SPEC"
+    },
+    {
+      "metric": 3,
+      "source_pointer": "/current_remaining_errors/MALFORMED_REFERENCE"
+    },
+    {
+      "metric": 27,
+      "source_pointer": "/current_remaining_errors/MISSING_TASK_REFERENCE"
+    },
+    {
+      "metric": 5,
+      "source_pointer": "/current_remaining_errors/PREVIEW_MISMATCH"
+    },
+    {
+      "metric": 4,
+      "source_pointer": "/current_remaining_errors/SOURCE_NOT_ALLOWED"
+    },
+    {
+      "metric": 3,
+      "source_pointer": "/current_remaining_errors/TOO_LARGE_FOR_SOLVER"
+    },
+    {
+      "metric": 2,
+      "source_pointer": "/current_remaining_errors/TRUNCATION_SUSPECTED"
+    },
+    {
+      "metric": 7,
+      "source_pointer": "/current_remaining_errors/UNRESOLVED_REFERENCE"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/false_complete"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/historical_batch10_metrics/COMPLETED"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/historical_batch10_metrics/HUMAN_REVIEW"
+    },
+    {
+      "metric": 79,
+      "source_pointer": "/historical_batch10_metrics/UNKNOWN"
+    },
+    {
+      "metric": 7,
+      "source_pointer": "/historical_batch10_metrics/classifier_reached"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/historical_batch10_metrics/false_complete"
+    },
+    {
+      "metric": 7,
+      "source_pointer": "/historical_batch10_metrics/material_complete"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/historical_batch10_metrics/solver_reached"
+    },
+    {
+      "metric": 80,
+      "source_pointer": "/historical_batch10_metrics/tasks"
+    },
+    {
+      "metric": 36,
+      "source_pointer": "/original_incomplete_causes/FETCH_FAILURE"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/original_incomplete_causes/INCOMPLETE_SPEC"
+    },
+    {
+      "metric": 3,
+      "source_pointer": "/original_incomplete_causes/MALFORMED_REFERENCE"
+    },
+    {
+      "metric": 27,
+      "source_pointer": "/original_incomplete_causes/MISSING_TASK_REFERENCE"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/original_incomplete_causes/SOURCE_NOT_ALLOWED"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/original_incomplete_causes/TRUNCATION_SUSPECTED"
+    },
+    {
+      "metric": 4,
+      "source_pointer": "/original_incomplete_causes/UNRESOLVED_REFERENCE"
+    },
+    {
+      "metric": 1476,
+      "source_pointer": "/table_evidence/0/body_bytes"
+    },
+    {
+      "metric": 1476,
+      "source_pointer": "/table_evidence/0/body_characters"
+    },
+    {
+      "digest": "8cb837b9be75d375090cef115db18aa0bd845bcef2754fc9d580e53b7279fa29",
+      "source_pointer": "/table_evidence/0/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/0/existing_table_parser_rows"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/0/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6826996",
+      "source_pointer": "/table_evidence/0/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/0/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/0/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/0/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/0/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/0/structural_unparsed_tokens"
+    },
+    {
+      "metric": 670,
+      "source_pointer": "/table_evidence/0/table_characters"
+    },
+    {
+      "metric": 5975,
+      "source_pointer": "/table_evidence/1/body_bytes"
+    },
+    {
+      "metric": 5975,
+      "source_pointer": "/table_evidence/1/body_characters"
+    },
+    {
+      "digest": "7842276d672731be5fec97fb6dbc9ae7c1ac9196eabd33f368cf4dc680854242",
+      "source_pointer": "/table_evidence/1/body_sha256"
+    },
+    {
+      "metric": 30,
+      "source_pointer": "/table_evidence/1/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827022",
+      "source_pointer": "/table_evidence/1/id"
+    },
+    {
+      "metric": 48,
+      "source_pointer": "/table_evidence/1/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/1/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/1/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 48,
+      "source_pointer": "/table_evidence/1/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/1/structural_unparsed_tokens"
+    },
+    {
+      "metric": 5025,
+      "source_pointer": "/table_evidence/1/table_characters"
+    },
+    {
+      "metric": 1429,
+      "source_pointer": "/table_evidence/10/body_bytes"
+    },
+    {
+      "metric": 1429,
+      "source_pointer": "/table_evidence/10/body_characters"
+    },
+    {
+      "digest": "a107e5915cafb6faa3a060609fb55bb9ded19068eaf8fe486d8eee7bec209f73",
+      "source_pointer": "/table_evidence/10/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/10/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827141",
+      "source_pointer": "/table_evidence/10/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/10/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/10/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/10/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/10/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/10/structural_unparsed_tokens"
+    },
+    {
+      "metric": 642,
+      "source_pointer": "/table_evidence/10/table_characters"
+    },
+    {
+      "metric": 1445,
+      "source_pointer": "/table_evidence/11/body_bytes"
+    },
+    {
+      "metric": 1445,
+      "source_pointer": "/table_evidence/11/body_characters"
+    },
+    {
+      "digest": "89d2493d39fcd5b1f91bb33cf09165b9667760473df9d000d555c07105fdd332",
+      "source_pointer": "/table_evidence/11/body_sha256"
+    },
+    {
+      "metric": 11,
+      "source_pointer": "/table_evidence/11/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830784",
+      "source_pointer": "/table_evidence/11/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/11/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/11/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/11/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/11/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/11/structural_unparsed_tokens"
+    },
+    {
+      "metric": 658,
+      "source_pointer": "/table_evidence/11/table_characters"
+    },
+    {
+      "metric": 1440,
+      "source_pointer": "/table_evidence/12/body_bytes"
+    },
+    {
+      "metric": 1440,
+      "source_pointer": "/table_evidence/12/body_characters"
+    },
+    {
+      "digest": "6ed7a1cad11660600928c4041f1a8b4572123f9a86cb0215f2bde9657ecee5c3",
+      "source_pointer": "/table_evidence/12/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/12/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830808",
+      "source_pointer": "/table_evidence/12/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/12/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/12/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/12/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/12/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/12/structural_unparsed_tokens"
+    },
+    {
+      "metric": 653,
+      "source_pointer": "/table_evidence/12/table_characters"
+    },
+    {
+      "metric": 1478,
+      "source_pointer": "/table_evidence/13/body_bytes"
+    },
+    {
+      "metric": 1478,
+      "source_pointer": "/table_evidence/13/body_characters"
+    },
+    {
+      "digest": "bae8edff11afb9f1231d62266ed0b6267ae1adbe94e9e8d1081a633b1ed51d8f",
+      "source_pointer": "/table_evidence/13/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/13/existing_table_parser_rows"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/13/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830821",
+      "source_pointer": "/table_evidence/13/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/13/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/13/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/13/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/13/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/13/structural_unparsed_tokens"
+    },
+    {
+      "metric": 682,
+      "source_pointer": "/table_evidence/13/table_characters"
+    },
+    {
+      "metric": 1485,
+      "source_pointer": "/table_evidence/14/body_bytes"
+    },
+    {
+      "metric": 1485,
+      "source_pointer": "/table_evidence/14/body_characters"
+    },
+    {
+      "digest": "c22b5db7d57b81bdb6bced39eab0270c1032b2af3edf7bd387a9ead46f7aefc5",
+      "source_pointer": "/table_evidence/14/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/14/existing_table_parser_rows"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/14/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830831",
+      "source_pointer": "/table_evidence/14/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/14/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/14/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/14/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/14/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/14/structural_unparsed_tokens"
+    },
+    {
+      "metric": 679,
+      "source_pointer": "/table_evidence/14/table_characters"
+    },
+    {
+      "metric": 1438,
+      "source_pointer": "/table_evidence/15/body_bytes"
+    },
+    {
+      "metric": 1438,
+      "source_pointer": "/table_evidence/15/body_characters"
+    },
+    {
+      "digest": "c0b035e9abf589a941bb5c5a557e7ae37c2778b7bfd04b7af83975be9b006373",
+      "source_pointer": "/table_evidence/15/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/15/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830834",
+      "source_pointer": "/table_evidence/15/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/15/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/15/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/15/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/15/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/15/structural_unparsed_tokens"
+    },
+    {
+      "metric": 642,
+      "source_pointer": "/table_evidence/15/table_characters"
+    },
+    {
+      "metric": 5983,
+      "source_pointer": "/table_evidence/16/body_bytes"
+    },
+    {
+      "metric": 5983,
+      "source_pointer": "/table_evidence/16/body_characters"
+    },
+    {
+      "digest": "aa6f7da629736f5c22da16194a0233dfd952ab9028ff89a3f41c2852685a94d0",
+      "source_pointer": "/table_evidence/16/body_sha256"
+    },
+    {
+      "metric": 30,
+      "source_pointer": "/table_evidence/16/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830840",
+      "source_pointer": "/table_evidence/16/id"
+    },
+    {
+      "metric": 48,
+      "source_pointer": "/table_evidence/16/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/16/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/16/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 48,
+      "source_pointer": "/table_evidence/16/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/16/structural_unparsed_tokens"
+    },
+    {
+      "metric": 5033,
+      "source_pointer": "/table_evidence/16/table_characters"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/17/body_bytes"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/17/body_characters"
+    },
+    {
+      "digest": "9024b16dccbe7f3835edfbb5e88135ba50d0ccebc578f56b34d3fc2c92b2a099",
+      "source_pointer": "/table_evidence/17/body_sha256"
+    },
+    {
+      "metric": 62,
+      "source_pointer": "/table_evidence/17/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830876",
+      "source_pointer": "/table_evidence/17/id"
+    },
+    {
+      "metric": 75,
+      "source_pointer": "/table_evidence/17/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/17/physical_lines"
+    },
+    {
+      "metric": 75,
+      "source_pointer": "/table_evidence/17/structural_matching_rows"
+    },
+    {
+      "metric": 7,
+      "source_pointer": "/table_evidence/17/structural_unparsed_tokens"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/17/table_characters"
+    },
+    {
+      "metric": 1431,
+      "source_pointer": "/table_evidence/18/body_bytes"
+    },
+    {
+      "metric": 1431,
+      "source_pointer": "/table_evidence/18/body_characters"
+    },
+    {
+      "digest": "93be9ab43c72eae419559bb82ebcbf2cd66a8aed9a2483b83d2c4d1af18ba620",
+      "source_pointer": "/table_evidence/18/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/18/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6830885",
+      "source_pointer": "/table_evidence/18/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/18/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/18/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/18/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/18/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/18/structural_unparsed_tokens"
+    },
+    {
+      "metric": 665,
+      "source_pointer": "/table_evidence/18/table_characters"
+    },
+    {
+      "metric": 7440,
+      "source_pointer": "/table_evidence/19/body_bytes"
+    },
+    {
+      "metric": 7440,
+      "source_pointer": "/table_evidence/19/body_characters"
+    },
+    {
+      "digest": "074a829f453c38df64dd92506b3a90d2fa5d1c01a56599aaa757e747b7343d83",
+      "source_pointer": "/table_evidence/19/body_sha256"
+    },
+    {
+      "metric": 70,
+      "source_pointer": "/table_evidence/19/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6852392",
+      "source_pointer": "/table_evidence/19/id"
+    },
+    {
+      "metric": 71,
+      "source_pointer": "/table_evidence/19/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/19/physical_lines"
+    },
+    {
+      "metric": 71,
+      "source_pointer": "/table_evidence/19/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/19/structural_unparsed_tokens"
+    },
+    {
+      "metric": 7440,
+      "source_pointer": "/table_evidence/19/table_characters"
+    },
+    {
+      "metric": 1464,
+      "source_pointer": "/table_evidence/2/body_bytes"
+    },
+    {
+      "metric": 1464,
+      "source_pointer": "/table_evidence/2/body_characters"
+    },
+    {
+      "digest": "0894a24b98b6e3caafef76307c62cdf515582870ad113a13e962d81028b42a3b",
+      "source_pointer": "/table_evidence/2/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/2/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827026",
+      "source_pointer": "/table_evidence/2/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/2/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/2/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/2/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/2/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/2/structural_unparsed_tokens"
+    },
+    {
+      "metric": 698,
+      "source_pointer": "/table_evidence/2/table_characters"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/20/body_bytes"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/20/body_characters"
+    },
+    {
+      "digest": "19663d50469b74947168885cc5ada9a1e370faf72dda55debdbb372d24ea21aa",
+      "source_pointer": "/table_evidence/20/body_sha256"
+    },
+    {
+      "metric": 74,
+      "source_pointer": "/table_evidence/20/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6852780",
+      "source_pointer": "/table_evidence/20/id"
+    },
+    {
+      "metric": 76,
+      "source_pointer": "/table_evidence/20/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/20/physical_lines"
+    },
+    {
+      "metric": 76,
+      "source_pointer": "/table_evidence/20/structural_matching_rows"
+    },
+    {
+      "metric": 7,
+      "source_pointer": "/table_evidence/20/structural_unparsed_tokens"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/20/table_characters"
+    },
+    {
+      "metric": 6524,
+      "source_pointer": "/table_evidence/21/body_bytes"
+    },
+    {
+      "metric": 6524,
+      "source_pointer": "/table_evidence/21/body_characters"
+    },
+    {
+      "digest": "b9c709844175d79ecbb4ee9544f9690772ff6917da4d7bafd72c1f5b0eaa0e56",
+      "source_pointer": "/table_evidence/21/body_sha256"
+    },
+    {
+      "metric": 25,
+      "source_pointer": "/table_evidence/21/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6852789",
+      "source_pointer": "/table_evidence/21/id"
+    },
+    {
+      "metric": 54,
+      "source_pointer": "/table_evidence/21/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/21/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/21/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 54,
+      "source_pointer": "/table_evidence/21/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/21/structural_unparsed_tokens"
+    },
+    {
+      "metric": 5657,
+      "source_pointer": "/table_evidence/21/table_characters"
+    },
+    {
+      "metric": 6909,
+      "source_pointer": "/table_evidence/22/body_bytes"
+    },
+    {
+      "metric": 6909,
+      "source_pointer": "/table_evidence/22/body_characters"
+    },
+    {
+      "digest": "63692c3f11c82ca5eda3cc9a54fe027b4a5fe37313ff9e3c8d6dc484d4ceb5f1",
+      "source_pointer": "/table_evidence/22/body_sha256"
+    },
+    {
+      "metric": 64,
+      "source_pointer": "/table_evidence/22/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6852792",
+      "source_pointer": "/table_evidence/22/id"
+    },
+    {
+      "metric": 66,
+      "source_pointer": "/table_evidence/22/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/22/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/22/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 66,
+      "source_pointer": "/table_evidence/22/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/22/structural_unparsed_tokens"
+    },
+    {
+      "metric": 6909,
+      "source_pointer": "/table_evidence/22/table_characters"
+    },
+    {
+      "metric": 1468,
+      "source_pointer": "/table_evidence/23/body_bytes"
+    },
+    {
+      "metric": 1468,
+      "source_pointer": "/table_evidence/23/body_characters"
+    },
+    {
+      "digest": "77a227cf6d71304fbd537d6d9889d0315bb042d6d86fb361d080c8ea0e8f8d94",
+      "source_pointer": "/table_evidence/23/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/23/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6852802",
+      "source_pointer": "/table_evidence/23/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/23/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/23/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/23/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/23/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/23/structural_unparsed_tokens"
+    },
+    {
+      "metric": 673,
+      "source_pointer": "/table_evidence/23/table_characters"
+    },
+    {
+      "metric": 4617,
+      "source_pointer": "/table_evidence/24/body_bytes"
+    },
+    {
+      "metric": 4617,
+      "source_pointer": "/table_evidence/24/body_characters"
+    },
+    {
+      "digest": "9a1b2be4f64f238bc9972d52f9c760435f3aba1bcb0936dff4cea11119376069",
+      "source_pointer": "/table_evidence/24/body_sha256"
+    },
+    {
+      "metric": 24,
+      "source_pointer": "/table_evidence/24/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6853313",
+      "source_pointer": "/table_evidence/24/id"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/24/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/24/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 6,
+      "source_pointer": "/table_evidence/24/structural_matching_rows"
+    },
+    {
+      "metric": 268,
+      "source_pointer": "/table_evidence/24/structural_unparsed_tokens"
+    },
+    {
+      "metric": 3750,
+      "source_pointer": "/table_evidence/24/table_characters"
+    },
+    {
+      "metric": 1449,
+      "source_pointer": "/table_evidence/25/body_bytes"
+    },
+    {
+      "metric": 1449,
+      "source_pointer": "/table_evidence/25/body_characters"
+    },
+    {
+      "digest": "4cf5699ddfbcf82451de305f2d0ed923f6d3005d0847f4903bfa2b571d59dbb6",
+      "source_pointer": "/table_evidence/25/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/25/existing_table_parser_rows"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/25/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6853344",
+      "source_pointer": "/table_evidence/25/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/25/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/25/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/25/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/25/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/25/structural_unparsed_tokens"
+    },
+    {
+      "metric": 653,
+      "source_pointer": "/table_evidence/25/table_characters"
+    },
+    {
+      "metric": 1456,
+      "source_pointer": "/table_evidence/26/body_bytes"
+    },
+    {
+      "metric": 1456,
+      "source_pointer": "/table_evidence/26/body_characters"
+    },
+    {
+      "digest": "ef787153236cfe221bd6c8d1460cf22ff519f1e52a983383de94853cde091e8c",
+      "source_pointer": "/table_evidence/26/body_sha256"
+    },
+    {
+      "metric": 11,
+      "source_pointer": "/table_evidence/26/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6853390",
+      "source_pointer": "/table_evidence/26/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/26/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/26/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/26/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/26/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/26/structural_unparsed_tokens"
+    },
+    {
+      "metric": 660,
+      "source_pointer": "/table_evidence/26/table_characters"
+    },
+    {
+      "metric": 1464,
+      "source_pointer": "/table_evidence/3/body_bytes"
+    },
+    {
+      "metric": 1464,
+      "source_pointer": "/table_evidence/3/body_characters"
+    },
+    {
+      "digest": "f20822fa0ab3d1604b5cf029013efe1eb84a11fde45c4c844304877dbead549a",
+      "source_pointer": "/table_evidence/3/body_sha256"
+    },
+    {
+      "metric": 10,
+      "source_pointer": "/table_evidence/3/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827036",
+      "source_pointer": "/table_evidence/3/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/3/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/3/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/3/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/3/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/3/structural_unparsed_tokens"
+    },
+    {
+      "metric": 658,
+      "source_pointer": "/table_evidence/3/table_characters"
+    },
+    {
+      "metric": 1487,
+      "source_pointer": "/table_evidence/4/body_bytes"
+    },
+    {
+      "metric": 1487,
+      "source_pointer": "/table_evidence/4/body_characters"
+    },
+    {
+      "digest": "65e4f119b9cb9ada7badeb56ccb5471bc7cd6255e36adb42cb2e262329cdbc08",
+      "source_pointer": "/table_evidence/4/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/4/existing_table_parser_rows"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/4/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827049",
+      "source_pointer": "/table_evidence/4/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/4/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/4/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/4/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/4/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/4/structural_unparsed_tokens"
+    },
+    {
+      "metric": 681,
+      "source_pointer": "/table_evidence/4/table_characters"
+    },
+    {
+      "metric": 7453,
+      "source_pointer": "/table_evidence/5/body_bytes"
+    },
+    {
+      "metric": 7453,
+      "source_pointer": "/table_evidence/5/body_characters"
+    },
+    {
+      "digest": "38b88d5dd5818d9f0c552162024695763e007c2f419e4a57c3c8414bc64de225",
+      "source_pointer": "/table_evidence/5/body_sha256"
+    },
+    {
+      "metric": 57,
+      "source_pointer": "/table_evidence/5/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827050",
+      "source_pointer": "/table_evidence/5/id"
+    },
+    {
+      "metric": 63,
+      "source_pointer": "/table_evidence/5/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/5/physical_lines"
+    },
+    {
+      "metric": 63,
+      "source_pointer": "/table_evidence/5/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/5/structural_unparsed_tokens"
+    },
+    {
+      "metric": 6586,
+      "source_pointer": "/table_evidence/5/table_characters"
+    },
+    {
+      "metric": 5968,
+      "source_pointer": "/table_evidence/6/body_bytes"
+    },
+    {
+      "metric": 5968,
+      "source_pointer": "/table_evidence/6/body_characters"
+    },
+    {
+      "digest": "eac3db42aafd005344e6c2cc326677e2f1f36ef87b7b2e0f95bf7ec101fa44ac",
+      "source_pointer": "/table_evidence/6/body_sha256"
+    },
+    {
+      "metric": 30,
+      "source_pointer": "/table_evidence/6/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827059",
+      "source_pointer": "/table_evidence/6/id"
+    },
+    {
+      "metric": 48,
+      "source_pointer": "/table_evidence/6/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/6/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/6/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 48,
+      "source_pointer": "/table_evidence/6/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/6/structural_unparsed_tokens"
+    },
+    {
+      "metric": 5018,
+      "source_pointer": "/table_evidence/6/table_characters"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/7/body_bytes"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/7/body_characters"
+    },
+    {
+      "digest": "c152925e4d57c7597e7dae85da128a0195f0eabf67955798ffa6e51fa738de85",
+      "source_pointer": "/table_evidence/7/body_sha256"
+    },
+    {
+      "metric": 73,
+      "source_pointer": "/table_evidence/7/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827070",
+      "source_pointer": "/table_evidence/7/id"
+    },
+    {
+      "metric": 76,
+      "source_pointer": "/table_evidence/7/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/7/physical_lines"
+    },
+    {
+      "metric": 76,
+      "source_pointer": "/table_evidence/7/structural_matching_rows"
+    },
+    {
+      "metric": 7,
+      "source_pointer": "/table_evidence/7/structural_unparsed_tokens"
+    },
+    {
+      "metric": 8000,
+      "source_pointer": "/table_evidence/7/table_characters"
+    },
+    {
+      "metric": 1443,
+      "source_pointer": "/table_evidence/8/body_bytes"
+    },
+    {
+      "metric": 1443,
+      "source_pointer": "/table_evidence/8/body_characters"
+    },
+    {
+      "digest": "abf690f18f03376bee302b37c12d82ea124f761b3bdd872633ff945e72590340",
+      "source_pointer": "/table_evidence/8/body_sha256"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/8/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827124",
+      "source_pointer": "/table_evidence/8/id"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/8/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/8/physical_lines"
+    },
+    {
+      "source_pointer": "/table_evidence/8/status",
+      "status": "RESOLVED"
+    },
+    {
+      "metric": 12,
+      "source_pointer": "/table_evidence/8/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/8/structural_unparsed_tokens"
+    },
+    {
+      "metric": 677,
+      "source_pointer": "/table_evidence/8/table_characters"
+    },
+    {
+      "metric": 7236,
+      "source_pointer": "/table_evidence/9/body_bytes"
+    },
+    {
+      "metric": 7236,
+      "source_pointer": "/table_evidence/9/body_characters"
+    },
+    {
+      "digest": "107335dfc46edde7c92ea1eaee6c742e3f456ec859da0e5349236a0afe84079f",
+      "source_pointer": "/table_evidence/9/body_sha256"
+    },
+    {
+      "metric": 68,
+      "source_pointer": "/table_evidence/9/grammar_matching_rows"
+    },
+    {
+      "source_id": "native-6827132",
+      "source_pointer": "/table_evidence/9/id"
+    },
+    {
+      "metric": 69,
+      "source_pointer": "/table_evidence/9/observed_rows"
+    },
+    {
+      "metric": 1,
+      "source_pointer": "/table_evidence/9/physical_lines"
+    },
+    {
+      "metric": 69,
+      "source_pointer": "/table_evidence/9/structural_matching_rows"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/table_evidence/9/structural_unparsed_tokens"
+    },
+    {
+      "metric": 7236,
+      "source_pointer": "/table_evidence/9/table_characters"
+    },
+    {
+      "metric": 88,
+      "source_pointer": "/tests/passed"
+    },
+    {
+      "metric": 0,
+      "source_pointer": "/tests/skipped"
+    }
+  ],
+  "original_evidence_file": "material-intake-gap-analysis-batch11-20260919.json",
+  "original_evidence_sha256": "a1746707886a55ace5d9347689739419a9855c0172602e222fe8dabcb7c3aba1",
+  "schema_version": 1
+}

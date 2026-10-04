@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "task_id": "example-extract",
+  "family": "json.extract",
+  "params": {
+    "source": "s1",
+    "pointer": "/messages/0/nonce"
+  },
+  "evidence": [
+    {
+      "id": "s1",
+      "locator": "fixture:technocore-like-unsigned-room-export",
+      "text": "{\"room\":\"public-fixture\",\"messages\":[{\"seq\":7,\"ts\":\"2026-09-18T00:00:00Z\",\"from\":\"synthetic-author\",\"text\":\"Compute gcd(12, 18) and lcm(12, 18).\",\"nonce\":9007199254740993123}]}",
+      "sha256": "34bc3e67fcd5d45698021c01f3e93d3950ea990a2b4e2793af316af32c38b5a4"
+    }
+  ]
+}

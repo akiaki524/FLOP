@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "technocore-observer"
+version = "0.1.0"
+description = "Read-only Technocore observer with a durable SQLite inbox"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+observer = "technocore_observer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

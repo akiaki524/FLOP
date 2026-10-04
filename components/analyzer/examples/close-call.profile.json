@@ -1,0 +1,39 @@
+{
+  "id": "close-call-close-1",
+  "kind": "close-call",
+  "enabled": true,
+  "profile_version": "1",
+  "config_source": "flop-labs/technocore-close-call-challenge @ 0ae6b063107b77e3a6cb794186fdd341a947e5e1: contest.json blob 4a520638168e41764630dd19112decf9fe4bfa0c, close-call-game.md blob 4e3ed2e7a4efaf47b8e8fbfa43b2955fd2964145 (room table), docs/close-1-referee.md blob 109875a944dfeb3b4548154eed60b1d868e45fd8. Re-check against the Observer's approved Event setting before use.",
+  "trading_rooms": [
+    "close1"
+  ],
+  "official_dids": [],
+  "official_dids_note": "UNCONFIRMED: close-call-game.md says the referee key is published in the signed launch record, which is not in the repository; attribution stays INCONCLUSIVE until a Human sets it from that record.",
+  "opening": "2026-09-25T12:00:00Z",
+  "first_sweep": "2026-09-25T12:05:00Z",
+  "sweep_seconds": 300,
+  "trading_lock": "2026-10-04T09:00:00Z",
+  "final_price_time": "2026-10-04T10:00:00Z",
+  "observation_end_basis": "final_price_time",
+  "post_end_hours": 24,
+  "claim_window_days": 90,
+  "referee_room_posts": {
+    "d-close1-price": [
+      "price",
+      "seed",
+      "final"
+    ],
+    "d-close1-flow": [
+      "flow"
+    ],
+    "d-close1-positions": [
+      "positions"
+    ],
+    "d-close1-pnl": [
+      "pnl"
+    ],
+    "d-close1-state": [
+      "state"
+    ]
+  }
+}

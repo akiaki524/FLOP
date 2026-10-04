@@ -1,0 +1,63 @@
+name: Worker CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "components/collaboration/worker/**"
+      - ".github/workflows/worker-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "components/collaboration/worker/**"
+      - ".github/workflows/worker-ci.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: components/collaboration/worker
+
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+
+    steps:
+      - name: Check out repository with test history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Check system Python
+        run: /usr/bin/python3 --version
+
+      - name: Prepare local test state
+        run: mkdir -p .local
+
+      - name: Run isolation verification
+        run: /usr/bin/python3 -B src/ccw/isolation.py
+
+      - name: Run unit tests
+        run: /usr/bin/python3 -B -m unittest discover -s tests -v
+
+      - name: Run GitHub-portable offline smoke suite
+        run: |
+          /usr/bin/python3 -B tests/smoke.py
+          /usr/bin/python3 -B tests/b1_smoke.py
+          /usr/bin/python3 -B tests/secret_handoff_probe.py
+          /usr/bin/python3 -B tests/secret_boundary_probe.py
+          /usr/bin/python3 -B tests/secret_abc_probe.py
+          /usr/bin/python3 -B tests/secret_consumer_window_probe.py
+          /usr/bin/python3 -B tests/runtime_service_smoke.py

@@ -1,0 +1,72 @@
+name: Signer CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "components/signer/**"
+      - ".github/workflows/signer-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "components/signer/**"
+      - ".github/workflows/signer-ci.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: components/signer
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+
+      - name: Syntax check
+        run: |
+          node --check src/technocore_signing.mjs
+          node --check src/tclk_v1.mjs
+          node --check src/technocore_read.mjs
+          node --check src/policy_signer.mjs
+          node --check src/runtime_credential.mjs
+          node --check src/runtime_acquisition.mjs
+          node --check src/runtime_rpc.mjs
+          node --check src/runtime_service.mjs
+          node --check src/runtime_audit.mjs
+          node --check src/bootstrap_state.mjs
+          node --check src/credential_handoff.mjs
+          node --check src/trusted_reader.mjs
+          node --check src/reader_service.mjs
+          node --check deploy/runtime_probe.mjs
+          node --check deploy/test_identity.mjs
+          node --check deploy/offline_state_status.mjs
+          node --check deploy/durability_probe.mjs
+          python3 -m py_compile deploy/runtime_preflight.py
+          python3 -m py_compile deploy/test_key_rehearsal.py
+
+      - name: Run offline signer tests
+        run: node --test tests/*.test.mjs
+
+      - name: Run runtime host tests
+        run: |
+          python3 -m unittest tests/test_runtime_preflight.py -v
+          python3 -m unittest tests/test_test_key_rehearsal.py -v

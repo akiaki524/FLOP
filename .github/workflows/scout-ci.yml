@@ -1,0 +1,51 @@
+name: Scout CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "components/collaboration/scout/**"
+      - ".github/workflows/scout-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "components/collaboration/scout/**"
+      - ".github/workflows/scout-ci.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: components/collaboration/scout
+
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.10"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run offline demo
+        run: python -m scout --demo

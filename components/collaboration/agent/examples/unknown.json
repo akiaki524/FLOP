@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "task_id": "example-unknown",
+  "family": "semantic.review",
+  "params": {
+    "request": "Judge whether this collaboration is trustworthy."
+  },
+  "evidence": [
+    {
+      "id": "s1",
+      "locator": "fixture:unsupported-request",
+      "text": "Please infer trust and approve a live deal.",
+      "sha256": "b5c02537dbbefc86b64f069f0819cfd4fe5e441c5884ec99458764ff34f4e266"
+    }
+  ]
+}

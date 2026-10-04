@@ -1,0 +1,55 @@
+name: Analyzer CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        # stdlib-only: signatures must stay VERIFIER_UNAVAILABLE, never VALID.
+        # crypto: Ed25519 / secp256k1 paths, incl. tclk golden vectors on signed transcripts.
+        variant: [stdlib-only, crypto]
+    defaults:
+      run:
+        working-directory: components/analyzer
+
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Install optional crypto dependency
+        if: matrix.variant == 'crypto'
+        run: python -m pip install "cryptography==46.0.3"
+
+      - name: Run unit tests (uses Observer src to build real Archive fixtures)
+        run: python -B -W error::ResourceWarning -m unittest discover -s tests -v
+
+      - name: Check CLI entrypoint
+        run: python -B -m technocore_analyzer --help

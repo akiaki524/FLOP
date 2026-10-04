@@ -1,0 +1,11 @@
+**
+!deploy/
+!deploy/Containerfile.full-capture
+!deploy/Containerfile.full-capture.dockerignore
+!src/
+!src/technocore_observer/
+!src/technocore_observer/__init__.py
+!src/technocore_observer/http.py
+!src/technocore_observer/protocol.py
+!src/technocore_full_capture/
+!src/technocore_full_capture/*.py

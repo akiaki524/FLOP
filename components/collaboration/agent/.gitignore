@@ -1,0 +1,16 @@
+.local/
+__pycache__/
+*.pyc
+
+# Local credentials / secret material
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+private-key.pem
+seed.txt
+wallet.json

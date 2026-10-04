@@ -1,0 +1,29 @@
+[Unit]
+Description=Collaboration dummy credential boundary probe (offline)
+[Service]
+Type=oneshot
+User=collab-signer
+Group=collab-signer
+ExecStart=/usr/bin/python3 -I /usr/local/lib/collab-boundary-probe/probe.py
+LoadCredentialEncrypted=dummy:/var/lib/collab-connection-setup/dummy.cred
+StateDirectory=collab-boundary-probe
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+PrivateNetwork=yes
+RestrictAddressFamilies=AF_UNIX
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectProc=invisible
+ProcSubset=pid
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+CapabilityBoundingSet=
+LimitCORE=0
+SystemCallFilter=~@debug @mount @reboot @swap clone:EPERM clone3:EPERM fork:EPERM vfork:EPERM execveat
+StandardOutput=null
+StandardError=null

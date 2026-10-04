@@ -1,0 +1,67 @@
+name: Public Hygiene CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  public-hygiene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Test public-check regressions (synthetic fixtures)
+        run: python3 -B -m unittest discover -s scripts/tests -v
+
+      - name: Check public-tree hygiene
+        run: python3 -B scripts/check_public_hygiene.py
+
+      - name: Check Project-owner commit metadata
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          if [ "${EVENT_NAME}" = "pull_request" ]; then
+            python3 -B scripts/check_public_commit_metadata.py "${BASE_SHA}" "${HEAD_SHA}"
+          elif [ -n "${BEFORE_SHA}" ] && ! printf '%s' "${BEFORE_SHA}" | grep -Eq '^0+$'; then
+            python3 -B scripts/check_public_commit_metadata.py "${BEFORE_SHA}" "${CURRENT_SHA}"
+          else
+            if git rev-parse --verify "${CURRENT_SHA}^" >/dev/null 2>&1; then
+              python3 -B scripts/check_public_commit_metadata.py "${CURRENT_SHA}^" "${CURRENT_SHA}"
+            else
+              python3 -B scripts/check_public_commit_metadata.py "${CURRENT_SHA}"
+            fi
+          fi
+
+      - name: Exercise clean public snapshot export
+        run: |
+          bash -n scripts/export_clean_public_snapshot.sh
+          export_dir="${RUNNER_TEMP}/flop-public"
+          scripts/export_clean_public_snapshot.sh "${export_dir}"
+          test "$(git -C "${export_dir}" rev-list --count HEAD)" = "1"
+          test -z "$(git -C "${export_dir}" remote)"
+          (
+            cd "${export_dir}"
+            python3 -B scripts/check_public_commit_metadata.py HEAD
+          )

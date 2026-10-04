@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "request": "保存資料の未完了事項を根拠付きでレビューしてください。",
+  "scope": {
+    "include": ["資料内のTODOと復旧手順"],
+    "exclude": ["URL取得、Code実行、実送信"]
+  },
+  "destination": {"room": "mock/flop_labs", "recipient": "human-selected-demo"},
+  "sources": [{
+    "id": "s1",
+    "origin": "human",
+    "locator": "examples/material.txt",
+    "text": "# Transport notes\nTODO: document timeout recovery.\n",
+    "sha256": "bea0f097737aa2ddeb944955080de921748c6eaa1b71ce153ec41c86611083fa"
+  }]
+}

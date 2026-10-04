@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "HUMAN_APPROVED_CURRENT_OFFICIAL_LAUNCH_RECORD",
+  "refereeDid": "did:key:z6Mk...",
+  "message": {
+    "from": "did:key:z6Mk...",
+    "nonce": "<lossless decimal nonce>",
+    "text": "<exact compact signed seed JSON from d-close1-price>",
+    "sig": "<86-char base64url Ed25519 signature>"
+  }
+}

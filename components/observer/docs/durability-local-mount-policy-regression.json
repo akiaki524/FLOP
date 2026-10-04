@@ -1,0 +1,93 @@
+{
+  "status": "OFFLINE_REGRESSION_PASS",
+  "scope": "offline tests and saved probe policy replay; not Docker durability proof",
+  "test_command": "env PYTHONPATH=src:tests python3 -B -m unittest test_container_recreation test_durability test_durability_diagnostics",
+  "tests_run": 44,
+  "elapsed_seconds": 7.606,
+  "suites": {
+    "test_container_recreation": 14,
+    "test_durability": 13,
+    "test_durability_diagnostics": 17
+  },
+  "process_matrix_cases": 31,
+  "external_requests": 0,
+  "source_hashes": {
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/cli.py": "188b2f4d1a23c549aa2684238c7254056f8f9011efe226bfa4316f4e5e4f3f1b",
+    "src/technocore_observer/http.py": "d9ce4feb1ca1391d955352bf5c4350efc66db8ff030b758efb739bd56521fff8",
+    "src/technocore_observer/observer.py": "1cc0398e7438e85018bca6d26eb7f26e884596479f1a5cf2f9b89bbe9676d377",
+    "src/technocore_observer/protocol.py": "1c6c16fcc7ba6e9b47be16ecc144a534192f217360fdc0a2b9ef412d63f578bf",
+    "src/technocore_observer/storage.py": "d2447c479e74d28bf0025629bc3f86b794a1d1c07252c3c667179e3a84c2d45e",
+    "tests/durability_payload.py": "f39f2cbf91ff5b5ee03164cda95f8f7e10b0ef3dd1f414b9f43512257563cad2",
+    "tests/run_durability.py": "6dd1dfed5d3ca54204e8cfd1845100b1f4a8fda13f80598b20a573512338c973",
+    "tests/test_durability.py": "88169279be22f7ea1cd78e340c38a496ed5bcf79dd370a120cf9ccc627f1abcf",
+    "tests/Containerfile.durability": "4fe28012265a3f64ff71e052093aa2228effe1bc47449642c18cfba2b9eeaa8d",
+    "tests/container_isolation.py": "3e7b60ab128e2f2eb1b008655b247cb335c6495f23d63b92d46e34f2f9a9b04d",
+    "tests/durability_diagnostics.py": "fe53de1a4dd0ddd86c114b439e52e92ff3fc801371423177a3aba903d5db4976",
+    "tests/run_container_recreation.py": "922cabafdaefe0edf2eda41d1f2a8da6dfdb43c435443d7ea65e830ea814f0a7",
+    "tests/test_container_recreation.py": "d0b112fc745c194e472318716bc643a3c34dc3931e6423a31a48e8dd40cf179c"
+  },
+  "observer_source_unchanged": {
+    "src/technocore_observer/__init__.py": true,
+    "src/technocore_observer/__main__.py": true,
+    "src/technocore_observer/cli.py": true,
+    "src/technocore_observer/http.py": true,
+    "src/technocore_observer/observer.py": true,
+    "src/technocore_observer/protocol.py": true,
+    "src/technocore_observer/storage.py": true
+  },
+  "replay_source": "docs/durability-results-recreation-20260906-231130-1030b653/report.json",
+  "original_status": "STOPPED",
+  "preflight": {
+    "nonroot_uid_gid": true,
+    "no_capabilities": true,
+    "no_new_privileges": true,
+    "seccomp": true,
+    "loopback_only": true,
+    "no_host_home": true,
+    "no_windows_mount": true,
+    "no_control_socket": true,
+    "state_mount_rw": true,
+    "state_mount_noexec": false,
+    "state_mount_nosuid": false,
+    "state_mount_nodev": false,
+    "root_mount_readonly": true,
+    "only_state_persistent_writable": true
+  },
+  "local_policy_replay": {
+    "validation_profile": "local-docker-desktop",
+    "accepted": true,
+    "isolation_boundary": "PASS",
+    "failed_checks": [],
+    "hardening_warnings": [
+      "state_mount_nodev",
+      "state_mount_noexec",
+      "state_mount_nosuid"
+    ],
+    "mount_hardening_noexec": "WARN",
+    "mount_hardening_nosuid": "WARN",
+    "mount_hardening_nodev": "WARN"
+  },
+  "strict_policy_replay": {
+    "validation_profile": "strict",
+    "accepted": false,
+    "isolation_boundary": "PASS",
+    "failed_checks": [
+      "state_mount_nodev",
+      "state_mount_noexec",
+      "state_mount_nosuid"
+    ],
+    "hardening_warnings": [
+      "state_mount_nodev",
+      "state_mount_noexec",
+      "state_mount_nosuid"
+    ],
+    "mount_hardening_noexec": "WARN",
+    "mount_hardening_nosuid": "WARN",
+    "mount_hardening_nodev": "WARN"
+  },
+  "persistent_storage_durability": "PENDING",
+  "production_hardening_gate": "PENDING",
+  "full_durability_gate": "PENDING"
+}

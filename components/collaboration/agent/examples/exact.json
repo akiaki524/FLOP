@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "task_id": "example-exact",
+  "family": "exact.match",
+  "params": {
+    "candidate": "s1",
+    "reference": "s2"
+  },
+  "evidence": [
+    {
+      "id": "s1",
+      "locator": "fixture:deliverable",
+      "text": "gcd=6 lcm=36",
+      "sha256": "e4b06688d51fe2f44d206e9410bbebc1b0f4122792ff807ede8811b9bd93dfea"
+    },
+    {
+      "id": "s2",
+      "locator": "fixture:human-reference",
+      "text": "gcd=6 lcm=36",
+      "sha256": "e4b06688d51fe2f44d206e9410bbebc1b0f4122792ff807ede8811b9bd93dfea"
+    }
+  ]
+}

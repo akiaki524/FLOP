@@ -1,0 +1,6 @@
+# Gate A consumes this template temporarily; Real Secret activation remains separate.
+# Future location: collab-signer.service.d/real-accept.conf
+[Service]
+LoadCredentialEncrypted=
+LoadCredentialEncrypted=project-seed:/var/lib/collab-connection-setup/project-seed.cred
+# Retain existing AF_UNIX-only, PrivateNetwork=yes and Node filesystem grants.

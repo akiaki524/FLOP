@@ -1,0 +1,11 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "sv"
+  ],
+  "relatedServers": [
+    "https://glama.ai/mcp/servers/@agent-room-alkl/agent-room-mcp",
+    "https://glama.ai/mcp/servers/@agree-able/room-mcp",
+    "https://glama.ai/mcp/servers/@enyonee/rocketchat-mcp"
+  ]
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.local/
+.venv/
+.env
+.env.*
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

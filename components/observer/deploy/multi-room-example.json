@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "root": "/tmp/technocore-multi-room-offline",
+  "budget": {
+    "read_limit_rpm": 600,
+    "external_rpm": null,
+    "headroom_rpm": 60,
+    "capture_rpm": null,
+    "max_waiters": 4,
+    "external_waiters": null
+  },
+  "rooms": [
+    {
+      "room": "lobby",
+      "evidence": "standard",
+      "interval_seconds": 1,
+      "max_rpm": 60,
+      "max_db_bytes": null,
+      "capture_owner": "external"
+    },
+    {
+      "room": "tclk-offers",
+      "evidence": "important",
+      "interval_seconds": 1,
+      "max_rpm": 60,
+      "max_db_bytes": 2147483648,
+      "capture_owner": "local"
+    },
+    {
+      "room": "kibble",
+      "evidence": "important",
+      "interval_seconds": 1,
+      "max_rpm": 60,
+      "max_db_bytes": 2147483648,
+      "capture_owner": "local"
+    },
+    {
+      "room": "events",
+      "evidence": "standard",
+      "interval_seconds": 120,
+      "max_rpm": 15,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "sub_economy",
+      "evidence": "standard",
+      "interval_seconds": 120,
+      "max_rpm": 15,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "zk-desk-a",
+      "evidence": "standard",
+      "interval_seconds": 120,
+      "max_rpm": 15,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "close1",
+      "evidence": "important",
+      "interval_seconds": 2,
+      "max_rpm": 30,
+      "max_db_bytes": 4294967296,
+      "capture_owner": "local"
+    },
+    {
+      "room": "d-close1-price",
+      "evidence": "important",
+      "interval_seconds": 2,
+      "max_rpm": 30,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "d-close1-flow",
+      "evidence": "important",
+      "interval_seconds": 2,
+      "max_rpm": 30,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "d-close1-positions",
+      "evidence": "important",
+      "interval_seconds": 2,
+      "max_rpm": 30,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "d-close1-pnl",
+      "evidence": "important",
+      "interval_seconds": 2,
+      "max_rpm": 30,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    },
+    {
+      "room": "d-close1-state",
+      "evidence": "important",
+      "interval_seconds": 2,
+      "max_rpm": 30,
+      "max_db_bytes": 268435456,
+      "capture_owner": "local"
+    }
+  ],
+  "global_min_free_bytes": 10737418240
+}

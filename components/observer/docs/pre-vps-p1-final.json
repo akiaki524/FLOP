@@ -1,0 +1,165 @@
+{
+  "kind": "P1_CODE_AND_OFFLINE_REMEDIATION",
+  "created_at_unix": 1788787983.5009172,
+  "official_source": {
+    "tag": "v0.12.1",
+    "commit": "2670ebb11ead1ab9b67307e518f8e8479fc9db47",
+    "provenance": "User supplied official-source verification; no independent upstream fetch this session"
+  },
+  "P1": {
+    "P1-1": "FIXED_FORWARD_JUMP_FAIL_CLOSED",
+    "P1-2": "RESOLVED_NEWEST_N_NOT_PAGINATION",
+    "P1-3": "EXPLICIT_RESYNC_PRESERVES_OLD_EPOCH",
+    "P1-4": "BOUNDED_EVIDENCE_EVENTS_STOP_WITHOUT_DELETION",
+    "P1-5": "BODY_AND_PRE_PARSE_JSON_BUDGET"
+  },
+  "regression": {
+    "command": "python3 -B -m unittest discover -s tests",
+    "tests_run": 148,
+    "new_test_methods": 25,
+    "skipped": 0,
+    "errors": 0,
+    "failures": 0,
+    "elapsed_seconds": 22.174,
+    "status": "OK",
+    "scope": "Offline; loopback HTTP permitted; saved live artifacts present on this machine"
+  },
+  "memory_probe": {
+    "rlimit_as_bytes": 268435456,
+    "peak_rss_bytes": 93843456,
+    "scope": "Linux process RLIMIT_AS; not container/cgroup measurement",
+    "cases": [
+      {
+        "name": "200_max_ascii_texts",
+        "body_bytes": 830308,
+        "passed": true,
+        "poll_seq": 300
+      },
+      {
+        "name": "tail_window_nonbmp_escape_expansion",
+        "body_bytes": 3100148,
+        "passed": true,
+        "poll_seq": 163
+      },
+      {
+        "name": "dense_array",
+        "body_bytes": 2000009,
+        "passed": true,
+        "poll_seq": 100
+      },
+      {
+        "name": "dense_objects",
+        "body_bytes": 800010,
+        "passed": true,
+        "poll_seq": 100
+      },
+      {
+        "name": "deep_nesting",
+        "body_bytes": 2007,
+        "passed": true,
+        "poll_seq": 100
+      },
+      {
+        "name": "body_over_cap",
+        "body_bytes": 4194305,
+        "passed": true,
+        "poll_seq": 100
+      },
+      {
+        "name": "near_cap_single_string",
+        "body_bytes": 4194303,
+        "passed": true,
+        "poll_seq": 100
+      },
+      {
+        "name": "near_cap_escaped_unicode",
+        "body_bytes": 4194296,
+        "passed": true,
+        "poll_seq": 100
+      },
+      {
+        "name": "near_cap_wide_python_string_saved_untrusted",
+        "body_bytes": 4193965,
+        "passed": true,
+        "poll_seq": 101
+      }
+    ]
+  },
+  "python": "3.12.3",
+  "sqlite": "3.45.1",
+  "source_sha256": {
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/cli.py": "c993597ce86b16cfec56b11a198e6fb1920ae1fe469c90d55173be618cc9f540",
+    "src/technocore_observer/http.py": "1b5f65c342256e560630831b3e5fd1ba65c3777295d190db8c2881799ae602ae",
+    "src/technocore_observer/observer.py": "2112b65e2028bfd0a314e65a8821de7a1681f90d8b380c148fc0193e3dc88933",
+    "src/technocore_observer/protocol.py": "7cd70c57c5be65dc5ee9d47ebf19515b5694ff49b196a5e4485b13ae9b88a72f",
+    "src/technocore_observer/storage.py": "55957b53caa198801418eb20096da23600504f175ff1cd07ba81fbfd26c25b76",
+    "tests/test_observer.py": "4fce3b51bfc9b9bb0ff627dcb20452cfec48882ec6401cb6ac2dd48af213056a",
+    "tests/test_p1_remediation.py": "13ca6fc5623c40901ed986619a40b5d0ea5f62292f91f152bc658f64dda80e05",
+    "tests/p1_memory_probe.py": "fd8d02166c33e8c4212f505a50d48ebe5e74e7794f2026071e78f45275ced44f",
+    "docs/technocore-v0121-read-contract.md": "71216c6c85080c88414bd4d960fbae1e86f7731326a0fe2a35598aaeceb6f31a",
+    "Containerfile": "71f860692ef4a262fac0f99f24c806b67c3d743e6e0b38ce8f2efaeb1fe369c2"
+  },
+  "changed_observer_files": [
+    "src/technocore_observer/cli.py",
+    "src/technocore_observer/http.py",
+    "src/technocore_observer/observer.py",
+    "src/technocore_observer/protocol.py",
+    "src/technocore_observer/storage.py"
+  ],
+  "security_harness_baseline": "docs/durability-results-recreation-20260907-192144-4562d78c/source-hashes.json",
+  "security_harness_unchanged": {
+    "tests/durability_payload.py": true,
+    "tests/run_durability.py": true,
+    "tests/test_durability.py": true,
+    "tests/Containerfile.durability": true,
+    "tests/container_isolation.py": true,
+    "tests/durability_diagnostics.py": true,
+    "tests/run_container_recreation.py": true,
+    "tests/test_container_recreation.py": true
+  },
+  "syntax_and_trailing_whitespace": "PASS",
+  "live_get_count": 0,
+  "technocore_write_count": 0,
+  "docker_socket_access": false,
+  "vps_deployment": false,
+  "schema_version": 2,
+  "budgets": {
+    "body_bytes": 4194304,
+    "json_depth": 32,
+    "json_structure": 32768,
+    "prefix_missing": 10000,
+    "evidence_prefix_bytes": 16384,
+    "evidence_body_total_bytes": 4194304,
+    "evidence_rows": 4096,
+    "event_rows": 8192,
+    "event_json_bytes": 4096,
+    "db_page_ceiling_bytes": 16777216,
+    "wal_pre_transaction_threshold_bytes": 8388608,
+    "min_disk_free_bytes": 8388608,
+    "retention_policy": "Preserve rows and stop; no automatic deletion, rotation, or budget reset"
+  },
+  "limitations": [
+    "No cgroup/deployment-image memory measurement; RLIMIT_AS is process-only",
+    "WAL threshold is not an in-flight filesystem hard quota",
+    "Local 16 MiB database budget requires production capacity review",
+    "Legacy evidence is preserved unchanged and may already exceed the new budget",
+    "Saved-response tests depend on local artifacts",
+    "Manual approval tokens bind decisions; they do not authenticate a human"
+  ],
+  "unresolved_p2_p3": [
+    "P2-1 production entrypoint -I/image validation",
+    "P2-2 watchdog UID/WAL write permissions",
+    "P2-3 byte-exact successful response not retained; docs clarified",
+    "P2-4 Store caller lock contract",
+    "P2-5 full verification scan cost",
+    "P2-6 artifact availability and uncommitted tree; claims clarified",
+    "P2-7 explicit production state path",
+    "P3-1 opener handler reduction",
+    "P3-2 host HOME probe portability",
+    "P3-3 path/fd TOCTOU",
+    "P3-4 EMPTY_OR_REAPED exit policy"
+  ],
+  "vps_migration_readiness": "NOT_READY_PRODUCTION_GATES_AND_HUMAN_APPROVAL_PENDING"
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=FLOP Project DID Policy Signer Socket
+
+[Socket]
+ListenStream=/run/flop-policy-signer.sock
+SocketMode=0660
+SocketUser=flop-signer
+FileDescriptorName=signer
+SocketGroup=flop-agent
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

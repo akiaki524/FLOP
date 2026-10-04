@@ -1,0 +1,300 @@
+{
+  "kind": "PRE_FIX_REPRODUCTION_NOT_FIX_VERIFICATION",
+  "baseline_regression": {
+    "command": "python3 -B -m unittest discover -s tests",
+    "sandbox_attempt": "118 tests; HTTP setUpClass blocked by socket PermissionError",
+    "authorized_retry": "123 tests / OK",
+    "retry_elapsed_seconds": 20.087,
+    "skipped": 0,
+    "scope": "Current machine with saved live artifacts; no P1 implementation changes",
+    "live_network": false
+  },
+  "created_at": 1788780832.445861,
+  "live_get_count": 0,
+  "docker_socket_access": false,
+  "source_sha256": {
+    "src/technocore_observer/__init__.py": "6b88971150c5c7349b3f55f08f486ddf9346f54498612841939a946559749b7f",
+    "src/technocore_observer/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/technocore_observer/cli.py": "188b2f4d1a23c549aa2684238c7254056f8f9011efe226bfa4316f4e5e4f3f1b",
+    "src/technocore_observer/http.py": "d9ce4feb1ca1391d955352bf5c4350efc66db8ff030b758efb739bd56521fff8",
+    "src/technocore_observer/observer.py": "1cc0398e7438e85018bca6d26eb7f26e884596479f1a5cf2f9b89bbe9676d377",
+    "src/technocore_observer/protocol.py": "1c6c16fcc7ba6e9b47be16ecc144a534192f217360fdc0a2b9ef412d63f578bf",
+    "src/technocore_observer/storage.py": "d2447c479e74d28bf0025629bc3f86b794a1d1c07252c3c667179e3a84c2d45e"
+  },
+  "P1-2": {
+    "source": "docs/smoke-results-20260906-125741-7d70a083/live",
+    "responses": [
+      {
+        "number": 1,
+        "query": {},
+        "bytes": 4484,
+        "sha256": "9a68eb1af69e0857f6320d06c45e0b335ab852c4594c1f8ddaba1d4787816036",
+        "matches_report": true
+      },
+      {
+        "number": 2,
+        "query": {
+          "format": "json",
+          "limit": 1,
+          "n": 1788667063826113493
+        },
+        "bytes": 538,
+        "sha256": "8162c25b3b9df543343fa51b48d09a07f1d367c10bbb7f06ae1792ddd4d48dee",
+        "matches_report": true
+      },
+      {
+        "number": 3,
+        "query": {
+          "since": 0,
+          "limit": 200,
+          "format": "json",
+          "n": 1788667066140787436
+        },
+        "bytes": 79888,
+        "sha256": "7891969ff0b7cc8d659a32eaf5ab2ff0b06aa4497372a363259447edba2b56f0",
+        "matches_report": true
+      },
+      {
+        "number": 4,
+        "query": {
+          "since": 0,
+          "limit": 201,
+          "format": "json",
+          "n": 1788667068493117310
+        },
+        "bytes": 79888,
+        "sha256": "7891969ff0b7cc8d659a32eaf5ab2ff0b06aa4497372a363259447edba2b56f0",
+        "matches_report": true
+      },
+      {
+        "number": 5,
+        "query": {
+          "since": 749,
+          "limit": 200,
+          "wait": 10,
+          "format": "json",
+          "n": 1788667070855622803
+        },
+        "bytes": 137,
+        "sha256": "24a32b1df20e8843027a53fe1ad605c2ea8cf529df5335b0bdad14be8cc09388",
+        "matches_report": true
+      },
+      {
+        "number": 6,
+        "query": {
+          "format": "json",
+          "limit": 1,
+          "n": 1788667083146413859
+        },
+        "bytes": 132,
+        "sha256": "fef9e6707c53d216b81f3a040bd939790617e9b13cc14cc25c5a6bb994fafda8",
+        "matches_report": true
+      }
+    ],
+    "history": {
+      "room": "mb-047f3d88ef38",
+      "count": 200,
+      "first_seq": 550,
+      "last_seq": 749,
+      "generation": 2,
+      "wait_held": null
+    },
+    "published_setting_names": [
+      "dupe_filter_seconds",
+      "dupe_max_copies",
+      "dupe_min_length",
+      "edge_cache_seconds",
+      "ephemeral_ttl_seconds",
+      "fsync",
+      "max_notes_per_ns",
+      "max_notes_total",
+      "max_rooms",
+      "max_wait",
+      "max_waiters_per_ip",
+      "max_waiters_total",
+      "note_stats_cache_seconds",
+      "rate_read",
+      "rate_rooms_per_day",
+      "rate_write",
+      "rooms_cache_seconds",
+      "static_cache_seconds",
+      "stillborn_seconds",
+      "wait_poll"
+    ],
+    "since_semantics": "UNRESOLVED: oldest-first and newest-limit both fit",
+    "documented_message_size_limit": "NOT PRESENT in saved config"
+  },
+  "P1-1": {
+    "before": {
+      "poll_seq": 100,
+      "resolved_seq": 100,
+      "status": "INITIALIZED",
+      "observer_epoch": 1
+    },
+    "attack_seq": 9223372036854775807,
+    "accepted": true,
+    "after_attack": {
+      "poll_seq": 9223372036854775807,
+      "resolved_seq": 100,
+      "status": "DEGRADED",
+      "observer_epoch": 1
+    },
+    "gaps": [
+      [
+        101,
+        9223372036854775806
+      ]
+    ],
+    "legitimate_poll_continuation": [
+      true,
+      true,
+      false
+    ],
+    "after_legitimate_polls": {
+      "poll_seq": 9223372036854775807,
+      "resolved_seq": 100,
+      "status": "ERROR",
+      "observer_epoch": 1
+    },
+    "anomalies": [
+      "OLD_RECORD_IN_NORMAL_POLL",
+      "OLD_RECORD_IN_NORMAL_POLL",
+      "OLD_RECORD_IN_NORMAL_POLL"
+    ]
+  },
+  "P1-3": {
+    "snapshots": [
+      {
+        "poll_seq": 201,
+        "resolved_seq": 100,
+        "status": "DEGRADED",
+        "observer_epoch": 1
+      },
+      {
+        "poll_seq": 203,
+        "resolved_seq": 100,
+        "status": "DEGRADED",
+        "observer_epoch": 1
+      },
+      {
+        "poll_seq": 205,
+        "resolved_seq": 100,
+        "status": "DEGRADED",
+        "observer_epoch": 1
+      }
+    ],
+    "reopened": {
+      "poll_seq": 205,
+      "resolved_seq": 100,
+      "status": "DEGRADED",
+      "observer_epoch": 1
+    },
+    "gap_rows": [
+      {
+        "gap_id": 1,
+        "room": "test-room",
+        "observer_epoch": 1,
+        "server_generation": 7,
+        "start_seq": 101,
+        "end_seq": 199,
+        "detected_at": 1788780832.5522196,
+        "status": "OPEN",
+        "recovery_deadline_hint": null
+      }
+    ]
+  },
+  "P1-4": {
+    "snapshots": [
+      {
+        "failures": 6,
+        "poll_seq": 100,
+        "resolved_seq": 100,
+        "status": "INITIALIZED",
+        "observer_epoch": 1,
+        "messages": 0,
+        "gaps": 0,
+        "evidence": 5,
+        "events": 6,
+        "evidence_body_bytes": 4194479
+      },
+      {
+        "failures": 12,
+        "poll_seq": 100,
+        "resolved_seq": 100,
+        "status": "INITIALIZED",
+        "observer_epoch": 1,
+        "messages": 0,
+        "gaps": 0,
+        "evidence": 9,
+        "events": 12,
+        "evidence_body_bytes": 8388783
+      },
+      {
+        "failures": 18,
+        "poll_seq": 100,
+        "resolved_seq": 100,
+        "status": "INITIALIZED",
+        "observer_epoch": 1,
+        "messages": 0,
+        "gaps": 0,
+        "evidence": 13,
+        "events": 18,
+        "evidence_body_bytes": 12583087
+      },
+      {
+        "failures": 24,
+        "poll_seq": 100,
+        "resolved_seq": 100,
+        "status": "INITIALIZED",
+        "observer_epoch": 1,
+        "messages": 0,
+        "gaps": 0,
+        "evidence": 17,
+        "events": 24,
+        "evidence_body_bytes": 16777391
+      }
+    ],
+    "requests": "24 fake replies; zero network requests",
+    "note": "Network failures append events, even without evidence rows."
+  },
+  "evidence_sqlite_full": {
+    "sqlite_error": "SQLITE_FULL",
+    "before": {
+      "poll_seq": 100,
+      "resolved_seq": 100,
+      "status": "INITIALIZED",
+      "observer_epoch": 1,
+      "messages": 0,
+      "gaps": 0,
+      "evidence": 1,
+      "events": 0
+    },
+    "after": {
+      "poll_seq": 100,
+      "resolved_seq": 100,
+      "status": "INITIALIZED",
+      "observer_epoch": 1,
+      "messages": 0,
+      "gaps": 0,
+      "evidence": 1,
+      "events": 0
+    },
+    "cursor_and_tables_unchanged": true,
+    "reopened": {
+      "poll_seq": 100,
+      "resolved_seq": 100,
+      "status": "INITIALIZED",
+      "observer_epoch": 1
+    },
+    "note": "Real SQLITE_FULL page quota, not host disk exhaustion or a mock."
+  },
+  "P1-5": {
+    "body_bytes": 16400094,
+    "message_count": 400000,
+    "max_body": 33554432,
+    "rlimit_as_bytes": 268435456,
+    "outcome": "decoded_before_count_or_sequence_validation",
+    "decoded_count": 400000,
+    "peak_rss_bytes_linux": 141676544
+  }
+}

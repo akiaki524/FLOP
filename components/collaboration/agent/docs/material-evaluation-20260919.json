@@ -1,0 +1,979 @@
+{
+  "batch": 3,
+  "cases": [
+    {
+      "agent_reached": true,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "22ae000cb0dbe30fed1bcdf2be54d82b84c75e1db38771388abdef24bda86da8",
+      "classification": "preview_full_spec",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "api",
+      "id": "native-6343689",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "ce9ce0cba35039a7b6b13854d1f347ec79abfcba4a445c05855a8373f99a981b",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343699",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "3303275dc176493be1f235a7c9a613ab96c57459ffd884b4a29a4b374069054f",
+      "classification": "preview_full_spec",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "attest",
+      "id": "native-6343703",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "4ec77ee9968afccf00ab4977579a5d3e424891aead30d8bdc67c58ca0091991c",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343712",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "38f24e0d8cfde07ecc1caabbdb62c45ba166e76791cd1bf8f67b1d3bf06d5820",
+      "classification": "direct_reference",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "validation",
+      "id": "native-6343713",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "ea7df58215a88f349e887f9c2b696301b2e8dc2cb7aaa86156def1a6df9934d5",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343716",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "d890efd2fba68aa599b4e6e684fcdf520589bec3bd1e30e11aca2591901a3920",
+      "classification": "direct_reference",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "validation",
+      "id": "native-6343727",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "58ca49607cd04ef40379162b9f20a4fdb95293df64b99d4fcc7af3eb11324eeb",
+      "classification": "preview_full_spec",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "protocol",
+      "id": "native-6343741",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "4735649077ce6f6a4c7ef31e49eb193807028986dc01e598bfdb49b3eb4a7a78",
+      "classification": "preview_full_spec",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "document",
+      "id": "native-6343746",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "7538cec4e35fc98401dd570a534e8ac920b0fd1910f67187ea04c9b48ae4e046",
+      "classification": "preview_full_spec",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "math",
+      "id": "native-6343749",
+      "solver_reached": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "8c5b38a230822e5b76ce83f0217b125e9c5c16554feedf864c793da538cdc3cb",
+      "classification": "direct_reference",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "protocol",
+      "id": "native-6343753",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "ec1d123c2d1299c1cd9fcce7e8f4c4df43dd4167d514e3946dc11f3d1daa9118",
+      "classification": "preview_full_spec",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "PREVIEW_MISMATCH"
+      ],
+      "family": null,
+      "id": "native-6343759",
+      "solver_reached": false,
+      "status": "HUMAN_REVIEW"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "048a1365a70a08977e9438b3d55b0e150a3aa37acbba46349bbdc11d35e8e3c9",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343763",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "8e5e7e3a0f9ebab718513cdeee942a845145c2b39a404b2d0b0b54a80e4c4de8",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343779",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "40e1fcaac733562591172264fcd5bbf7d832ff390454a479113caf86dccecc28",
+      "classification": "direct_reference",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "validation",
+      "id": "native-6343793",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "0b7a62bcf3974de67fa69905695aac49bd1a3d7ae9f4855f5d84eb6b7aa25527",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343801",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "0999763ceee7aeb41bfa306992a117ae7f2b2a9c83912edb3eca76a77f1a2833",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343811",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "59c031b0990852b38d803fedf633ffd9c3c7a3215089e774069c9aef69fa340c",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343814",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "34fe5b4ec6234c2e0c286f39d4a9f6b3ab3c08bcc0f3b6956d32fecab5154d47",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343881",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "context_preview_incomplete_and_unsupported",
+      "bundle_sha256": "e04b08dd03fa7da2231b30cab1a335f25847c8b63e72deabbaed312e2ba1e7ea",
+      "classification": "preview_full_spec",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "TRUNCATION_SUSPECTED"
+      ],
+      "family": "verification",
+      "id": "native-6343883",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "b2b3288553c3bcde2d328682cc3c704216989f76312f2cc59abd38c7b2ddeb72",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343690",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "bff7c7f7cb4e735d18467bcd2df3a0539164d27bc9bb3b62ce1218c4fd705020",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343695",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": true,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "7aa0d2b34e9b975860e53a50aa27b1b3d06083099b7853f0e73e5e7931d3d505",
+      "classification": "direct_reference",
+      "completeness": "COMPLETE_WITHIN_SCOPE",
+      "errors": [],
+      "family": "validation",
+      "id": "native-6343730",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "55dcef85aa34dbf72f3461154bf6f83a6514e1a40bc94a85ed5a84cfaf7b27c0",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343775",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    },
+    {
+      "agent_reached": false,
+      "batch2_reason": "missing_job_material",
+      "bundle_sha256": "a242bceba26204f7d49a33ee24ca84919bad330b1f826bb3480e5ca2e6970587",
+      "classification": "no_context",
+      "completeness": "INCOMPLETE",
+      "errors": [
+        "MISSING_TASK_REFERENCE"
+      ],
+      "family": null,
+      "id": "native-6343825",
+      "solver_reached": false,
+      "status": "UNKNOWN"
+    }
+  ],
+  "classification": {
+    "direct_note_reference": 5,
+    "no_context": 13,
+    "preview_full_spec_reference": 7
+  },
+  "combined": {
+    "COMPLETED": 0,
+    "HUMAN_REVIEW": 1,
+    "UNKNOWN": 24,
+    "agent_classifier_reached": 10,
+    "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+    "errors": {
+      "MISSING_TASK_REFERENCE": 13,
+      "PREVIEW_MISMATCH": 1,
+      "TRUNCATION_SUSPECTED": 1
+    },
+    "false_complete": 0,
+    "fetch_failure": 0,
+    "incomplete_tasks": 15,
+    "material_references_detected": 16,
+    "missing_references": 0,
+    "missing_task_reference": 13,
+    "previously_material_missing": 18,
+    "previously_missing_now_agent_reached": 5,
+    "previously_missing_now_registered_solver_reached": 0,
+    "public_tasks_total": 25,
+    "registered_solver_reached": 1,
+    "rejected_by_source_policy": 0,
+    "successfully_resolved_references": 15,
+    "truncated_or_incomplete_references": 1
+  },
+  "date_jst": "2026-09-19",
+  "development": {
+    "audit": {
+      "audit_head": "44c8bc41991d7010a556b4216059186f61c5012f6b4e8985669691ceb278d3bd",
+      "events": 48,
+      "policy": {
+        "concurrency": 1,
+        "families": {
+          "exact.match": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          },
+          "json.extract": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          },
+          "math.gcd_lcm": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          },
+          "text.lines": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          }
+        },
+        "per_day": 10000,
+        "per_hour": 10000
+      },
+      "runs": 9
+    },
+    "by_family": {
+      "api": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 1,
+        "agent_classifier_reached": 1,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 2,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 0,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 1,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 2,
+        "truncated_or_incomplete_references": 0
+      },
+      "attest": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 1,
+        "agent_classifier_reached": 1,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 1,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 0,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 1,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 1,
+        "truncated_or_incomplete_references": 0
+      },
+      "document": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 1,
+        "agent_classifier_reached": 1,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 2,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 0,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 1,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 2,
+        "truncated_or_incomplete_references": 0
+      },
+      "math": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 1,
+        "agent_classifier_reached": 1,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 1,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 0,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 1,
+        "registered_solver_reached": 1,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 1,
+        "truncated_or_incomplete_references": 0
+      },
+      "protocol": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 2,
+        "agent_classifier_reached": 2,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 3,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 1,
+        "previously_missing_now_agent_reached": 1,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 2,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 3,
+        "truncated_or_incomplete_references": 0
+      },
+      "unresolved": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 1,
+        "UNKNOWN": 9,
+        "agent_classifier_reached": 0,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {
+          "MISSING_TASK_REFERENCE": 9,
+          "PREVIEW_MISMATCH": 1
+        },
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 10,
+        "material_references_detected": 1,
+        "missing_references": 0,
+        "missing_task_reference": 9,
+        "previously_material_missing": 9,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 10,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 1,
+        "truncated_or_incomplete_references": 0
+      },
+      "validation": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 3,
+        "agent_classifier_reached": 3,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 3,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 3,
+        "previously_missing_now_agent_reached": 3,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 3,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 3,
+        "truncated_or_incomplete_references": 0
+      },
+      "verification": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 1,
+        "agent_classifier_reached": 0,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {
+          "TRUNCATION_SUSPECTED": 1
+        },
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 1,
+        "material_references_detected": 2,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 0,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 1,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 1,
+        "truncated_or_incomplete_references": 1
+      }
+    },
+    "classification": {
+      "direct_reference": 4,
+      "no_context": 9,
+      "preview_full_spec": 7
+    },
+    "external_writes": 0,
+    "metrics": {
+      "COMPLETED": 0,
+      "HUMAN_REVIEW": 1,
+      "UNKNOWN": 19,
+      "agent_classifier_reached": 9,
+      "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+      "errors": {
+        "MISSING_TASK_REFERENCE": 9,
+        "PREVIEW_MISMATCH": 1,
+        "TRUNCATION_SUSPECTED": 1
+      },
+      "false_complete": 0,
+      "fetch_failure": 0,
+      "incomplete_tasks": 11,
+      "material_references_detected": 15,
+      "missing_references": 0,
+      "missing_task_reference": 9,
+      "previously_material_missing": 13,
+      "previously_missing_now_agent_reached": 4,
+      "previously_missing_now_registered_solver_reached": 0,
+      "public_tasks_total": 20,
+      "registered_solver_reached": 1,
+      "rejected_by_source_policy": 0,
+      "successfully_resolved_references": 14,
+      "truncated_or_incomplete_references": 1
+    },
+    "network": {
+      "cache_hits": 4,
+      "cumulative_bytes": 83523,
+      "cumulative_fetches": 14,
+      "new_bytes": 78271,
+      "new_fetches": 11
+    },
+    "replay_network_requests": 0,
+    "results_sha256": "74b48a0f6e5a57e811cb0040b85f44c77a7aea66f45a88aff73c017ace268d81",
+    "split": "development"
+  },
+  "evidence": {
+    "files": {
+      ".local/batch3/development/evaluation/results.json": "74b48a0f6e5a57e811cb0040b85f44c77a7aea66f45a88aff73c017ace268d81",
+      ".local/batch3/development/manifest.json": "63e1918eea8b8972a1de4007b54be515fde90998dc2e5a46133e9be5928ba4ad",
+      ".local/batch3/holdout/evaluation/results.json": "1bce33eea372dc64fc55b0aca669d01b1bb3a26dd208ae87f87726974720bc00",
+      ".local/batch3/holdout/implementation-lock.json": "21840e37780186f6e3f68bb7e4e954e83b522caa51f454e4ab1d2617d801e007",
+      ".local/batch3/holdout/manifest.json": "497d10be5bf3b1717bfc7c3f460d27bb5a513dcee383e93cf8f8932d0c5d7485"
+    },
+    "frozen_task_bundles": {
+      "development": {
+        "native-6343689": "22ae000cb0dbe30fed1bcdf2be54d82b84c75e1db38771388abdef24bda86da8",
+        "native-6343699": "ce9ce0cba35039a7b6b13854d1f347ec79abfcba4a445c05855a8373f99a981b",
+        "native-6343703": "3303275dc176493be1f235a7c9a613ab96c57459ffd884b4a29a4b374069054f",
+        "native-6343712": "4ec77ee9968afccf00ab4977579a5d3e424891aead30d8bdc67c58ca0091991c",
+        "native-6343713": "38f24e0d8cfde07ecc1caabbdb62c45ba166e76791cd1bf8f67b1d3bf06d5820",
+        "native-6343716": "ea7df58215a88f349e887f9c2b696301b2e8dc2cb7aaa86156def1a6df9934d5",
+        "native-6343727": "d890efd2fba68aa599b4e6e684fcdf520589bec3bd1e30e11aca2591901a3920",
+        "native-6343741": "58ca49607cd04ef40379162b9f20a4fdb95293df64b99d4fcc7af3eb11324eeb",
+        "native-6343746": "4735649077ce6f6a4c7ef31e49eb193807028986dc01e598bfdb49b3eb4a7a78",
+        "native-6343749": "7538cec4e35fc98401dd570a534e8ac920b0fd1910f67187ea04c9b48ae4e046",
+        "native-6343753": "8c5b38a230822e5b76ce83f0217b125e9c5c16554feedf864c793da538cdc3cb",
+        "native-6343759": "ec1d123c2d1299c1cd9fcce7e8f4c4df43dd4167d514e3946dc11f3d1daa9118",
+        "native-6343763": "048a1365a70a08977e9438b3d55b0e150a3aa37acbba46349bbdc11d35e8e3c9",
+        "native-6343779": "8e5e7e3a0f9ebab718513cdeee942a845145c2b39a404b2d0b0b54a80e4c4de8",
+        "native-6343793": "40e1fcaac733562591172264fcd5bbf7d832ff390454a479113caf86dccecc28",
+        "native-6343801": "0b7a62bcf3974de67fa69905695aac49bd1a3d7ae9f4855f5d84eb6b7aa25527",
+        "native-6343811": "0999763ceee7aeb41bfa306992a117ae7f2b2a9c83912edb3eca76a77f1a2833",
+        "native-6343814": "59c031b0990852b38d803fedf633ffd9c3c7a3215089e774069c9aef69fa340c",
+        "native-6343881": "34fe5b4ec6234c2e0c286f39d4a9f6b3ab3c08bcc0f3b6956d32fecab5154d47",
+        "native-6343883": "e04b08dd03fa7da2231b30cab1a335f25847c8b63e72deabbaed312e2ba1e7ea"
+      },
+      "holdout": {
+        "native-6343690": "b2b3288553c3bcde2d328682cc3c704216989f76312f2cc59abd38c7b2ddeb72",
+        "native-6343695": "bff7c7f7cb4e735d18467bcd2df3a0539164d27bc9bb3b62ce1218c4fd705020",
+        "native-6343730": "7aa0d2b34e9b975860e53a50aa27b1b3d06083099b7853f0e73e5e7931d3d505",
+        "native-6343775": "55dcef85aa34dbf72f3461154bf6f83a6514e1a40bc94a85ed5a84cfaf7b27c0",
+        "native-6343825": "a242bceba26204f7d49a33ee24ca84919bad330b1f826bb3480e5ca2e6970587"
+      }
+    },
+    "manifest_path": ".local/batch3/evidence-manifest.json",
+    "manifest_sha256": "a087cd081dfb209b24c693802de749703ef93340657255f41c40356c14d70a30",
+    "source_catalog": [
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:25:12.690187+00:00",
+        "http_status": 200,
+        "raw_bytes": 1435,
+        "raw_sha256": "a304d59127394331384856a1fdfa6ec9c0e2740316ce0b3f4c698dc1535852c6",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "a304d59127394331384856a1fdfa6ec9c0e2740316ce0b3f4c698dc1535852c6",
+        "url": "https://technocore.chat/kv/tclk-job-60/val-9ed61760"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:25:13.007051+00:00",
+        "http_status": 200,
+        "raw_bytes": 2947,
+        "raw_sha256": "ec54d29f3884b3895dd1e95e764cc2ecaef5fc24de45a64712c2afff026220f8",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "ec54d29f3884b3895dd1e95e764cc2ecaef5fc24de45a64712c2afff026220f8",
+        "url": "https://technocore.chat/kv/tclk-job-ab/task-8088dfab"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:25:13.511245+00:00",
+        "http_status": 200,
+        "raw_bytes": 870,
+        "raw_sha256": "230e86099b0fb795ad3a8f71c9fb96bede8c7828dd66b6a9b41a311b58bcc254",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "230e86099b0fb795ad3a8f71c9fb96bede8c7828dd66b6a9b41a311b58bcc254",
+        "url": "https://technocore.chat/kv/tclk-job-en/task-a8dd5881-"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:04.763559+00:00",
+        "http_status": 200,
+        "raw_bytes": 31170,
+        "raw_sha256": "4fd57fb18f5f9a4c16771238f5e3d2c77b10c3592c8315da23101f30719e02b3",
+        "resolver_type": "official_document",
+        "stored_sha256": "4fd57fb18f5f9a4c16771238f5e3d2c77b10c3592c8315da23101f30719e02b3",
+        "url": "https://raw.githubusercontent.com/flop-labs/technocore-chat/main/README.md"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:05.035496+00:00",
+        "http_status": 200,
+        "raw_bytes": 1031,
+        "raw_sha256": "aedc7d47b01ae0118282daccc5fc4e7c49d2fa6a3707a67de1baa8ca5233f8e7",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "aedc7d47b01ae0118282daccc5fc4e7c49d2fa6a3707a67de1baa8ca5233f8e7",
+        "url": "https://technocore.chat/kv/tclk-job-en/attest-b5d1602"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:06.028973+00:00",
+        "http_status": 200,
+        "raw_bytes": 1310,
+        "raw_sha256": "0ef61dffb222abe41d67f066d21649267793c6679e3e9f78a872e099186d8bf6",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "0ef61dffb222abe41d67f066d21649267793c6679e3e9f78a872e099186d8bf6",
+        "url": "https://technocore.chat/kv/tclk-job-35/val-178f6335"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:06.463977+00:00",
+        "http_status": 200,
+        "raw_bytes": 859,
+        "raw_sha256": "5c9850d5386b49e98a329a5f762cabce61e608c5d845c5e6bbfb4398e9959477",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "5c9850d5386b49e98a329a5f762cabce61e608c5d845c5e6bbfb4398e9959477",
+        "url": "https://technocore.chat/kv/tclk-job-en/task-7bc57fc2-"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:07.605730+00:00",
+        "http_status": 200,
+        "raw_bytes": 26182,
+        "raw_sha256": "40e0bebabcc105a2931805b68e200f1d5fc212e32ca14501ac4d85d105a2bb54",
+        "resolver_type": "official_document",
+        "stored_sha256": "40e0bebabcc105a2931805b68e200f1d5fc212e32ca14501ac4d85d105a2bb54",
+        "url": "https://technocore.chat/llms.txt"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:07.763295+00:00",
+        "http_status": 200,
+        "raw_bytes": 872,
+        "raw_sha256": "4cb81ee00fbea6f3bd6e4249d756de2974f1ec69e846f0a2169c3d4c8238ad07",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "4cb81ee00fbea6f3bd6e4249d756de2974f1ec69e846f0a2169c3d4c8238ad07",
+        "url": "https://technocore.chat/kv/tclk-job-en/task-a8848e47-"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:09.234131+00:00",
+        "http_status": 200,
+        "raw_bytes": 926,
+        "raw_sha256": "cfab420b7185f38d07aafd0f40a1d9fbdd64961f86f4e3d3bae0914674d09f64",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "cfab420b7185f38d07aafd0f40a1d9fbdd64961f86f4e3d3bae0914674d09f64",
+        "url": "https://technocore.chat/kv/tclk-job-en/math-cf9f2a18-"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:09.557495+00:00",
+        "http_status": 200,
+        "raw_bytes": 5279,
+        "raw_sha256": "df4bb5d8b409c94f1736d96705eda6d9e23bb6cd0060abc34c69318ec80e13b5",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "df4bb5d8b409c94f1736d96705eda6d9e23bb6cd0060abc34c69318ec80e13b5",
+        "url": "https://technocore.chat/kv/tclk-job-en/task-2fcdab74-"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:10.409658+00:00",
+        "http_status": 200,
+        "raw_bytes": 1515,
+        "raw_sha256": "70dcc97f8f7a94c7600a818072a60ace040c2fbcf973419628bc78b861b4f96a",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "70dcc97f8f7a94c7600a818072a60ace040c2fbcf973419628bc78b861b4f96a",
+        "url": "https://technocore.chat/kv/tclk-job-d7/val-92891bd7"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:10.862201+00:00",
+        "http_status": 200,
+        "raw_bytes": 989,
+        "raw_sha256": "439642732f5e18e3246e4610baa8a82c5d51c13ac20fb20e7ec032959294045d",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "439642732f5e18e3246e4610baa8a82c5d51c13ac20fb20e7ec032959294045d",
+        "url": "https://technocore.chat/kv/tclk-job-en/task-302ef8d8-"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:37:11.234490+00:00",
+        "http_status": 200,
+        "raw_bytes": 8138,
+        "raw_sha256": "7500ced25eb0e997b3086d8c486a5a2d18bf5f59741f22fd9310c82fca74eccd",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "7500ced25eb0e997b3086d8c486a5a2d18bf5f59741f22fd9310c82fca74eccd",
+        "url": "https://technocore.chat/kv/tclk-mat-en/mtask-302ef8d8"
+      },
+      {
+        "fetch_policy": "public-material-v1",
+        "fetched_at": "2026-09-18T15:40:04.912113+00:00",
+        "http_status": 200,
+        "raw_bytes": 1310,
+        "raw_sha256": "d8a94412292dec5f26e55bb8e92c388ed949ec89ffdef86845e3d0f03d73c3c1",
+        "resolver_type": "technocore_note",
+        "stored_sha256": "d8a94412292dec5f26e55bb8e92c388ed949ec89ffdef86845e3d0f03d73c3c1",
+        "url": "https://technocore.chat/kv/tclk-job-36/val-568dd136"
+      }
+    ]
+  },
+  "holdout": {
+    "audit": {
+      "audit_head": "9f28ea7759a5268b2d3239a056fea9b6d8042308e4ceb218977f27087fd5f51c",
+      "events": 9,
+      "policy": {
+        "concurrency": 1,
+        "families": {
+          "exact.match": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          },
+          "json.extract": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          },
+          "math.gcd_lcm": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          },
+          "text.lines": {
+            "enabled": true,
+            "reason": "initial",
+            "suspended": false
+          }
+        },
+        "per_day": 10000,
+        "per_hour": 10000
+      },
+      "runs": 1
+    },
+    "by_family": {
+      "unresolved": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 4,
+        "agent_classifier_reached": 0,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {
+          "MISSING_TASK_REFERENCE": 4
+        },
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 4,
+        "material_references_detected": 0,
+        "missing_references": 0,
+        "missing_task_reference": 4,
+        "previously_material_missing": 4,
+        "previously_missing_now_agent_reached": 0,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 4,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 0,
+        "truncated_or_incomplete_references": 0
+      },
+      "validation": {
+        "COMPLETED": 0,
+        "HUMAN_REVIEW": 0,
+        "UNKNOWN": 1,
+        "agent_classifier_reached": 1,
+        "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+        "errors": {},
+        "false_complete": 0,
+        "fetch_failure": 0,
+        "incomplete_tasks": 0,
+        "material_references_detected": 1,
+        "missing_references": 0,
+        "missing_task_reference": 0,
+        "previously_material_missing": 1,
+        "previously_missing_now_agent_reached": 1,
+        "previously_missing_now_registered_solver_reached": 0,
+        "public_tasks_total": 1,
+        "registered_solver_reached": 0,
+        "rejected_by_source_policy": 0,
+        "successfully_resolved_references": 1,
+        "truncated_or_incomplete_references": 0
+      }
+    },
+    "classification": {
+      "direct_reference": 1,
+      "no_context": 4
+    },
+    "external_writes": 0,
+    "metrics": {
+      "COMPLETED": 0,
+      "HUMAN_REVIEW": 0,
+      "UNKNOWN": 5,
+      "agent_classifier_reached": 1,
+      "answer_quality": "UNSCORED / HUMAN_EVAL_REQUIRED",
+      "errors": {
+        "MISSING_TASK_REFERENCE": 4
+      },
+      "false_complete": 0,
+      "fetch_failure": 0,
+      "incomplete_tasks": 4,
+      "material_references_detected": 1,
+      "missing_references": 0,
+      "missing_task_reference": 4,
+      "previously_material_missing": 5,
+      "previously_missing_now_agent_reached": 1,
+      "previously_missing_now_registered_solver_reached": 0,
+      "public_tasks_total": 5,
+      "registered_solver_reached": 0,
+      "rejected_by_source_policy": 0,
+      "successfully_resolved_references": 1,
+      "truncated_or_incomplete_references": 0
+    },
+    "network": {
+      "cache_hits": 0,
+      "cumulative_bytes": 84833,
+      "cumulative_fetches": 15,
+      "new_bytes": 1310,
+      "new_fetches": 1
+    },
+    "replay_network_requests": 0,
+    "results_sha256": "1bce33eea372dc64fc55b0aca669d01b1bb3a26dd208ae87f87726974720bc00",
+    "split": "holdout"
+  },
+  "limitations": [
+    "SOURCE_UNVERIFIED; no signatures or tclk validation",
+    "No semantic ground truth: native answer quality UNSCORED / HUMAN_EVAL_REQUIRED",
+    "Completeness covers recognized material references and structure, not author intent or historical truth",
+    "Holdout has only one fetchable material; narrow generalization evidence"
+  ],
+  "material_inspections": {
+    "development": {
+      "path": ".local/material-smoke-teu9edxm",
+      "public_literal_completed": 2,
+      "synthetic_math_completed": 1
+    },
+    "false_complete": 0,
+    "holdout": {
+      "path": ".local/material-smoke-hgihs82f",
+      "public_literal_completed": 1,
+      "synthetic_math_completed": 1
+    },
+    "native_job_completions": 0
+  },
+  "network": {
+    "actual_gets_including_probe": 15,
+    "body_bytes": 84833,
+    "external_writes": 0,
+    "redirects_followed": 0,
+    "requests_during_offline_replay": 0
+  },
+  "start": {
+    "branch": "main",
+    "head": "82a037ab20f26c728f4169760e2e7aaa35ace89c",
+    "worktree": "clean"
+  },
+  "verification": {
+    "frozen_replay_all_25_results_identical": true,
+    "implementation_unchanged_after_holdout": true,
+    "legacy_smoke": ".local/smoke-6mujeet9",
+    "unit_tests_passed": 49
+  }
+}
