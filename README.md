@@ -65,11 +65,13 @@ Private 正本には評価原本を保持します。配布 snapshot では一�
 - 変更・公開の境界は [OPERATIONS](docs/OPERATIONS.md)、snapshot 準備は [PUBLIC_RELEASE_CHECKLIST](docs/PUBLIC_RELEASE_CHECKLIST.md)、移行の由来は [MONOREPO_MIGRATION](docs/MONOREPO_MIGRATION.md) を参照してください。
 - Runtime / Production の事実は別の Current Runtime Evidence、Secret / Credential は GitHub 外で管理します。Private GitHub も Secret 保管庫ではありません。
 
-## Field Notes（準備中）
+## Field Notes
 
-最初の「Why FLOP」では、なぜこの個人プロジェクトを始めたかと、何を試したいかを記録する予定です。
-Field Notes は別 repository に置き、配布 repo の公開と同時に出す計画です。
-公開 URL はまだありません。使い方・境界・検証条件はこの repository の文書を正本とします。
+These Field Notes are based on my own experiences and work logs, with AI assistance in organizing, drafting, and translating them. I review the text before publication.
+
+[Field Notes](field-notes/README.md) に、AI とこの個人プロジェクトに取り組んだ経験を英語で記録します。
+最初の記事は [Why I Started with FLOP](field-notes/01-why-i-started-with-flop.md) です。
+記事は当時の経験の記録です。現在の使い方・境界・検証条件はこの repository の文書を正本とします。
 
 ## Licensing
 
