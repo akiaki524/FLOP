@@ -1,23 +1,21 @@
-FLOP Monorepo Licensing Notice
+MIT License
 
-For project-authored portions of this repository that are not covered by a
-path-specific license or notice:
+Copyright (c) 2026 akiaki524
 
-Copyright (c) 2026 akiaki524. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This notice does not assert ownership over third-party or separately licensed
-material. This repository is a multi-component project and does not currently
-grant one repository-wide open-source license.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-Path-specific terms take precedence. In particular:
-
-- `components/did/` is distributed under the Apache License 2.0 in
-  `components/did/LICENSE`, together with `components/did/NOTICE`.
-- `components/did/mcp/` is distributed under the Apache License 2.0 in
-  `components/did/mcp/LICENSE`, together with `components/did/mcp/NOTICE`.
-- Other paths are not licensed for copying, modification, or redistribution
-  unless a LICENSE, NOTICE, or other explicit grant in that path says
-  otherwise.
-
-Making repository contents publicly readable does not, by itself, change these
-terms.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.

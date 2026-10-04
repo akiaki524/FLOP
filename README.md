@@ -75,7 +75,8 @@ These Field Notes are based on my own experiences and work logs, with AI assista
 
 ## Licensing
 
-repository 全体に一律の OSS license は付与していません。
-[LICENSE](LICENSE) に従い、個別条件のない Project 作成部分は **All rights reserved** です。
-`components/did/` と `components/did/mcp/` は各 Apache-2.0 LICENSE / NOTICE に従います。
-第三者の著作権・必要な出典表記は保持します。公開されていることだけで自由な再利用を許諾したとは扱わないでください。
+Project 作成のコード・テスト・合成例・関連する技術文書は、個別条件がある部分を除き [MIT License](LICENSE) です。
+[Field Notes](field-notes/README.md) の記事・一覧は **CC BY 4.0**、帰属名は **akiaki524** です。
+`components/did/` と `components/did/mcp/` は既存の Apache-2.0 LICENSE / NOTICE に従います。
+第三者の引用・取得資料・外部依存は再許諾せず、元の条件と出典表記を保持します。
+適用範囲と例外は [Licensing scope](LICENSING.md) を参照してください。
