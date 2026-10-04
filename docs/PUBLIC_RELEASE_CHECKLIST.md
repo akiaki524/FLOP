@@ -2,12 +2,15 @@
 
 ## 0. Choose the publication topology — BLOCKING DECISION
 
-The planned topology is **Path A**: Private remains the ongoing canonical
-development repository; Public distributes periodic reviewed snapshots.
-The Private development repository has already been renamed to
-`akiaki524/FLOP-private`. The new distribution target `akiaki524/FLOP` has not
-been created. Create it PRIVATE first under separate authorization, then apply
-the publication gates before changing visibility. Local folder names are separate.
+The topology is **Path A**: Private remains the ongoing canonical development
+repository; the distribution repository receives periodic reviewed snapshots.
+
+Preparation checkpoint (2026-10-04): the development repository is
+`akiaki524/FLOP-private`. The distribution repository `akiaki524/FLOP` has been
+created PRIVATE, with an initial clean root and reviewed incremental updates
+from Private. It remains PRIVATE at this checkpoint; apply the publication gates
+before any separately approved Public visibility change. Check GitHub for the
+current visibility. Local folder names are separate.
 
 There are two different release paths. Do not mix their gates.
 
@@ -25,8 +28,8 @@ reach.
 3. publish that one-root-commit repository initially, then append reviewed
    snapshot updates to its Public history (section 2.2);
 4. recreate only publication-safe Issues / summaries that are actually useful;
-5. the Private rename is complete; verify remaining trusted writers before
-   creating the new distribution repository under the old name.
+5. the Private rename and distribution repository creation are complete;
+   verify remaining trusted writers before making the distribution Public.
 
 GitHub warns that reusing the old repository name stops redirects from the old
 location to the renamed repository. Therefore, before reusing
@@ -240,7 +243,10 @@ exporter does not implement updates.
 
    This personalized metadata gate is mandatory for the owner release;
 6. submit the reviewed update through the existing Public publication and
-   protected-branch gates. Use normal history-preserving updates; do not replace
+   protected-branch gates. Once PR-based main protection is enabled, future
+   distribution updates must use a work branch and PR; this is the planned
+   protected workflow, not a claim that protection is already enabled.
+   Use normal history-preserving updates; do not replace
    Public history or force-push to distribute a snapshot. Record the resulting
    Public commit and source mapping in the Private release record.
 
