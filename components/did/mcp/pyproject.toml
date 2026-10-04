@@ -24,6 +24,10 @@ requires-python = ">=3.11"
 # (FastMCP -> MCPServer happened in 2.0) out of an unattended `uvx` run.
 dependencies = [
     "mcp>=2.1,<3",
+    # SDK transitive security floors must travel in wheel metadata: uv-only constraints
+    # do not protect independent uvx or Pyodide installs.
+    "pyjwt>=2.15.0",
+    "httpx2>=2.12.0",
     # The signed lane's Ed25519 (signing.py). Effectively free: the SDK already pulls
     # cryptography in through pyjwt[crypto], and it ships a Pyodide wheel, so declaring
     # what we import adds nothing to an install on either platform.

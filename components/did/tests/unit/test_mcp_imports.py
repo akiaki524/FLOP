@@ -45,6 +45,8 @@ PACKAGE = ROOT / "mcp" / "src" / "technocore_mcp"
 # past that first ring is a transitive graph — not something this wheel's dependency line
 # promises a user.
 _ROOT_DEPENDENCIES = {"mcp", "cryptography"}
+# Explicit security floors on SDK requirements do not widen the import allowlist.
+_SECURITY_FLOORS = {"pyjwt", "httpx2"}
 
 # `import x` where the module and its distribution are not named alike.
 _EXTRA_TOP_LEVEL = {"mcp": {"mcp", "mcp_types"}}
@@ -93,7 +95,12 @@ def _allowed_roots() -> set[str]:
         requirement.split("[")[0].split(">")[0].split("<")[0].split("=")[0].strip()
         for requirement in declared["project"]["dependencies"]
     }
-    assert names == _ROOT_DEPENDENCIES, f"unreviewed wrapper dependencies: {names}"
+    assert names == _ROOT_DEPENDENCIES | _SECURITY_FLOORS, (
+        f"unreviewed wrapper dependencies: {names}"
+    )
+    assert _SECURITY_FLOORS <= _direct_requirements("mcp"), (
+        "security floors must constrain existing SDK dependencies"
+    )
 
     owners = packages_distributions()
     by_distribution: dict[str, set[str]] = {}

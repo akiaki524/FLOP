@@ -29,7 +29,7 @@ dependencies = [
 dev = [
     "coverage>=7.15.4",
     "pytest>=9.1.1",
-    "httpx2>=2.10.0",
+    "httpx2>=2.12.0",
     "ruff>=0.16.1",
     "ty>=0.0.71",
     # The store's lifecycle rules only conflict in *sequences*; tests/test_store_stateful.py
@@ -121,3 +121,5 @@ pytest_add_cli_args_test_selection = [
 [tool.uv]
 package = false
 required-version = ">=0.9"
+# Security floors for transitive dev dependencies; these do not add runtime packages.
+constraint-dependencies = ["pyjwt>=2.15.0", "urllib3>=2.8.0"]
